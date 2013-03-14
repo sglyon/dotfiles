@@ -1,0 +1,10 @@
+syntax: glob
+
+*.pyc
+_*.txt
+
+MANIFEST
+
+*.sublime-project
+
+dist/

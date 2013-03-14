@@ -1,0 +1,16 @@
+{ "name": "Python module path",
+  "scopeName": "input_panel.python_module_path",
+  "patterns": [
+    {
+        "match": "^\\s*\\+?\\s*\\.*(\\w+)?(\\.\\w+)*\\s*$",
+        "name": "valid.input_panel.python_module_path",
+        "comment": "Valid Python module path"
+    },
+    {
+        "match": "^.*$",
+        "name": "invalid.input_panel.python_module_path",
+        "comment": "Invalid Python module path"
+    }
+  ],
+  "uuid": "df0e97d4-06fc-4786-9427-04ffe1637b78"
+}

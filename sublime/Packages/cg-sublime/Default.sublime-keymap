@@ -1,0 +1,17 @@
+[
+
+    // Navigating
+    { "keys": ["super+alt+shift+left"], "command": "prev_group" },
+    { "keys": ["super+alt+shift+right"], "command": "next_group" },
+    { "keys": ["super+down"], "command": "forward_paragraph" },
+    { "keys": ["super+up"], "command": "backward_paragraph" },
+
+    // Opening Files
+    { "keys": ["super+alt+shift+c"], "command": "clone_to_new_window" },
+    { "keys": ["super+o"], "command": "prompt_open_file_path" },
+    { "keys": ["super+shift+o"], "command": "prompt_change_view" },
+
+    // Sorting
+    { "keys": ["shift+f5"], "command": "sort_paragraphs" }
+
+]

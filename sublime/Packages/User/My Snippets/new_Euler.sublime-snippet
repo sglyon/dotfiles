@@ -1,0 +1,30 @@
+<snippet>
+    <content><![CDATA[
+"""
+Created ${1:Date}
+
+Author: Spencer Lyon
+
+Project Euler Problem ${2:PROBLEM NUMBER}:
+
+${3:PROBLEM TEXT}
+"""
+from __future__ import division
+from time import time
+
+start_time = time()
+
+$4
+
+print("The answer is: %i" % (ans))
+
+running_time = time()
+elapsed_time = running_time - start_time
+print 'Total Execution time is ', elapsed_time, 'seconds'
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>newEuler</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <!-- <scope>source.python</scope> -->
+</snippet>

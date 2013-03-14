@@ -1,0 +1,16 @@
+{
+	// autoformat code on save ?
+	"autoformat_on_save": false,
+
+    // select errors / warnings (e.g. ["E4", "W"])
+    "select": [],
+
+    // do not fix these errors / warnings (e.g. ["E501", E4", "W"])
+    "ignore": [],
+
+    // Maximum line length
+    "max-line-length": 128,
+
+    // enable possibly unsafe changes (E711, E712)
+    "aggressive": false
+}

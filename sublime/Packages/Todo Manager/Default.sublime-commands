@@ -1,0 +1,49 @@
+[
+  {
+    "caption": "Todo: Add",
+    "command": "todo_manager_add"
+  },
+  {
+    "caption": "Todo: Add-at-line",
+    "command": "todo_manager_add",
+    "args": {
+      "at_line": true
+    }
+  },
+  {
+    "caption": "Todo: Add-at-function",
+    "command": "todo_manager_add",
+    "args": {
+      "at_function": true
+    }
+  },
+  {
+    "caption": "Todo: List All",
+    "command": "todo_manager_list",
+    "args": {
+      "show_state": 1
+    }
+  },
+  {
+    "caption": "Todo: List Active",
+    "command": "todo_manager_list",
+    "args": {
+      "show_state": 2
+    }
+  },
+  {
+    "caption": "Todo: List Done",
+    "command": "todo_manager_list",
+    "args": {
+      "show_state": 3
+    }
+  },
+  {
+    "caption": "Todo: Open File",
+    "command": "todo_manager_open"
+  },
+    {
+    "caption": "Todo: Purge",
+    "command": "todo_manager_purge"
+  }
+]

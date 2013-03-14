@@ -1,0 +1,6 @@
+[
+	{
+		"keys": ["ctrl+enter"],
+		"command": "enter_pressed"
+	}
+]

@@ -1,0 +1,8 @@
+.ropeproject
+*.pyc
+.pydevproject
+python_debugger.py
+.project
+.DS_Store
+rope_repo
+docs/build/
