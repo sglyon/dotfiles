@@ -1,9 +1,6 @@
 {
-
-	//Default
-	// "cmd": ["python", "-u", "$file"],
-	
-	"cmd": ["/Library/Frameworks/EPD64.framework/Versions/Current/bin/python", "-u", "$file"],
+	// // Default
+	"cmd": ["python", "-u", "$file"],
 	"file_regex": "^[ ]*File \"(...*?)\", line ([0-9]*)",
 	"selector": "source.python"
 }
