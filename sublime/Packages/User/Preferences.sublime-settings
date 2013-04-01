@@ -1,7 +1,7 @@
 {
 	"auto_complete_commit_on_tab": false,
 	"caret_style": "phase",
-	"color_scheme": "Packages/Color Scheme - Light/Tango.tmTheme",
+	"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night.tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_centered": false,
 	"draw_minimap_border": true,
@@ -11,7 +11,8 @@
 	"highlight_modified_tabs": false,
 	"ignored_packages":
 	[
-		"Dayle Rees Color Schemes"
+		"Dayle Rees Color Schemes",
+		"WordCount"
 	],
 	"indent_to_bracket": true,
 	"phoenix_color_blue": true,
@@ -31,22 +32,5 @@
 	"theme": "Phoenix Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"use_simple_full_screen": true,
-    "todo":
-	    {
-	        "file_exclude_patterns":[
-	            "*.css", "*.po", "*.mo"
-	        ],
-	        "folder_exclude_patterns": [
-	            "static", "vendor", "tmp"
-	        ],
-	        "patterns":
-	        {
-	            "BUG": "BUG[\\s]*?:+(?P<bug>.*)$",
-	            "TODO": "TODO[\\s]*?:+(?P<todo>.*)$",
-	            "NOTE": "NOTE[\\s]*?:+(?P<note>.*)$"
-	        },
-	        "case_sensitive": true,
-	        "result_title": "TODO Results"
-	    }
+	"use_simple_full_screen": true
 }

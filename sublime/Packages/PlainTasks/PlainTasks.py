@@ -10,11 +10,14 @@ from datetime import datetime
 
 class PlainTasksBase(sublime_plugin.TextCommand):
     def run(self, edit):
+        # Read in all settings from settings file
         self.open_tasks_bullet = self.view.settings().get('open_tasks_bullet')
         self.done_tasks_bullet = self.view.settings().get('done_tasks_bullet')
         self.canc_tasks_bullet = self.view.settings().get('canc_tasks_bullet')
         self.before_tasks_bullet_spaces = ' ' * self.view.settings().get('before_tasks_bullet_margin')
         self.date_format = self.view.settings().get('date_format')
+
+        # Check to see if user wants to use DONETAG
         if self.view.settings().get('done_tag'):
             self.done_tag = "@done"
             self.canc_tag = "@cancelled"
@@ -182,8 +185,13 @@ class PlainTasksNewTaskDocCommand(sublime_plugin.WindowCommand):
         view.set_syntax_file('Packages/PlainTasks/PlainTasks.tmLanguage')
 
 
+# Fill this class in:
+class PlainTasksProjectTODODoc(sublime_plugin.WindowCommand):
+    pass
+
+
 class PlainTasksOpenUrlCommand(sublime_plugin.TextCommand):
-    #It is horrible regex but it works perfectly
+    #It is horrible regex but it works perfectly + 1 (for horrible part)
     URL_REGEX = r"""(?i)\b((?:https?://|www\d{0,3}[.]|[a-z0-9.\-]+[.][a-z]{2,4}/)(?:[^\s()<>]+|\(([^\s()<>]+|(\([^\s()<>]+\)))*\))
         +(?:\(([^\s()<>]+|(\([^\s()<>]+\)))*\)|[^\s`!()\[\]{};:'".,<>?«»“”‘’]))"""
 

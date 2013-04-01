@@ -3,6 +3,7 @@
     { "keys": ["super+t", "super+d"], "command": "print_all_tags" },
     { "keys": ["alt+ctrl+super+t", "alt+ctrl+super+d"], "command": "log_all_tags" },
     { "keys": ["super+shift+o"], "command": "fuzzy_bookmarks_load" },
+    { "keys": ["super+shift+b"], "command": "build", "args": {"variant": "Run"} },
     { "keys": ["j", "j"], "command": "exit_insert_mode",
     "context":
     [
