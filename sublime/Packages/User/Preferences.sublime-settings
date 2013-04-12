@@ -13,6 +13,7 @@
 	"ignored_packages":
 	[
 		"WordCount",
+		"GitGutter",
 		"Dayle Rees Color Schemes"
 	],
 	"indent_to_bracket": true,

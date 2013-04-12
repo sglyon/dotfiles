@@ -1,2 +1,4 @@
 /sublime/Packages/SublimeCodeIntel/*
+*.last-run
 *.cache
+*.zip

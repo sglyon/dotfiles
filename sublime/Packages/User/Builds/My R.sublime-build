@@ -1,0 +1,4 @@
+{
+  "cmd": ["osascript", "-e", "tell app \"R\" to cmd \"source('$file')\"\n"],
+  "selector": "source.r"
+}

@@ -38,11 +38,11 @@
   \usepackage{pdfsync}
   \usepackage{fancyhdr}
   \usepackage{multicol}
-  \newcommand\ve{\varepsilon} % From Rick
   \theoremstyle{definition} % From Rick
   \newtheorem{definition}{Definition} % Number definitions on their own
   \usepackage{hyperref}  % From Rick
   \hypersetup{colorlinks,linkcolor=cyan,urlcolor=blue,citecolor=black}
+  \usepackage{caption}
 
   %%% Equation and float numbering
   \numberwithin{equation}{section}
@@ -59,11 +59,11 @@
       \setlength{\headheight}{13.6pt}
   }
 
-  %%% Maketitle metadata
-  \newcommand{\horrule}[1]{\rule{\linewidth}{#1}}     % Horizontal rule
-
-  % Set title here
-  \newcommand \thetitle{${2: Main Title}}
+  %%% Commands I define
+  \newcommand \thetitle{${2: Main Title}} % Set title here
+  \newcommand{\TODO}[1]{ {\color{magenta} TODO: #1} } % Make TODO messages pink
+  \newcommand{\horrule}[1]{\rule{\linewidth}{#1}} % Horizontal rule
+  \newcommand\ve{\varepsilon} % From Rick
 
   \title{
     \vspace{-.6in}
