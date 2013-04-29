@@ -35,6 +35,16 @@
 (package-initialize)
 
 ; ;- - - - - - - - - - - - - - - Global Settings - - - - - - - - - - - - - - - ;
+;;; Sublime like settings
+; Multiple cursors
+(require 'multiple-cursors)
+
+; Keyboard shortcuts for multiple-cursors. Maybe change to be like sublime (cmd + d)?
+(global-set-key (kbd "C->") 'mc/mark-next-like-this) 
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this) 
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this) 
+(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+
 ; Map command as control
 (setq mac-command-modifier 'control)
 
@@ -62,7 +72,6 @@
 
 ; Changes all yes/no questions to y/n type
 (fset 'yes-or-no-p 'y-or-n-p)
-
 
 
 ; turn on ido
