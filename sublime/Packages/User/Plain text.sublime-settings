@@ -2,6 +2,7 @@
 	"enable_table_editor": true,
 	"extensions":
 	[
-		"txt"
+		"txt",
+		"enaml"
 	]
 }

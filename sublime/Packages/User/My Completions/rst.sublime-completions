@@ -1,0 +1,10 @@
+{
+        "scope": "text.restructuredtext",
+
+        "completions":
+        [
+                // imports
+                { "trigger": "math", "contents": ".. math::\n\t:label: $1"}
+
+        ]
+}
