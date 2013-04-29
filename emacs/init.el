@@ -40,10 +40,13 @@
 (require 'multiple-cursors)
 
 ; Keyboard shortcuts for multiple-cursors. Maybe change to be like sublime (cmd + d)?
-(global-set-key (kbd "C->") 'mc/mark-next-like-this) 
+(global-unset-key (kbd "C-d"))
+(global-unset-key (kbd "C-S-l"))
+(global-set-key (kbd "C-d") 'mc/mark-next-like-this) 
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this) 
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this) 
-(global-set-key (kbd "C-S-c C-S-c") 'mc/edit-lines)
+(global-set-key (kbd "C-S-l") 'mc/edit-lines)
+
 
 ; Map command as control
 (setq mac-command-modifier 'control)
@@ -138,3 +141,7 @@
 (load-file "~/.emacs.d/python-setup.el")
 (load-file "~/.emacs.d/org-setup.el")
 (load-file "~/.emacs.d/tex-setup.el")
+
+; expand-region settings
+(require 'expand-region)
+(global-set-key (kbd "C-c C-d") 'er/expand-region)
