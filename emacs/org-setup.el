@@ -71,3 +71,4 @@
   (define-key org-mode-map (kbd "C-c (") 'org-mode-reftex-search))
 
 (add-hook 'org-mode-hook 'org-mode-reftex-setup)
+

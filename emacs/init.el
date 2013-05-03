@@ -136,6 +136,19 @@
                 (shell-command-history    . 50)
                 tags-file-name
                 register-alist)))
+;; Set up google talk with Jabber
+
+(setq jabber-username "spencerlyon2")
+  (setq jabber-password "ly0no409")
+  (setq jabber-nickname "spencer")
+  (setq jabber-connection-type (quote ssl))
+  (setq jabber-network-server "talk.google.com")
+  (setq jabber-server "gmail.com")
+
+(setq jabber-account-list
+    '(("spencerlyon2@gmail.com" 
+       (:network-server . "talk.google.com")
+       (:connection-type . ssl))))
 
 ; ;- - - - - - - - - - - - - - Mode-Specific Settings - - - - - - - - - - - - -;
 (load-file "~/.emacs.d/python-setup.el")
@@ -145,3 +158,5 @@
 ; expand-region settings
 (require 'expand-region)
 (global-set-key (kbd "C-c C-d") 'er/expand-region)
+
+

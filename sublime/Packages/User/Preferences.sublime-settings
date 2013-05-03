@@ -7,7 +7,7 @@
 	"draw_centered": false,
 	"draw_minimap_border": true,
 	"ensure_newline_at_eof_on_save": true,
-	"font_size": 11.,
+	"font_size": 11.0,
 	"highlight_line": true,
 	"highlight_modified_tabs": false,
 	"ignored_packages":
@@ -29,7 +29,7 @@
 	],
 	"save_on_focus_lost": false,
 	"scroll_past_end": true,
-	"spell_check": true,
+	"spell_check": false,
 	"theme": "Phoenix Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,

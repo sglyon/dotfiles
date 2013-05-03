@@ -6,7 +6,7 @@
 	"draw_indent_guides": true,
 
 	// Lighter color scheme. Part of the Aqua theme package installable via package control
-	// "color_scheme": "Packages/Theme - Aqua/Color Schemes/Espresso Aqua.tmTheme",
+	"color_scheme": "Packages/Theme - Aqua/Color Schemes/Espresso Aqua.tmTheme",
 
 	// Always end a file with a blank line
 	"ensure_newline_at_eof_on_save": true,

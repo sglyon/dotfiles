@@ -3,3 +3,7 @@
 *.cache
 *.zip
 *.pyc
+*/archive-contents
+
+archive-contents
+*.dat

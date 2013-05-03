@@ -3,9 +3,12 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+	org-beginning-of-line
 	))
 
 (setq mc/cmds-to-run-once
       '(
+	org-backward-sentence
+	org-self-insert-command
 	save-some-buffers
 	))
