@@ -24,7 +24,8 @@
  ;; If you edit it by hand, you could mess it up, so be careful.
  ;; Your init file should contain only one such instance.
  ;; If there is more than one, they won't work right.
- )
+ '(column-marker-1 ((t (:background "dark cyan"))))
+ '(column-marker-2 ((t (:background "red3")))))
 ;;
 
 ; Add marmalade to package control sources
@@ -42,11 +43,22 @@
 ; Keyboard shortcuts for multiple-cursors. Maybe change to be like sublime (cmd + d)?
 (global-unset-key (kbd "C-d"))
 (global-unset-key (kbd "C-S-l"))
-(global-set-key (kbd "C-d") 'mc/mark-next-like-this) 
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this) 
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this) 
+(global-set-key (kbd "C-d") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 (global-set-key (kbd "C-S-l") 'mc/edit-lines)
 
+; Clear whitespace on save
+(add-hook 'before-save-hook 'delete-trailing-whitespace)
+
+; Ensure new line at eof on save
+(setq require-final-newline 't)
+
+; Set column markers
+(require 'column-marker)
+(column-marker-1 72)
+(column-marker-2 79)
+(add-hook 'python-mode-hook (lambda () (interactive) (column-marker-1 72) (column-marker-2 79)))
 
 ; Map command as control
 (setq mac-command-modifier 'control)
@@ -59,6 +71,11 @@
 
 ; Disable scroll-bar
 (scroll-bar-mode -1)
+
+; Comment with C-S-/ (C-?)
+(global-set-key (kbd "C-?") 'comment-region)
+(global-set-key (kbd "M-?") 'uncomment-region)
+
 
 ; Set defualt directory
 (let ((default-directory "~/.emacs.d"))
@@ -136,8 +153,12 @@
                 (shell-command-history    . 50)
                 tags-file-name
                 register-alist)))
-;; Set up google talk with Jabber
 
+; expand-region settings
+(require 'expand-region)
+(global-set-key (kbd "C-c C-d") 'er/expand-region)
+
+;; Set up google talk with Jabber
 (setq jabber-username "spencerlyon2")
   (setq jabber-password "ly0no409")
   (setq jabber-nickname "spencer")
@@ -146,7 +167,7 @@
   (setq jabber-server "gmail.com")
 
 (setq jabber-account-list
-    '(("spencerlyon2@gmail.com" 
+    '(("spencerlyon2@gmail.com"
        (:network-server . "talk.google.com")
        (:connection-type . ssl))))
 
@@ -154,9 +175,3 @@
 (load-file "~/.emacs.d/python-setup.el")
 (load-file "~/.emacs.d/org-setup.el")
 (load-file "~/.emacs.d/tex-setup.el")
-
-; expand-region settings
-(require 'expand-region)
-(global-set-key (kbd "C-c C-d") 'er/expand-region)
-
-
