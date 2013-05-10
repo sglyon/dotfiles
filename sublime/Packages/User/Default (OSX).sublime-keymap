@@ -21,6 +21,9 @@
     { "keys": ["ctrl+shift+alt+r"], "command": "repl_transfer_current", "args": {"scope": "block"}},
     { "keys": ["ctrl+shift+alt+r", "r"], "command": "repl_transfer_current", "args": {"scope": "block", "action":"view_write"}},
 
+    // Macros
+    { "keys": ["super+alt+shift+-"], "command": "run_macro_file", "args": {"file": "Packages/User/MyMacros/rst_sub.sublime-macro"} },
+
     { "keys": ["j", "j"], "command": "exit_insert_mode",
         "context":
         [
