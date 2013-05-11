@@ -1,0 +1,22 @@
+{
+	"installed_packages":
+	[
+		"AdvancedNewFile",
+		"Gist",
+		"Git",
+		"GitGutter",
+		"MacTerminal",
+		"Package Control",
+		"PlainTasks",
+		"SFTP",
+		"SideBarEnhancements",
+		"SublimeLinter",
+		"SublimeREPL",
+		"SublimeRope",
+		"SublimeTODO",
+		"Table Editor",
+		"Theme - Aqua",
+		"Theme - Phoenix",
+		"Tomorrow Color Schemes"
+	]
+}
