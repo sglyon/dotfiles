@@ -1,0 +1,13 @@
+[
+    { "keys": ["ctrl+alt+t"], "command": "print_all_tags" },
+    { "keys": ["alt+ctrl+super+t"], "command": "log_all_tags" },
+    { "keys": ["super+shift+b"], "command": "build", "args": {"variant": "Run"} },
+
+    { "keys": ["j", "j"], "command": "exit_insert_mode",
+        "context":
+        [
+            { "key": "setting.command_mode", "operand": false },
+            { "key": "setting.is_widget", "operand": false }
+        ]
+}
+]
