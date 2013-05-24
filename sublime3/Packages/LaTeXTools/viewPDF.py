@@ -12,7 +12,7 @@ class ViewPdfCommand(sublime_plugin.WindowCommand):
 		s = sublime.load_settings("LaTeXTools Preferences.sublime-settings")
 		prefs_keep_focus = s.get("keep_focus", True)
 		prefs_lin = s.get("linux")
-		prefs_skim = s.get("use_skim", False)
+		prefs_skim = s.get("use_skim", True)
 		prefs_acro = s.get("use_acrobat", False)
 
 		view = self.window.active_view()
@@ -39,11 +39,11 @@ class ViewPdfCommand(sublime_plugin.WindowCommand):
 			else:
 				viewercmd = ["open", "-g", "-a", "Preview"]
 		elif s == "Windows":
-			# with new version of SumatraPDF, can set up Inverse 
+			# with new version of SumatraPDF, can set up Inverse
 			# Search in the GUI: under Settings|Options...
 			# Under "Set inverse search command-line", set:
 			# sublime_text "%f":%l
-			viewercmd = ["SumatraPDF", "-reuse-instance"]		
+			viewercmd = ["SumatraPDF", "-reuse-instance"]
 		elif s == "Linux":
 			# the required scripts are in the 'evince' subdir
 			script_path = os.path.join(sublime.packages_path(), 'LaTeXTools', 'evince')
@@ -54,11 +54,11 @@ class ViewPdfCommand(sublime_plugin.WindowCommand):
 			viewercmd = ['sh', ev_sync_exec, py_binary, sb_binary]
 		else:
 			sublime.error_message("Platform as yet unsupported. Sorry!")
-			return	
+			return
 		print(viewercmd + [pdfFile])
 		try:
 			Popen(viewercmd + [pdfFile], cwd=script_path)
 		except OSError:
 			sublime.error_message("Cannot launch Viewer. Make sure it is on your PATH.")
 
-			
+

@@ -13,6 +13,10 @@
 	[
 		"Dayle Rees Color Schemes"
 	],
+	"ignored_words":
+	[
+		"docstring"
+	],
 	"indent_to_bracket": true,
 	"phoenix_color_blue": true,
 	"phoenix_dirty_bottom_bar": true,
@@ -22,8 +26,7 @@
 	"phoenix_tabs_small": true,
 	"rulers":
 	[
-		72,
-		78
+		79
 	],
 	"save_on_focus_lost": false,
 	"scroll_past_end": true,

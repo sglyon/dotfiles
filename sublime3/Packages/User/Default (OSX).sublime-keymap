@@ -3,6 +3,12 @@
     { "keys": ["alt+ctrl+super+t"], "command": "log_all_tags" },
     { "keys": ["super+shift+b"], "command": "build", "args": {"variant": "Run"} },
 
+    // Macros
+    {
+        "keys": ["super+alt+shift+-"], "command": "run_macro_file", "args": {"file": "Packages/User/MyMacros/rst_sub.sublime-macro"},
+        "context": [{ "key": "selector", "operator": "equal", "operand": "text.restructuredtext"}]
+    },
+
     { "keys": ["j", "j"], "command": "exit_insert_mode",
         "context":
         [

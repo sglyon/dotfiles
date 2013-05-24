@@ -1,0 +1,50 @@
+{
+        "scope": "text.restructuredtext - source - meta.tag, punctuation.definition.tag.begin",
+
+        "completions":
+        [
+        { "trigger": "h1", "contents" : "${1/./*/g}\n${1}\n${1/./*/g}" },
+        { "trigger": "title, h2", "contents" : "${1}\n${1/./=/g}" },
+        { "trigger": "h3", "contents" : "${1}\n${1/./-/g}" },
+
+                { "trigger": "e", "contents": "*${1}*" },
+                { "trigger": "se", "contents": "**${1}**" },
+                { "trigger": "literal", "contents": "``${1}``" },
+
+                { "trigger": "list", "contents": "* ${1:text}\n* ${2}\n* ${3}" },
+                { "trigger": "listn", "contents": "1. ${1}\n2. ${2}\n3. ${3}" },
+                { "trigger": "listan", "contents": "#. ${1}\n#. ${2}\n#. ${3}" },
+
+                { "trigger": "def", "contents": "${1:term} : ${2:classifier}\n    ${3:definition}" },
+
+                { "trigger": "source", "contents": "::\n\n    ${1:text}" },
+        { "trigger": "code", "contents": ".. code-block:: ${1:language}\n\n    ${2:source}" },
+
+        { "trigger": "img", "contents": ".. image:: ${1:path}\n\n$0" },
+        { "trigger": "fig", "contents": ".. figure:: ${1:path}\n\n   ${2:caption}\n\n$0" },
+
+                { "trigger": "table", "contents": "${1/./=/g}\n${1:heading}\n${1/./=/g}\n${2:row}\n${3:row}\n${4:row}\n${1/./=/g}" },
+
+                { "trigger": "link", "contents": "${1:link_variable_name}_ $0\n\n.. _${1}: ${2:http://}"},
+                { "trigger": "linki", "contents": "`${1:link_variable_name} <${2:http://}>`_ $0"},
+        { "trigger": "fn", "contents": "[${2:#}]_ $0\n\n.. [${2}]: ${1:footnote}" },
+
+        { "trigger": "quote", "contents": ".. epigraph::\n\n   ${1:quote}\n\n   -- ${2:author}\n\n$0" },
+
+        // admonitions
+        { "trigger": "attention", "contents": ".. attention:: ${1:note}\n\n$0" },
+        { "trigger": "caution", "contents": ".. caution:: ${1:note}\n\n$0" },
+        { "trigger": "danger", "contents": ".. danger:: ${1:note}\n\n$0" },
+        { "trigger": "error", "contents": ".. error:: ${1:note}\n\n$0" },
+        { "trigger": "hint", "contents": ".. hint:: ${1:note}\n\n$0" },
+        { "trigger": "important", "contents": ".. important:: ${1:note}\n\n$0" },
+        { "trigger": "note", "contents": ".. note:: ${1:note}\n\n$0" },
+        { "trigger": "tip", "contents": ".. tip:: ${1:note}\n\n$0" },
+        { "trigger": "warning", "contents": ".. warning:: ${1:note}\n\n$0" },
+
+
+                // see http://docutils.sourceforge.net/docutils/parsers/rst/include/isoamsa.txt
+                { "trigger": "->", "contents": " |srarr| $0" },
+                { "trigger": "=>", "contents": " |xrArr| $0" }
+        ]
+}
