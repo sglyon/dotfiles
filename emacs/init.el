@@ -76,6 +76,11 @@
 (global-set-key (kbd "C-?") 'comment-region)
 (global-set-key (kbd "M-?") 'uncomment-region)
 
+; Switch header/implementation with C-c o
+(global-set-key (kbd "C-c o") 'ff-find-other-file)
+
+; always visually wrap lines
+(global-visual-line-mode 1)
 
 ; Set defualt directory
 (let ((default-directory "~/.emacs.d"))

@@ -51,6 +51,7 @@
             (add-to-list 'org-tab-first-hook 'yas/org-very-safe-expand)
             (define-key yas/keymap [tab] 'yas/next-field)))
 
+(setq org-log-done 'time)
 
 ;; ReFTeX setup
 (defun org-mode-reftex-setup ()
@@ -71,4 +72,3 @@
   (define-key org-mode-map (kbd "C-c (") 'org-mode-reftex-search))
 
 (add-hook 'org-mode-hook 'org-mode-reftex-setup)
-

@@ -9,6 +9,11 @@
         "context": [{ "key": "selector", "operator": "equal", "operand": "text.restructuredtext"}]
     },
 
+    {
+        "keys": ["super+alt+shift+="], "command": "run_macro_file", "args": {"file": "Packages/User/MyMacros/rst_sec.sublime-macro"},
+        "context": [{ "key": "selector", "operator": "equal", "operand": "text.restructuredtext"}]
+    },
+
     { "keys": ["j", "j"], "command": "exit_insert_mode",
         "context":
         [

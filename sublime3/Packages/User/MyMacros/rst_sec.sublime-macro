@@ -19,67 +19,18 @@
 		"command": "copy"
 	},
 	{
-		"args": null,
-		"command": "set_snake_right"
-	},
-	{
-		"args": null,
-		"command": "set_snake_up"
-	},
-	{
-		"args": null,
-		"command": "paste"
-	},
-	{
 		"args":
 		{
-			"extend": true,
-			"to": "bol"
+			"to": "eol"
 		},
 		"command": "move_to"
 	},
 	{
 		"args":
 		{
-			"character": "="
+			"characters": "\n"
 		},
-		"command": "replace_character"
-	},
-	{
-		"args":
-		{
-			"action_args": null,
-			"action_command": null,
-			"motion_args":
-			{
-				"by": "lines",
-				"extend": true,
-				"forward": true
-			},
-			"motion_clip_to_line": false,
-			"motion_command": "move",
-			"motion_inclusive": false,
-			"motion_mode": 0.0
-		},
-		"command": "vi_eval"
-	},
-	{
-		"args":
-		{
-			"action_args": null,
-			"action_command": null,
-			"motion_args":
-			{
-				"by": "lines",
-				"extend": true,
-				"forward": true
-			},
-			"motion_clip_to_line": false,
-			"motion_command": "move",
-			"motion_inclusive": false,
-			"motion_mode": 0.0
-		},
-		"command": "vi_eval"
+		"command": "insert"
 	},
 	{
 		"args": null,
