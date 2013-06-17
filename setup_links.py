@@ -46,3 +46,11 @@ try:
     symlink(this_dir + '/emacs/', emacs_dir)
 except OSError:
     print("Couldn't create symlink for emacs. Just skipping it")
+
+
+# Crete symlink for zshrc
+try:
+    call(['rm', home + '/.zshrc'])
+    symlink(this_dir + '/zsh/zshrc', home + '/.zshrc')
+except OSError:
+    print("Couldn't create symlink for zshrc. Just skipping it")
