@@ -1,0 +1,89 @@
+# Path to your oh-my-zsh configuration.
+ZSH=$HOME/.oh-my-zsh
+
+# Set name of the theme to load.
+# Look in ~/.oh-my-zsh/themes/
+# Optionally, if you set this to "random", it'll load a random theme each
+# time that oh-my-zsh is loaded.
+# ZSH_THEME="random"
+ZSH_THEME="miloshadzic"
+
+# Example aliases
+# alias zshconfig="mate ~/.zshrc"
+# alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Set to this to use case-sensitive completion
+# CASE_SENSITIVE="true"
+
+# Comment this out to disable bi-weekly auto-update checks
+# DISABLE_AUTO_UPDATE="true"
+
+# Uncomment to change how often before auto-updates occur? (in days)
+# export UPDATE_ZSH_DAYS=13
+
+# Uncomment following line if you want to disable colors in ls
+# DISABLE_LS_COLORS="true"
+
+# Uncomment following line if you want to disable autosetting terminal title.
+# DISABLE_AUTO_TITLE="true"
+
+# Uncomment following line if you want to disable command autocorrection
+# DISABLE_CORRECTION="true"
+
+# Uncomment following line if you want red dots to be displayed while waiting for completion
+# COMPLETION_WAITING_DOTS="true"
+
+# Uncomment following line if you want to disable marking untracked files under
+# VCS as dirty. This makes repository status check for large repositories much,
+# much faster.
+# DISABLE_UNTRACKED_FILES_DIRTY="true"
+
+# Which plugins would you like to load? (plugins can be found in ~/.oh-my-zsh/plugins/*)
+# Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
+# Example format: plugins=(rails git textmate ruby lighthouse)
+plugins=(git)
+
+source $ZSH/oh-my-zsh.sh
+
+# Customize to your needs...
+export PATH=$PATH:/Users/spencerlyon2/.rvm/gems/ruby-1.9.3-p362/bin:/Users/spencerlyon2/.rvm/gems/ruby-1.9.3-p362@global/bin:/Users/spencerlyon2/.rvm/rubies/ruby-1.9.3-p362/bin:/Users/spencerlyon2/.rvm/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/texbin:/Users/spencerlyon2/.src/Python/nbconvert:/Users/spencerlyon2/anaconda/bin:/Users/spencerlyon2/Library/Enthought/Canopy_64bit/User/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin:/Users/spencerlyon2/.rvm/bin
+
+PATH="/Users/spencerlyon2/Library/Enthought/Canopy_64bit/User/bin:${PATH}"
+export PATH
+
+# Prepend anaconda to the path ahead of Enthought
+# PATH="/Users/spencerlyon2/anaconda/bin:${PATH}"
+# export PATH
+
+# PATH="/Users/spencerlyon2/.src/Python/nbconvert:${PATH}"
+# export PATH
+
+PATH="/usr/texbin:${PATH}"
+
+export CLICOLOR=1
+export LSCOLORS=ExFxCxDxBxegedabagacad
+export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
+
+export PATH="/usr/local/bin:${PATH}"
+
+# MacPorts Installer addition on 2012-09-01_at_22:49:40: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+
+
+
+# MacPorts Installer addition on 2012-10-13_at_20:48:47: adding an appropriate PATH variable for use with MacPorts.
+export PATH=/opt/local/bin:/opt/local/sbin:$PATH
+# Finished adapting your PATH environment variable for use with MacPorts.
+export TMP=/private/tmp
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+
+# My settings
+alias grep='grep --color=auto'
+alias egrep='egrep --color=auto'
+alias matlab='matlab -nodesktop -nosplash'
+
+export CC=/usr/bin/gcc
+export CXX=/usr/bin/gcc
