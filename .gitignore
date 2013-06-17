@@ -7,5 +7,9 @@
 
 sublime/Packages/User/FileHistory.sublime-settings
 
+*~
+[#]*[#]
+.\#*
+
 archive-contents
 *.dat
