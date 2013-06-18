@@ -4,8 +4,9 @@
 
 
 ;;;### (autoloads (yas/minor-mode yas/root-directory) "yasnippet-bundle"
-;;;;;;  "yasnippet-bundle.el" (20766 39619))
-;;; Generated autoloads from yasnippet-bundle.el
+;;;;;;  "../../../../.emacs.d/elpa/yasnippet-bundle-0.6.1/yasnippet-bundle.el"
+;;;;;;  "e664ba2852f0f694b5dadb69a017eda9")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/yasnippet-bundle-0.6.1/yasnippet-bundle.el
 
 (defvar yas/root-directory nil "\
 Root directory that stores the snippets for each major mode.
@@ -38,8 +39,9 @@ Key bindings:
 
 ;;;***
 
-;;;### (autoloads nil nil ("yasnippet-bundle-pkg.el") (20766 39619
-;;;;;;  917233))
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/yasnippet-bundle-0.6.1/yasnippet-bundle-pkg.el"
+;;;;;;  "../../../../.emacs.d/elpa/yasnippet-bundle-0.6.1/yasnippet-bundle.el")
+;;;;;;  (20928 33091 427395))
 
 ;;;***
 

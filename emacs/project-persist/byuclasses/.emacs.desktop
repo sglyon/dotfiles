@@ -1,0 +1,51 @@
+;; -*- mode: emacs-lisp; coding: emacs-mule; -*-
+;; --------------------------------------------------------------------------
+;; Desktop File for Emacs
+;; --------------------------------------------------------------------------
+;; Created Tue Jun 18 10:02:04 2013
+;; Desktop file format version 206
+;; Emacs version 24.2.1
+
+;; Global section:
+(setq desktop-missing-file-warning nil)
+(setq tags-file-name nil)
+(setq tags-table-list nil)
+(setq search-ring nil)
+(setq regexp-search-ring nil)
+(setq register-alist (list (list 213465889 "Unprintable entity" (let ((mk (make-marker))) (add-hook 'desktop-delay-hook (list 'lambda '() (list 'set-marker mk 1 (get-buffer "*IPython*")))) mk))))
+(setq file-name-history nil)
+
+;; Buffer section -- buffers listed in same order as in buffer list:
+(desktop-create-buffer 206
+  "/Users/spencerlyon2/School/BYU/byuclasses/Physics/P441/Homework/HW7/hw_7.tex"
+  "hw_7.tex"
+  'latex-mode
+  '(visual-line-mode global-visual-line-mode yas/minor-mode global-auto-revert-mode project-persist-mode reftex-mode)
+  401
+  '(694 nil)
+  nil
+  nil
+  '((indent-tabs-mode) (buffer-file-coding-system . undecided-unix) (truncate-lines)))
+
+(desktop-create-buffer 206
+  nil
+  "*info*"
+  'Info-mode
+  '(visual-line-mode global-visual-line-mode global-auto-revert-mode project-persist-mode)
+  49419
+  '(49392 nil)
+  t
+  '("/Users/spencerlyon2/.emacs.d/elpa/auctex-11.86/auctex" "Quick Start" ((history ("/Users/spencerlyon2/.emacs.d/elpa/auctex-11.86/auctex" "Top" 3637) ("/Users/spencerlyon2/.emacs.d/elpa/auctex-11.86/auctex" "Processing" 126110) ("/Users/spencerlyon2/.emacs.d/elpa/auctex-11.86/auctex" "Commands" 126553) ("/Users/spencerlyon2/.emacs.d/elpa/auctex-11.86/auctex" "Processing" 126108) ("/Users/spencerlyon2/.emacs.d/elpa/auctex-11.86/auctex" "Top" 3228) ("dir" "Top" 551))))
+  '((tab-width . 8) (buffer-file-coding-system . undecided-unix) (case-fold-search . t) (truncate-lines)))
+
+(desktop-create-buffer 206
+  nil
+  " *info-browse-tmp*"
+  'Info-mode
+  '(visual-line-mode global-visual-line-mode global-auto-revert-mode project-persist-mode)
+  4866
+  '(nil nil)
+  t
+  '("dir" "Top" ((history ("dir" "Top" 4866) ("dir" "Top" 4866) ("dir" "Top" 4866) ("dir" "Top" 4866))))
+  '((tab-width . 8) (case-fold-search . t) (truncate-lines)))
+

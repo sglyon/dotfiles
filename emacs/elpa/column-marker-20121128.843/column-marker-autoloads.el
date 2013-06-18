@@ -3,15 +3,18 @@
 ;;; Code:
 
 
-;;;### (autoloads nil "column-marker" "column-marker.el" (20868 45))
-;;; Generated autoloads from column-marker.el
+;;;### (autoloads nil "column-marker" "../../../../.emacs.d/elpa/column-marker-20121128.843/column-marker.el"
+;;;;;;  "fcaff8a24b7c18ecdee7e7d5e0d84572")
+;;; Generated autoloads from ../../../../.emacs.d/elpa/column-marker-20121128.843/column-marker.el
 
 (autoload 'column-marker-1 "column-marker" "\
 Highlight a column." t)
 
 ;;;***
 
-;;;### (autoloads nil nil ("column-marker-pkg.el") (20868 45 819813))
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/column-marker-20121128.843/column-marker-pkg.el"
+;;;;;;  "../../../../.emacs.d/elpa/column-marker-20121128.843/column-marker.el")
+;;;;;;  (20928 33223 469148))
 
 ;;;***
 

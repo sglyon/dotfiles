@@ -3,8 +3,9 @@
 ;;; Code:
 
 
-;;;### (autoloads nil nil ("python-mode-pkg.el" "python-mode.el")
-;;;;;;  (20766 38764 331413))
+;;;### (autoloads nil nil ("../../../../.emacs.d/elpa/python-mode-6.0.10/python-mode-pkg.el"
+;;;;;;  "../../../../.emacs.d/elpa/python-mode-6.0.10/python-mode.el")
+;;;;;;  (20928 32730 4092))
 
 ;;;***
 
