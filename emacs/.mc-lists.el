@@ -3,11 +3,13 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+	mouse-buffer-menu
 	org-beginning-of-line
 	))
 
 (setq mc/cmds-to-run-once
       '(
+	mouse-set-region
 	org-backward-sentence
 	org-self-insert-command
 	save-some-buffers

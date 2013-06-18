@@ -1,0 +1,1 @@
+("/Users/spencerlyon2/dotfiles/" "/Users/spencerlyon2/Documents/Python/Open_Source/xdress/" "/Users/spencerlyon2/Documents/Python/hbs/")

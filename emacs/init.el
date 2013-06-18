@@ -151,6 +151,23 @@
 ;        (:network-server . "talk.google.com")
 ;        (:connection-type . ssl))))
 
+;; load helm
+; (require 'helm-config)
+
+;; Projectile settings
+; (projectile-global-mode)
+; (setq projectile-use-native-indexing t)
+; (setq projectile-enable-caching t)
+
+;; project-persist settings
+; (require 'project-persist)
+; (require 'sr-speedbar)
+; (project-persist-mode t)
+
+;; linum-global mode
+; (require 'linum-relative)
+; (global-linum-mode)
+
 ; ;- - - - - - - - - - - - - - Mode-Specific Settings - - - - - - - - - - - - -;
 (load-file "~/.emacs.d/python-setup.el")
 (load-file "~/.emacs.d/org-setup.el")
