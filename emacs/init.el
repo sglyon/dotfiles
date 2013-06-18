@@ -168,6 +168,11 @@
 ; (require 'linum-relative)
 ; (global-linum-mode)
 
+;; git settings
+
+(global-set-key (kbd "M-g M-s")  `magit-status)
+
+
 ; ;- - - - - - - - - - - - - - Mode-Specific Settings - - - - - - - - - - - - -;
 (load-file "~/.emacs.d/python-setup.el")
 (load-file "~/.emacs.d/org-setup.el")
