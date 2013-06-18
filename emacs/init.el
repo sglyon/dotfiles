@@ -11,7 +11,6 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (tomorrow-night)))
  '(custom-safe-themes (quote ("6dfcb4de19630ea3676c256ca3c648b43524364898d1b94adca536b10344fefd" default)))
- '(org-agenda-files (quote ("~/Dropbox/org/research/yield_curve.org" "~/Dropbox/org/research/sargent.org")))
  '(org-directory "~/Dropbox/org")
  '(py-shell-local-path "~/anaconda/bin/ipython")
  '(py-shell-name "~/anaconda/bin/ipython")
@@ -135,48 +134,38 @@
 (global-set-key [M-up] 'windmove-up)              ; move to upper window
 (global-set-key [M-down] 'windmove-down)          ; move to downer window
 
-;;; Desktop mode settings
-; save a list of open files in ~/.emacs.desktop
-; save the desktop file automatically if it already exists
-(require 'desktop)
-(setq desktop-save 'if-exists)
-(desktop-save-mode 1)
-
-; save a bunch of variables to the desktop file
-; for lists specify the len of the maximal saved data also
-(setq desktop-globals-to-save
-      (append '((extended-command-history . 30)
-                (file-name-history        . 100)
-                (grep-history             . 30)
-                (compile-history          . 30)
-                (minibuffer-history       . 50)
-                (query-replace-history    . 60)
-                (read-expression-history  . 60)
-                (regexp-history           . 60)
-                (regexp-search-ring       . 20)
-                (search-ring              . 20)
-                (shell-command-history    . 50)
-                tags-file-name
-                register-alist)))
-
 ; expand-region settings
 (require 'expand-region)
 (global-set-key (kbd "C-c C-d") 'er/expand-region)
 
-;; Set up google talk with Jabber
-(setq jabber-username "spencerlyon2")
-  (setq jabber-password "ly0no409")
-  (setq jabber-nickname "spencer")
-  (setq jabber-connection-type (quote ssl))
-  (setq jabber-network-server "talk.google.com")
-  (setq jabber-server "gmail.com")
+; ;; Set up google talk with Jabber
+; (setq jabber-username "spencerlyon2")
+;   (setq jabber-password "ly0no409")
+;   (setq jabber-nickname "spencer")
+;   (setq jabber-connection-type (quote ssl))
+;   (setq jabber-network-server "talk.google.com")
+;   (setq jabber-server "gmail.com")
 
-(setq jabber-account-list
-    '(("spencerlyon2@gmail.com"
-       (:network-server . "talk.google.com")
-       (:connection-type . ssl))))
+; (setq jabber-account-list
+;     '(("spencerlyon2@gmail.com"
+;        (:network-server . "talk.google.com")
+;        (:connection-type . ssl))))
 
 ; ;- - - - - - - - - - - - - - Mode-Specific Settings - - - - - - - - - - - - -;
 (load-file "~/.emacs.d/python-setup.el")
 (load-file "~/.emacs.d/org-setup.el")
 (load-file "~/.emacs.d/tex-setup.el")
+
+
+; ;- - - - - - - - - - - - - - - - - el-get settings - - - - - - - - - - - - -;
+(add-to-list 'load-path "~/.emacs.d/el-get/el-get")
+
+(unless (require 'el-get nil 'noerror)
+  (with-current-buffer
+      (url-retrieve-synchronously
+       "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
+    (goto-char (point-max))
+    (eval-print-last-sexp)))
+
+(add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
+(el-get 'sync)

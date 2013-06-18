@@ -4,6 +4,8 @@
 ; (setq py-install-directory "~/.emacs.d/plugins/python-mode.el-6.1.0/")
 (require 'python-mode)
 
+(setq py-load-pymacs-p nil)
+
 ; use IPython
 (setq py-shell-name "~/anaconda/bin/ipython")  ; if problem set full path
 (setq-default py-which-bufname "IPython")
@@ -33,7 +35,7 @@
 
 (setq ipython-completion-command-string "print(';'.join(get_ipython().Completer.complete('%s')[1])) #PYTHON-MODE SILENT\n")
 
-; Pymacs
+; ; Pymacs
 ; (autoload 'pymacs-apply "pymacs")
 ; (autoload 'pymacs-call "pymacs")
 ; (autoload 'pymacs-eval "pymacs" nil t)
@@ -45,6 +47,10 @@
 ; ; ropemacs
 ; (require 'pymacs)
 ; (pymacs-load "ropemacs" "rope-")
+
+; jedi setup
+; (add-hook 'python-mode-hook 'jedi:setup)
+; (setq jedi:complete-on-dot t)
 
 
 (provide 'python-setup)
