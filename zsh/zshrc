@@ -48,12 +48,15 @@ source $ZSH/oh-my-zsh.sh
 # Customize to your needs...
 export PATH=$PATH:/Users/spencerlyon2/.rvm/gems/ruby-1.9.3-p362/bin:/Users/spencerlyon2/.rvm/gems/ruby-1.9.3-p362@global/bin:/Users/spencerlyon2/.rvm/rubies/ruby-1.9.3-p362/bin:/Users/spencerlyon2/.rvm/bin:/opt/local/bin:/opt/local/sbin:/opt/local/bin:/opt/local/sbin:/usr/texbin:/Users/spencerlyon2/.src/Python/nbconvert:/Users/spencerlyon2/anaconda/bin:/Users/spencerlyon2/Library/Enthought/Canopy_64bit/User/bin:/usr/bin:/bin:/usr/sbin:/sbin:/usr/local/bin:/opt/X11/bin:/usr/texbin:/Users/spencerlyon2/.rvm/bin
 
-PATH="/Users/spencerlyon2/Library/Enthought/Canopy_64bit/User/bin:${PATH}"
-export PATH
+# PATH="/Users/spencerlyon2/Library/Enthought/Canopy_64bit/User/bin:${PATH}"
+# export PATH
 
 # Prepend anaconda to the path ahead of Enthought
-# PATH="/Users/spencerlyon2/anaconda/bin:${PATH}"
-# export PATH
+PATH="/Users/spencerlyon2/anaconda/envs/python3/bin:${PATH}"
+export PATH
+
+PATH="/Users/spencerlyon2/anaconda/bin:${PATH}"
+export PATH
 
 # PATH="/Users/spencerlyon2/.src/Python/nbconvert:${PATH}"
 # export PATH
