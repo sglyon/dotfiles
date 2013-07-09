@@ -39,11 +39,11 @@ if my_os == 'OSX':
     except OSError:
         print("You didn't have homebrew installed. I will do that now")
         hb = 'ruby -e "$(curl -fsSL https://raw.github.com/mxcl/homebrew/go)"'
-        call(hb.split(' '))
+        call(hb)
 
         # Install brew-cask
         call("brew tap phinze/homebrew-cask")
-        call("$ brew install brew-cask")
+        call("brew install brew-cask")
 
     # Install certain casks
     want_to_install = "Would you like to install "

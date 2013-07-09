@@ -1,4 +1,4 @@
-from subprocess import call as _call
+    from subprocess import call as _call
 import os
 import sys
 
@@ -10,24 +10,39 @@ def call(call_str):
     _call(call_str.split(' '))
 
 home = os.path.expanduser('~')
-os.makedirs(home + '/Python/Open_Source')
-os.makedirs(home + '/Python/Sites')
-os.makedirs(home + '/School/BYU')
-os.makedirs(home + '/School/NYU')
-os.makedirs(home + '/Research')
+try:
+    os.makedirs(home + '/Python/Open_Source')
+except OSError:
+    pass
+try:
+    os.makedirs(home + '/Python/Sites')
+except OSError:
+    pass
+try:
+    os.makedirs(home + '/School/BYU')
+except OSError:
+    pass
+try:
+    os.makedirs(home + '/School/NYU')
+except OSError:
+    pass
+try:
+    os.makedirs(home + '/Research')
+except OSError:
+    pass
 
 # Check for ssh keys
-print('I am going to check for ssh keys. If I find them, I am going to' +
-      '\nassume that you have put them up on github.')
-try:
-    os.chdir('~/.ssh')
-except OSError:
-    print("I couldn't move to ssh directory. You need to make a key")
-    print("Follow the instructions on the website I am opening for you")
-    import webbrowser as web
-    web.open('https://help.github.com/articles/generating-ssh-keys')
-    print('When you are done, run me again')
-    sys.exit()
+# print('I am going to check for ssh keys. If I find them, I am going to' +
+#       '\nassume that you have put them up on github.')
+# try:
+#     os.chdir('~/.ssh')
+# except OSError:
+#     print("I couldn't move to ssh directory. You need to make a key")
+#     print("Follow the instructions on the website I am opening for you")
+#     import webbrowser as web
+#     web.open('https://help.github.com/articles/generating-ssh-keys')
+#     print('When you are done, run me again')
+#     sys.exit()
 
 # clone open-source projects
 python_OpenSource = ['git@github.com:spencerlyon2/xdress.git',
@@ -37,7 +52,7 @@ python_OpenSource = ['git@github.com:spencerlyon2/xdress.git',
 for repo in python_OpenSource:
     folder_name = repo.split('/')[-1][:-4]
     repo_dir = home + '/Python/Open_Source/%s' % (folder_name)
-    call('git clone repo "%s"' % repo_dir)
+    call('git clone %s "%s"' % (repo, repo_dir))
 
 # Clone Personal things
 call('git clone git@github.com:spencerlyon2/dotfiles.git' +
