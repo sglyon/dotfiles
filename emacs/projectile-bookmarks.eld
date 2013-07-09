@@ -1,1 +1,1 @@
-("/Users/spencerlyon2/dotfiles/" "/Users/spencerlyon2/Documents/Python/Open_Source/xdress/" "/Users/spencerlyon2/Documents/Python/hbs/")
+("/Users/sglyon/School/NYU/NYUclasses/" "/Users/sglyon/Dropbox/org/" "/Users/spencerlyon2/dotfiles/" "/Users/spencerlyon2/Documents/Python/Open_Source/xdress/" "/Users/spencerlyon2/Documents/Python/hbs/")

@@ -11,6 +11,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (tomorrow-night)))
  '(custom-safe-themes (quote ("6dfcb4de19630ea3676c256ca3c648b43524364898d1b94adca536b10344fefd" default)))
+ '(org-agenda-files (quote ("~/Dropbox/org/refile.org" "~/School/NYU/NYUclasses/Sargent/sargent.org")))
  '(org-directory "~/Dropbox/org")
  '(py-shell-local-path "~/anaconda/bin/ipython")
  '(py-shell-name "~/anaconda/bin/ipython")
@@ -88,7 +89,7 @@
 ;; (add-to-list 'load-path "~/.emacs.d/elpa")
 
 ; Set font size in units of x/10 so :height 100 = 10 pt.
-(set-face-attribute 'default nil :height 110)
+(set-face-attribute 'default nil :height 100)
 
 ; Set cursor color and font lock
 (set-cursor-color "#6785c5")

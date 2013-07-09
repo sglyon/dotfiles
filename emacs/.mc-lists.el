@@ -5,6 +5,7 @@
       '(
 	mouse-buffer-menu
 	org-beginning-of-line
+	org-dblock-update
 	))
 
 (setq mc/cmds-to-run-once
