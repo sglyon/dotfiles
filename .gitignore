@@ -7,6 +7,10 @@
 
 sublime/Packages/User/FileHistory.sublime-settings
 
+/emacs/org-clock-save.el
+
+*.DS_Store
+
 *~
 [#]*[#]
 .\#*
