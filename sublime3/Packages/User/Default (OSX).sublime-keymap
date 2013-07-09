@@ -2,6 +2,7 @@
     { "keys": ["ctrl+alt+t"], "command": "print_all_tags" },
     { "keys": ["alt+ctrl+super+t"], "command": "log_all_tags" },
     { "keys": ["super+shift+b"], "command": "build", "args": {"variant": "Run"} },
+    { "keys": ["super+g", "super+s"], "command": "git_status"},
 
     // Macros
     {

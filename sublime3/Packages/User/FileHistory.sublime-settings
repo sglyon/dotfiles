@@ -1,14 +1,15 @@
 {
 	"closed":
 	[
-		"/Users/spencerlyon2/Library/Application Support/Sublime Text 3/Packages/User/Base File.sublime-settings",
-		"/Users/spencerlyon2/Library/Application Support/Sublime Text 3/Packages/orgmode/orgmode.sublime-settings"
+		"/Users/sglyon/dotfiles/sublime3/Packages/orgmode/Default.sublime-commands",
+		"/Users/sglyon/Library/Application Support/Sublime Text 3/Packages/orgmode/README.org"
 	],
 	"opened":
 	[
-		"/Users/spencerlyon2/Research/HBS/hbs/swig/notes.org",
-		"/Users/spencerlyon2/Research/HBS/Capstone/swig.org",
-		"/Users/spencerlyon2/Research/HBS/bem/include/Eigen/OrderingMethods",
-		"/Users/spencerlyon2/Research/HBS/bem/include/Output.h"
+		"/Users/sglyon/dotfiles/sublime3/Packages/orgmode/orgmode.sublime-settings",
+		"/Users/sglyon/dotfiles/sublime3/Packages/orgmode/Default.sublime-keymap",
+		"/Users/sglyon/dotfiles/sublime3/Packages/orgmode/README.org",
+		"/Users/sglyon/dotfiles/sublime3/Packages/orgmode/README.md",
+		"/Users/sglyon/School/NYU/NYUclasses/Sargent/sargent.org"
 	]
 }
