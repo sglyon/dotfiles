@@ -9,7 +9,7 @@
  (position . 729))
 ("org-capture-last-stored"
  (filename . "~/Dropbox/org/refile.org")
- (front-context-string . "* Should be a no")
- (rear-context-string . "ex-parse-all)]]\n")
- (position . 897))
+ (front-context-string . "* TODO Add test ")
+ (rear-context-string . "ETAGS: :REFILE:\n")
+ (position . 22))
 )
