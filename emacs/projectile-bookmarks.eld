@@ -1,1 +1,1 @@
-("/Users/sglyon/School/NYU/NYUclasses/" "/Users/sglyon/Dropbox/org/" "/Users/spencerlyon2/dotfiles/" "/Users/spencerlyon2/Documents/Python/Open_Source/xdress/" "/Users/spencerlyon2/Documents/Python/hbs/")
+("/Users/sglyon/School/BYU/capstone/" "/Users/sglyon/Dropbox/org/" "/Users/sglyon/School/BYU/byuclasses/" "/Users/sglyon/dotfiles/" "/Users/sglyon/School/NYU/NYUclasses/" "/Users/sglyon/Python/hbs/" "/Users/sglyon/Downloads/pycse/" "/Users/sglyon/Downloads/v46i03-replication/")

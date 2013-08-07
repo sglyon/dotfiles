@@ -11,7 +11,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (tomorrow-night)))
  '(custom-safe-themes (quote ("6dfcb4de19630ea3676c256ca3c648b43524364898d1b94adca536b10344fefd" default)))
- '(org-agenda-files (quote ("~/Dropbox/org/xdress.org" "~/Dropbox/org/school.org" "~/Dropbox/org/refile.org" "~/School/NYU/NYUclasses/Sargent/sargent.org")))
+ '(org-agenda-files (quote ("~/Dropbox/org/personal.org" "~/Dropbox/org/xdress.org" "~/Dropbox/org/school.org" "~/Dropbox/org/refile.org" "~/School/NYU/NYUclasses/Sargent/sargent.org")))
  '(org-directory "~/Dropbox/org")
  '(py-shell-local-path "~/anaconda/bin/ipython")
  '(py-shell-name "~/anaconda/bin/ipython")
@@ -173,12 +173,27 @@
 
 (global-set-key (kbd "M-g M-s")  `magit-status)
 
+;; New shutdown function that calls org-mobile-push automatically
+(defun intelligent-close ()
+  (interactive)
+  (org-mobile-push) ;; <== MOBILE ==
+  (if (eq (car (visible-frame-list)) (selected-frame))
+      (if (> (length (visible-frame-list)) 1)
+          (delete-frame (selected-frame))
+        (save-buffers-kill-emacs))
+    (delete-frame (selected-frame)))
+)
+(global-set-key (kbd "C-x C-c") 'intelligent-close)
+
 
 ; ;- - - - - - - - - - - - - - Mode-Specific Settings - - - - - - - - - - - - -;
 (load-file "~/.emacs.d/python-setup.el")
 (load-file "~/.emacs.d/org-setup.el")
 (load-file "~/.emacs.d/tex-setup.el")
 
+(projectile-global-mode)
+
+(find-file "~/Dropbox/org/refile.org")
 
 ; ;- - - - - - - - - - - - - - - - - el-get settings - - - - - - - - - - - - -;
 ; (add-to-list 'load-path "~/.emacs.d/el-get/el-get")

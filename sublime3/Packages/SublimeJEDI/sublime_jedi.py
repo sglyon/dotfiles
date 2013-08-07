@@ -1,24 +1,22 @@
 # -*- coding: utf-8 -*-
-from __future__ import print_function
-
 import os
 import sys
 import functools
 from uuid import uuid1
 from collections import defaultdict
 
-import sublime
-import sublime_plugin
-
 try:
+    from console_logging import getLogger
     from utils import start_daemon, is_python_scope
 except ImportError:
     from .utils import start_daemon, is_python_scope
+    from .console_logging import getLogger
 
+import sublime
+import sublime_plugin
+
+logger = getLogger(__name__)
 PY3 = sys.version_info[0] == 3
-#import pprint
-#jedi.set_debug_function(lambda level, *x: pprint.pprint((repr(level), x)))
-
 DAEMONS = defaultdict(dict)  # per window
 
 
@@ -38,6 +36,8 @@ def get_plugin_settings():
 
 
 def ask_daemon(view, callback, ask_type, location=None):
+    logger.info('JEDI ask daemon for "{0}"'.format(ask_type))
+
     window_id = view.window().id()
     if window_id not in DAEMONS:
         # there is no api to get current project's name
@@ -101,6 +101,11 @@ class SublimeJediParamsAutocomplete(sublime_plugin.TextCommand):
 
         ask_daemon(self.view, self.show_template, 'funcargs', self.view.sel()[0].end())
 
+    @property
+    def auth_match_enabled(self):
+        """ check if sublime closes parenthesis automaticly """
+        return self.view.settings().get('auto_match_enabled', True)
+
     def _insert_characters(self, edit, characters):
         """
         Insert autocomplete character with closed pair
@@ -111,8 +116,15 @@ class SublimeJediParamsAutocomplete(sublime_plugin.TextCommand):
         """
         regions = [a for a in self.view.sel()]
         self.view.sel().clear()
+
+        # set close parenthesis if sublime setting enabled
+        if self.auth_match_enabled:
+            pair = characters + ')'
+        else:
+            pair = characters
+
         for region in reversed(regions):
-            self.view.insert(edit, region.end(), characters + ')')
+            self.view.insert(edit, region.end(), pair)
             position = region.end() + len(characters)
             self.view.sel().add(sublime.Region(position, position))
 
@@ -143,7 +155,15 @@ class Autocomplete(sublime_plugin.EventListener):
 
             :return: list
         """
+        logger.info('JEDI completion triggered')
+
         if self.cplns_ready:
+            logger.debug(
+                'JEDI has completion in daemon response {0}'.format(
+                    self.completions
+                )
+            )
+
             self.cplns_ready = None
             if self.completions:
                 cplns, self.completions = self.completions, []
@@ -152,6 +172,7 @@ class Autocomplete(sublime_plugin.EventListener):
 
         # nothing to do with non-python code
         if not is_python_scope(view, locations[0]):
+            logger.debug('JEDI does not complete in strings')
             return
 
         # get completions list
@@ -171,7 +192,7 @@ class Autocomplete(sublime_plugin.EventListener):
     def show(self, view):
         view.run_command("auto_complete", {
             'disable_auto_insert': True,
-            'api_completions_only': True,
+            'api_completions_only': False,
             'next_completion_if_showing': False,
             'auto_complete_commit_on_tab': True,
         })

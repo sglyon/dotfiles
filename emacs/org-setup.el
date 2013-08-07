@@ -1,7 +1,47 @@
 ;; My org-mode setup
 (setq org-directory "~/Dropbox/org/")
 (setq org-default-notes-file (concat org-directory "refile.org"))
+
+(setq load-path (cons "~/.src/Emacs/org-mode/lisp" load-path))
+(setq load-path (cons "~/.src/Emacs/org-mode/contrib/lisp" load-path))
+(require 'org-install)
+
+;;--------------- habit tracking
 (require 'org-habit)
+; Enable habit tracking (and a bunch of other modules)
+(setq org-modules (quote (org-bbdb
+                          org-bibtex
+                          org-crypt
+                          org-gnus
+                          org-id
+                          org-info
+                          org-jsinfo
+                          org-habit
+                          org-inlinetask
+                          org-irc
+                          org-mew
+                          org-mhe
+                          org-protocol
+                          org-rmail
+                          org-vm
+                          org-wl
+                          org-w3m)))
+
+; position the habit graph on the agenda to the right of the default
+(setq org-habit-graph-column 50)
+
+; Turn habit graph on every morning
+(run-at-time "06:00" 86400 '(lambda () (setq org-habit-show-habits t)))
+
+;;----------------- MobileOrg setup
+
+;; Set to the location of your Org files on your local system
+(setq org-directory "~/Dropbox/org")
+;; Set to the name of the file where new notes will be stored
+(setq org-mobile-inbox-for-pull "~/Dropbox/org/flagged.org")
+;; Set to <your Dropbox root directory>/MobileOrg.
+(setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
+(setq org-mobile-inbox-for-pull "~/Dropbox/org/refile.org")
 
 ;;----------------- Helper functions
 (defun bh/is-project-p ()
@@ -30,6 +70,17 @@ Callers of this function already widen the buffer view."
       (if (equal (point) task)
           nil
         t))))
+
+(defun bh/find-project-task ()
+  "Move point to the parent (project) task if any"
+  (save-restriction
+    (widen)
+    (let ((parent-task (save-excursion (org-back-to-heading 'invisible-ok) (point))))
+      (while (org-up-heading-safe)
+        (when (member (nth 2 (org-heading-components)) org-todo-keywords-1)
+          (setq parent-task (point))))
+      (goto-char parent-task)
+      parent-task)))
 
 (defun bh/is-task-p ()
   "Any task with a todo keyword and no subtask"
@@ -322,7 +373,7 @@ When not restricted, skip project and sub-project tasks, habits, and project rel
       (quote (("t" "todo" entry (file "~/Dropbox/org/refile.org")
                "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
 	      ("o" "Open Source TODO" entry (file "~/Dropbox/org/refile.org")
-	       "* TODO %? :OSDEV: \n%U\n%a\n" :clock-in t :clock-resume t)
+	       "* TODO %? :DEV: \n%U\n%a\n" :clock-in t :clock-resume t)
 	      ("c" "Classes" entry (file "~/Dropbox/org/school.org")
 	       "* TODO %? :SCHOOL: \n%U\n%a\n" :clock-in t :clock-resume t)
 	      ("f" "Family" entry (file "~/Dropbox/org/refile.org")
@@ -492,6 +543,13 @@ When not restricted, skip project and sub-project tasks, habits, and project rel
 
 
 ;;------------ My own settings
+(org-mobile-push)
+(org-mobile-pull)
 
 ; (setq org-M-RET-may-split-line 0)
+
+; org-sync settings
+(add-to-list 'load-path "~/.src/Emacs/org-sync")
+(mapc 'load
+      '("org-element" "os" "os-bb" "os-github" "os-rmine"))
 (provide 'org-setup)

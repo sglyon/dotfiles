@@ -511,6 +511,8 @@ class ReplManager(object):
             "packages": sublime.packages_path(),
             "installed_packages": sublime.installed_packages_path()
         }
+        if window.folders():
+            res["folder"] = window.folders()[0]
         res["editor"] = "subl -w"
         res["win_cmd_encoding"] = "utf8"
         if sublime.platform() == "windows":
@@ -526,20 +528,12 @@ class ReplManager(object):
         res["file"] = filename
         res["file_path"] = os.path.dirname(filename)
         res["file_basename"] = os.path.basename(filename)
-        if window.folders():
-            res["folder"] = window.folders()[0]
-        else:
+        if 'folder' not in res:
             res["folder"] = res["file_path"]
 
         if sublime.load_settings(SETTINGS_FILE).get("use_build_system_hack", False):
             project_settings = sublimerepl_build_system_hack.get_project_settings(window)
             res.update(project_settings)
-
-        # see #200, on older OSX (10.6.8) system wide python won't accept
-        # dict(unicode -> unicode) as **argument.
-        # It's best to just str() keys, since they are ascii anyway
-        if PY2:
-            return dict((str(key), val) for key, val in res.items())
 
         return res
 
@@ -548,6 +542,12 @@ class ReplManager(object):
         from string import Template
         if subst is None:
             subst = ReplManager._subst_for_translate(window)
+
+        # see #200, on older OSX (10.6.8) system wide python won't accept
+        # dict(unicode -> unicode) as **argument.
+        # It's best to just str() keys, since they are ascii anyway
+        if PY2:
+            subst = dict((str(key), val) for key, val in subst.items())
 
         return Template(string).safe_substitute(**subst)
 

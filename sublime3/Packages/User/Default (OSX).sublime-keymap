@@ -3,6 +3,7 @@
     { "keys": ["alt+ctrl+super+t"], "command": "log_all_tags" },
     { "keys": ["super+shift+b"], "command": "build", "args": {"variant": "Run"} },
     { "keys": ["super+g", "super+s"], "command": "git_status"},
+    { "keys": ["ctrl+alt+m"], "command": "markdown_preview", "args": {"target": "browser"}},
 
     // Macros
     {
@@ -12,6 +13,11 @@
 
     {
         "keys": ["super+alt+shift+="], "command": "run_macro_file", "args": {"file": "Packages/User/MyMacros/rst_sec.sublime-macro"},
+        "context": [{ "key": "selector", "operator": "equal", "operand": "text.restructuredtext"}]
+    },
+
+    {
+        "keys": ["super+alt+shift+6"], "command": "run_macro_file", "args": {"file": "Packages/User/MyMacros/rst_ssub.sublime-macro"},
         "context": [{ "key": "selector", "operator": "equal", "operand": "text.restructuredtext"}]
     },
 

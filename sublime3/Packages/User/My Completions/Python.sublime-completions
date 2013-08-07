@@ -10,5 +10,9 @@
                 { "trigger": "impd", "contents": "import pandas as pd\n$1"},
                 { "trigger": "implt", "contents": "import matplotlib.pyplot as plt\n$1"}
 
+                // pdb
+                { "trigger": "itrace", "contents": "import pdb; pdb.set_trace()\n$1"},
+                { "trigger": "trace", "contents": "pdb.set_trace()\n$1"}
+
         ]
 }

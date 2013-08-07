@@ -6,7 +6,7 @@
 	"draw_centered": false,
 	"draw_minimap_border": true,
 	"ensure_newline_at_eof_on_save": true,
-	"font_size": 11.0,
+	"font_size": 10.0,
 	"highlight_line": true,
 	"highlight_modified_tabs": false,
 	"ignored_packages":
@@ -27,7 +27,7 @@
 	"phoenix_tabs_small": true,
 	"rulers":
 	[
-		79,
+		79
 	],
 	"save_on_focus_lost": false,
 	"scroll_past_end": true,
