@@ -1,7 +1,7 @@
 {
     "auto_complete_commit_on_tab": false,
     "caret_style": "phase",
-    "color_scheme": "Packages/User/Byworded Light.tmTheme",
+    "color_scheme": "Packages/User/Byworded Dark.tmTheme",
     "dictionary": "Packages/Language - English/en_US.dic",
     "draw_centered": true,
     "draw_minimap_border": true,
