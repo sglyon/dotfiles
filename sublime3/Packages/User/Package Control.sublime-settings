@@ -1,4 +1,5 @@
 {
+	"auto_upgrade_last_run": null,
 	"installed_packages":
 	[
 		"AdvancedNewFile",
@@ -7,6 +8,7 @@
 		"Dayle Rees Color Schemes",
 		"Gist",
 		"GitGutter",
+		"Jedi - Python autocompletion",
 		"Julia",
 		"MacTerminal",
 		"Package Control",
@@ -20,11 +22,12 @@
 		"Sublime Finder",
 		"sublime-github",
 		"SublimeGit",
-		"SublimeJEDI",
 		"SublimeREPL",
 		"SublimeRope",
 		"SublimeTODO",
+		"Table Cleaner",
 		"Table Editor",
+		"Text Pastry",
 		"Theme - Aqua",
 		"Theme - Phoenix",
 		"TODO Control",

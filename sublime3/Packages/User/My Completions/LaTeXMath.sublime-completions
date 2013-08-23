@@ -3,5 +3,10 @@
 
         "completions":
         [
+            { "trigger": "tp", "contents": "_{t+$1}$0" },
+            { "trigger": "tp1", "contents": "_{t+1}$0" },
+            { "trigger": "tm", "contents": "_{t-$1}$0" },
+            { "trigger": "tm1", "contents": "_{t-1}$0" },
+            { "trigger": "inf", "contents": "\\infty" },
         ]
 }

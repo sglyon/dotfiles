@@ -1,0 +1,20 @@
+{
+    // Set this to false to turn pep8 checking off completely
+    "pep8": true,
+
+    /*
+        A list of pep8 error numbers to ignore. By default "line too long" errors are ignored.
+        The list of error codes is in this file: https://github.com/jcrocholl/pep8/blob/master/pep8.py.
+        Search for "Ennn:", where nnn is a 3-digit number.
+    */
+    "pep8_ignore":
+    [
+        "E501"
+    ],
+
+    // Set to true to highlight annotations
+    "sublimelinter_notes": true,
+
+    // The set of annotation phrases to highlight
+    "annotations": ["TODO", "README", "FIXME"]
+}

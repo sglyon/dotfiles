@@ -1,0 +1,10 @@
+{
+  "stdin_port": 60402, 
+  "ip": "127.0.0.1", 
+  "control_port": 60403, 
+  "hb_port": 60404, 
+  "key": "ea0f2fd5-552e-44ee-90b3-c90fc581c297", 
+  "shell_port": 60400, 
+  "transport": "tcp", 
+  "iopub_port": 60401
+}

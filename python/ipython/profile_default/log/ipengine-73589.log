@@ -1,0 +1,46 @@
+2013-08-22 11:31:02.060 [IPEngineApp] Loading url_file u'/Users/sglyon/.ipython/profile_default/security/ipcontroller-engine.json'
+2013-08-22 11:31:02.066 [IPEngineApp] Registering with controller at tcp://127.0.0.1:57468
+2013-08-22 11:31:02.124 [IPEngineApp] Starting to monitor the heartbeat signal from the hub every 3010 ms.
+2013-08-22 11:31:02.128 [IPEngineApp] Using existing profile dir: u'/Users/sglyon/.ipython/profile_default'
+2013-08-22 11:31:02.130 [IPEngineApp] Completed registration with id 0
+2013-08-22 11:39:17.143 [IPEngineApp] Exception in apply request:
+[0;31m---------------------------------------------------------------------------[0m
+[0;31mImportError[0m                               Traceback (most recent call last)
+[0;32m/usr/local/lib/python2.7/site-packages/IPython/kernel/zmq/serialize.pyc[0m in [0;36munpack_apply_message[0;34m(bufs, g, copy)[0m
+[1;32m    184[0m     [0margs[0m [0;34m=[0m [0;34m[[0m[0;34m][0m[0;34m[0m[0m
+[1;32m    185[0m     [0;32mfor[0m [0mi[0m [0;32min[0m [0mrange[0m[0;34m([0m[0minfo[0m[0;34m[[0m[0;34m'nargs'[0m[0;34m][0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0m
+[0;32m--> 186[0;31m         [0marg[0m[0;34m,[0m [0marg_bufs[0m [0;34m=[0m [0munserialize_object[0m[0;34m([0m[0marg_bufs[0m[0;34m,[0m [0mg[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    187[0m         [0margs[0m[0;34m.[0m[0mappend[0m[0;34m([0m[0marg[0m[0;34m)[0m[0;34m[0m[0m
+[1;32m    188[0m     [0margs[0m [0;34m=[0m [0mtuple[0m[0;34m([0m[0margs[0m[0;34m)[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python2.7/site-packages/IPython/kernel/zmq/serialize.pyc[0m in [0;36munserialize_object[0;34m(buffers, g)[0m
+[1;32m    136[0m     [0;32melse[0m[0;34m:[0m[0;34m[0m[0m
+[1;32m    137[0m         [0m_restore_buffers[0m[0;34m([0m[0mcanned[0m[0;34m,[0m [0mbufs[0m[0;34m)[0m[0;34m[0m[0m
+[0;32m--> 138[0;31m         [0mnewobj[0m [0;34m=[0m [0muncan[0m[0;34m([0m[0mcanned[0m[0;34m,[0m [0mg[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    139[0m [0;34m[0m[0m
+[1;32m    140[0m     [0;32mreturn[0m [0mnewobj[0m[0;34m,[0m [0mbufs[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python2.7/site-packages/IPython/utils/pickleutil.pyc[0m in [0;36muncan[0;34m(obj, g)[0m
+[1;32m    299[0m             [0;32mbreak[0m[0;34m[0m[0m
+[1;32m    300[0m         [0;32melif[0m [0misinstance[0m[0;34m([0m[0mobj[0m[0;34m,[0m [0mcls[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0m
+[0;32m--> 301[0;31m             [0;32mreturn[0m [0muncanner[0m[0;34m([0m[0mobj[0m[0;34m,[0m [0mg[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    302[0m [0;34m[0m[0m
+[1;32m    303[0m     [0;32mif[0m [0mimport_needed[0m[0;34m:[0m[0;34m[0m[0m
+
+[0;32m/usr/local/lib/python2.7/site-packages/IPython/utils/pickleutil.pyc[0m in [0;36m<lambda>[0;34m(obj, g)[0m
+[1;32m    347[0m [0;34m[0m[0m
+[1;32m    348[0m uncan_map = {
+[0;32m--> 349[0;31m     [0mCannedObject[0m [0;34m:[0m [0;32mlambda[0m [0mobj[0m[0;34m,[0m [0mg[0m[0;34m:[0m [0mobj[0m[0;34m.[0m[0mget_object[0m[0;34m([0m[0mg[0m[0;34m)[0m[0;34m,[0m[0;34m[0m[0m
+[0m[1;32m    350[0m }
+[1;32m    351[0m [0;34m[0m[0m
+
+[0;32m/usr/local/lib/python2.7/site-packages/IPython/utils/pickleutil.pyc[0m in [0;36mget_object[0;34m(self, g)[0m
+[1;32m    125[0m         [0;31m# try to load function back into its module:[0m[0;34m[0m[0;34m[0m[0m
+[1;32m    126[0m         [0;32mif[0m [0;32mnot[0m [0mself[0m[0;34m.[0m[0mmodule[0m[0;34m.[0m[0mstartswith[0m[0;34m([0m[0;34m'__'[0m[0;34m)[0m[0;34m:[0m[0;34m[0m[0m
+[0;32m--> 127[0;31m             [0m__import__[0m[0;34m([0m[0mself[0m[0;34m.[0m[0mmodule[0m[0;34m)[0m[0;34m[0m[0m
+[0m[1;32m    128[0m             [0mg[0m [0;34m=[0m [0msys[0m[0;34m.[0m[0mmodules[0m[0;34m[[0m[0mself[0m[0;34m.[0m[0mmodule[0m[0;34m][0m[0;34m.[0m[0m__dict__[0m[0;34m[0m[0m
+[1;32m    129[0m [0;34m[0m[0m
+
+[0;31mImportError[0m: No module named css2012
+2013-08-22 11:39:38.094 [IPEngineApp] CRITICAL | Engine Interrupted, shutting down...
+

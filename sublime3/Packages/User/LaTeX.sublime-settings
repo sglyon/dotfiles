@@ -1,7 +1,7 @@
 {
         "dictionary": "Packages/Language - English/en_US.dic",
         "draw_indent_guides": true,
-        "color_scheme": "Packages/Theme - Aqua/Color Schemes/Espresso Aqua.tmTheme",
+        "color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow.tmTheme",
         "ensure_newline_at_eof_on_save": true,
         "extensions":
         [

@@ -10,7 +10,7 @@
                 { "trigger": "delta", "contents": "partial" },
                 //{ "trigger": "partial", "contents": "delta" },  # can't have trigger as it conflicts with p -> \pi
 		{ "trigger": "e", "contents": "\\epsilon" },
-		{ "trigger": "epsilon", "contents": "varepsilon" }, 
+		{ "trigger": "epsilon", "contents": "varepsilon" },
                 /* toggle the two! */
 		{ "trigger": "varepsilon", "contents": "epsilon" },
 		{ "trigger": "z", "contents": "\\zeta"},
@@ -18,7 +18,7 @@
                 { "trigger": "q", "contents": "\\theta" },
                 { "trigger": "\\theta", "contents": "\\vartheta" },
                 { "trigger": "\\vartheta", "contents": "\\theta" },
-                { "trigger": "i", "contents": "\\iota" },
+                { "trigger": "i", "contents": "^{-1}" },
                 { "trigger": "k", "contents": "\\kappa" },
                 { "trigger": "l", "contents": "\\lambda" },
                 { "trigger": "m", "contents": "\\mu" },
@@ -28,9 +28,9 @@
                 { "trigger": "r", "contents": "\\rho" },
                 { "trigger": "s", "contents": "\\sigma" },
                 { "trigger": "t", "contents": "\\tau" },
-                { "trigger": "u", "contents": "\\upsilon" },        
+                { "trigger": "u", "contents": "\\upsilon" },
                 { "trigger": "f", "contents": "\\phi" },
-                { "trigger": "\\phi", "contents": "\\varphi" }, 
+                { "trigger": "\\phi", "contents": "\\varphi" },
                 { "trigger": "\\varphi", "contents": "\\phi" },
                 { "trigger": "c", "contents": "\\chi" },
                 { "trigger": "y", "contents": "\\psi" },
@@ -99,7 +99,7 @@
 		{ "trigger": "Lr", "contents": "\\Leftrightarrow"},
 		{ "trigger": "iff", "contents": "\\Leftrightarrow"},
 		{ "trigger": "Leftrightarrow", "contents": "Longleftrightarrow"},
-		{ "trigger": "Longleftrightarrow", "contents": "Leftrightarrow"}, 
+		{ "trigger": "Longleftrightarrow", "contents": "Leftrightarrow"},
                 { "trigger": "up", "contents": "\\uparrow"},
 		{ "trigger": "do", "contents": "\\downarrow"},
 

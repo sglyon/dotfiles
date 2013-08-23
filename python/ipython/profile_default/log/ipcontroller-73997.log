@@ -1,0 +1,30 @@
+2013-08-22 11:49:47.319 [IPControllerApp] Hub listening on tcp://127.0.0.1:52175 for registration.
+2013-08-22 11:49:47.320 [IPControllerApp] Hub using DB backend: 'NoDB'
+2013-08-22 11:49:47.573 [IPControllerApp] hub::created hub
+2013-08-22 11:49:47.573 [IPControllerApp] writing connection info to /Users/sglyon/.ipython/profile_default/security/ipcontroller-client.json
+2013-08-22 11:49:47.573 [IPControllerApp] writing connection info to /Users/sglyon/.ipython/profile_default/security/ipcontroller-engine.json
+2013-08-22 11:49:47.574 [IPControllerApp] task::using Python leastload Task scheduler
+2013-08-22 11:49:47.574 [IPControllerApp] Heartmonitor started
+2013-08-22 11:49:47.579 [IPControllerApp] Creating pid file: /Users/sglyon/.ipython/profile_default/pid/ipcontroller.pid
+2013-08-22 11:49:47.589 [IPControllerApp] client::client '\x00\x80\x00A\xa7' requested u'connection_request'
+2013-08-22 11:49:47.589 [IPControllerApp] client::client ['\x00\x80\x00A\xa7'] connected
+2013-08-22 11:49:48.326 [IPControllerApp] client::client '583ba876-b848-4400-90f1-adc1e15bd5a7' requested u'registration_request'
+2013-08-22 11:49:48.383 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'45a07aca-4c71-4787-bab4-3f3b81f5e2ca', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2013, 8, 22, 11, 49, 48, 381844), u'username': u'sglyon', u'session': u'583ba876-b848-4400-90f1-adc1e15bd5a7', u'msg_id': u'45a07aca-4c71-4787-bab4-3f3b81f5e2ca', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2013-08-22 11:49:48.454 [IPControllerApp] client::client '92717b98-9d2b-4cc0-9315-db374ad18a28' requested u'registration_request'
+2013-08-22 11:49:48.514 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'71453a91-d3fa-46ad-9ff5-b69cd97e53cf', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2013, 8, 22, 11, 49, 48, 513672), u'username': u'sglyon', u'session': u'92717b98-9d2b-4cc0-9315-db374ad18a28', u'msg_id': u'71453a91-d3fa-46ad-9ff5-b69cd97e53cf', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2013-08-22 11:49:48.572 [IPControllerApp] client::client 'fa872cab-daa3-44e6-9df9-3230dc3dfe4a' requested u'registration_request'
+2013-08-22 11:49:48.629 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'35313e6f-2bcd-4a28-92a3-d233d84b4938', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2013, 8, 22, 11, 49, 48, 628317), u'username': u'sglyon', u'session': u'fa872cab-daa3-44e6-9df9-3230dc3dfe4a', u'msg_id': u'35313e6f-2bcd-4a28-92a3-d233d84b4938', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2013-08-22 11:49:48.667 [IPControllerApp] client::client 'cf80dda9-4d0f-44b8-b928-aad7b1d1f27b' requested u'registration_request'
+2013-08-22 11:49:48.718 [IPControllerApp] WARNING | iopub::IOPub message lacks parent: {'parent_header': {}, 'msg_type': u'status', 'msg_id': u'143df287-fce4-430c-a141-df562fd3eb4f', 'content': {u'execution_state': u'starting'}, 'header': {u'date': datetime.datetime(2013, 8, 22, 11, 49, 48, 717242), u'username': u'sglyon', u'session': u'cf80dda9-4d0f-44b8-b928-aad7b1d1f27b', u'msg_id': u'143df287-fce4-430c-a141-df562fd3eb4f', u'msg_type': u'status'}, 'buffers': [], 'metadata': {}}
+2013-08-22 11:49:52.685 [IPControllerApp] client::client '\x00\x80\x00A\xa8' requested u'connection_request'
+2013-08-22 11:49:52.685 [IPControllerApp] client::client ['\x00\x80\x00A\xa8'] connected
+2013-08-22 11:49:53.576 [IPControllerApp] registration::finished registering engine 2:fa872cab-daa3-44e6-9df9-3230dc3dfe4a
+2013-08-22 11:49:53.576 [IPControllerApp] engine::Engine Connected: 2
+2013-08-22 11:49:53.576 [IPControllerApp] registration::finished registering engine 3:cf80dda9-4d0f-44b8-b928-aad7b1d1f27b
+2013-08-22 11:49:53.577 [IPControllerApp] engine::Engine Connected: 3
+2013-08-22 11:49:53.583 [IPControllerApp] registration::finished registering engine 0:583ba876-b848-4400-90f1-adc1e15bd5a7
+2013-08-22 11:49:53.584 [IPControllerApp] engine::Engine Connected: 0
+2013-08-22 11:49:53.584 [IPControllerApp] registration::finished registering engine 1:92717b98-9d2b-4cc0-9315-db374ad18a28
+2013-08-22 11:49:53.585 [IPControllerApp] engine::Engine Connected: 1
+2013-08-22 11:51:04.179 [IPControllerApp] CRITICAL | Received signal 2, shutting down
+2013-08-22 11:51:04.180 [IPControllerApp] CRITICAL | terminating children...
