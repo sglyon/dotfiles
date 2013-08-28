@@ -22,3 +22,4 @@ archive-contents
 *.log
 *.sqlite
 *.pid
+log/
