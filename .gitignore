@@ -17,3 +17,8 @@ sublime/Packages/User/FileHistory.sublime-settings
 
 archive-contents
 *.dat
+
+# Don't worry about log files
+*.log
+*.sqlite
+*.pid
