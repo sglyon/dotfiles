@@ -98,15 +98,16 @@
     MathJax.Hub.Config({
                         TeX: {
                            extensions: ["AMSmath.js"],
-                           equationNumbers: { autoNumber: "AMS" }
+                           equationNumbers: { autoNumber: "AMS", useLabelIds: true }
                            },
                 tex2jax: {
                     inlineMath: [ ['$','$'], ["\\(","\\)"] ],
-                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ]
+                    displayMath: [ ['$$','$$'], ["\\[","\\]"] ],
+                    processEnvironments: true
                 },
                 displayAlign: 'center', // Change this to 'center' to center equations.
                 "HTML-CSS": {
-                    styles: {'.MathJax_Display': {"margin": 4}}
+                    styles: {'.MathJax_Display': {"margin": 2}}
                 }
         });
 </script>
