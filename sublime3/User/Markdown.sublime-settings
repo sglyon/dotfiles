@@ -1,0 +1,12 @@
+{
+    "auto_complete_commit_on_tab": false,
+    "caret_style": "phase",
+    "color_scheme": "Packages/Byworded/Byworded Light.tmTheme",
+    "dictionary": "Packages/Language - English/en_US.dic",
+    "draw_centered": false,
+    "draw_minimap_border": true,
+    "ensure_newline_at_eof_on_save": true,
+    "font_size": 10.0,
+    "highlight_line": false,
+    "gutter": false,
+}

@@ -1,0 +1,92 @@
+{
+	"auto_complete_commit_on_tab": false,
+	"binary_file_patterns":
+	[
+		"*.jpg",
+		"*.jpeg",
+		"*.png",
+		"*.gif",
+		"*.ttf",
+		"*.tga",
+		"*.dds",
+		"*.ico",
+		"*.eot",
+		"*.pdf",
+		"*.swf",
+		"*.jar",
+		"*.zip",
+		"*.mat"
+	],
+	"caret_style": "phase",
+	"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night.tmTheme",
+	"default_extend_env":
+	{
+		"PATH": "{PATH}:/usr/local/bin"
+	},
+	"dictionary": "Packages/Language - English/en_US.dic",
+	"draw_centered": false,
+	"draw_minimap_border": true,
+	"ensure_newline_at_eof_on_save": true,
+	"file_exclude_patterns":
+	[
+		"*.pyc",
+		"*.pyo",
+		"*.exe",
+		"*.dll",
+		"*.obj",
+		"*.o",
+		"*.a",
+		"*.lib",
+		"*.so",
+		"*.dylib",
+		"*.ncb",
+		"*.sdf",
+		"*.suo",
+		"*.pdb",
+		"*.idb",
+		".DS_Store",
+		"*.class",
+		"*.psd",
+		"*.db",
+		"*.sublime-workspace"
+	],
+	"font_size": 10.0,
+	"highlight_line": true,
+	"highlight_modified_tabs": false,
+	"ignored_packages":
+	[
+		"Gist",
+		"Julia",
+		"Jedi - Python autocompletion",
+		"AutoWrap",
+		"Alignment",
+		"LiveReload",
+		"Dayle Rees Color Schemes",
+		"PlainTasks",
+		"GitGutter",
+		"MacTerminal"
+	],
+	"ignored_words":
+	[
+		"docstring",
+		"internet"
+	],
+	"indent_to_bracket": true,
+	"phoenix_color_blue": true,
+	"phoenix_dirty_bottom_bar": true,
+	"phoenix_eighties": true,
+	"phoenix_highlight_current_tab": true,
+	"phoenix_tabs_auto_width": true,
+	"phoenix_tabs_small": true,
+	"rulers":
+	[
+		79
+	],
+	"save_on_focus_lost": false,
+	"scroll_past_end": true,
+	"spell_check": true,
+	"theme": "Phoenix Dark.sublime-theme",
+	"translate_tabs_to_spaces": true,
+	"trim_trailing_white_space_on_save": true,
+	"use_simple_full_screen": true
+}
