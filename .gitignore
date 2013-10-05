@@ -23,3 +23,7 @@ archive-contents
 *.sqlite
 *.pid
 log/
+
+security/
+db/
+mathjax/
