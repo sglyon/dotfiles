@@ -1,7 +1,0 @@
-2013-08-22 11:49:48.447 [IPEngineApp] Loading url_file u'/Users/sglyon/.ipython/profile_default/security/ipcontroller-engine.json'
-2013-08-22 11:49:48.452 [IPEngineApp] Registering with controller at tcp://127.0.0.1:52175
-2013-08-22 11:49:48.508 [IPEngineApp] Starting to monitor the heartbeat signal from the hub every 3010 ms.
-2013-08-22 11:49:48.512 [IPEngineApp] Using existing profile dir: u'/Users/sglyon/.ipython/profile_default'
-2013-08-22 11:49:48.513 [IPEngineApp] Completed registration with id 1
-2013-08-22 11:51:04.179 [IPEngineApp] CRITICAL | Engine Interrupted, shutting down...
-
