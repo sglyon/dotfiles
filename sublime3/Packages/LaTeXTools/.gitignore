@@ -1,6 +1,0 @@
-# Ignore compiled Python files
-*.pyc
-# Ignore cache files
-*.cache
-
-.DS_Store

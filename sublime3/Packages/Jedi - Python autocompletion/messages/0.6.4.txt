@@ -1,5 +1,0 @@
-Changes in 0.6.4
-================
-
- - Fix plugin failing on when Jedi raise an expection
- - Change logging info to console for more usefull bug tracking
