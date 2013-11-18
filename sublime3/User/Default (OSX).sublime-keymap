@@ -8,6 +8,20 @@
     { "keys": ["super+alt+t"], "command": "add_time_stamp" },
     { "keys": ["super+alt+ctrl+t"], "command": "add_date_time_stamp" },
 
+    // Toggle toggle_vintageous
+    { "keys": ["super+k", "super+o"], "command": "toggle_vintageous", "context": [{"key": "panel_visible", "operand": false}] },
+
+    // My own plugin!
+    { "keys": ["alt+ctrl+o"], "command": "open_file_by_name" },
+
+    { "keys": ["super+alt+ctrl+g"], "command": "prompt_goto_line" },
+
+    // Fix stupid alt+arrows. Not sure how they got messed up to begin with.
+    { "keys": ["alt+left"], "command": "move", "args": {"by": "subwords", "forward": false} },
+    { "keys": ["alt+right"], "command": "move", "args": {"by": "subword_ends", "forward": true} },
+    { "keys": ["alt+shift+left"], "command": "move", "args": {"by": "subwords", "forward": false, "extend": true} },
+    { "keys": ["alt+shift+right"], "command": "move", "args": {"by": "subword_ends", "forward": true, "extend": true} },
+
     // SublimeREPL setup
     { "keys": ["super+.", "s"], "command": "repl_transfer_current", "args": {"scope": "selection"}},
     { "keys": ["shift+super+.", "s"], "command": "repl_transfer_current", "args": {"scope": "selection", "action":"view_write"}},
@@ -32,6 +46,16 @@
     {
         "keys": ["super+alt+shift+6"], "command": "run_macro_file", "args": {"file": "Packages/User/MyMacros/rst_ssub.sublime-macro"},
         "context": [{ "key": "selector", "operator": "equal", "operand": "text.restructuredtext"}]
+    },
+
+    {
+        "keys": ["ctrl+alt+c"], "command": "run_macro_file", "args": {"file": "Packages/User/MyMacros/realCodeSec.sublime-macro"},
+    },
+
+    // When in ipynb, bind super+s to save (in addition to ctrl+m, s)
+    {
+        "keys": ["super+s"], "command": "inb_save_notebook",
+        "context" : [ { "key": "setting.ipython_notebook", "operator": "equal", "operand": true }]
     },
 
     { "keys": ["j", "j"], "command": "exit_insert_mode",

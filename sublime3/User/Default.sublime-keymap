@@ -1,0 +1,10 @@
+[
+    {
+        "keys": ["super+l", "e"],
+        "command": "ltx_latex_environment",
+        "context":
+        [
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+        ]
+    },
+]

@@ -8,10 +8,60 @@
             { "trigger": "tm", "contents": "_{t-$1}$0" },
             { "trigger": "tm1", "contents": "_{t-1}$0" },
             { "trigger": "inf", "contents": "\\infty" },
+            { "trigger": "inv", "contents": "^{-1}$0" },
+            { "trigger": "0", "contents": "\\emptyset" },
             { "trigger": "br", "contents": "\\\\{ $0 \\\\}" },
             { "trigger": "l|", "contents": "\\left| $1 \\right| $0"},
 
             { "trigger": "t", "contents": "\\tau" },
+
+            { "trigger": "lp", "contents": "\\left( $1 \\right) $0"},
+            { "trigger": "lb", "contents": "\\left[ $1 \\right] $0"},
+            { "trigger": "lbr", "contents": "\\left\\\\{ $0 \\right\\\\}"},
+            { "trigger": "fr", "contents": "\\frac"},
+            { "trigger": "fra", "contents": "\\frac{$1}{$2}$0"},
+            { "trigger": "stack", "contents": "\\stackrel{$1}{$2}$0"},
+
+            { "trigger": "lar", "contents": "\\leftarrow"},
+            { "trigger": "leftarrow", "contents": "longleftarrow"},
+            { "trigger": "longleftarrow", "contents": "leftarrow"},
+            { "trigger": "Lar", "contents": "\\Leftarrow"},
+            { "trigger": "Leftarrow", "contents": "Longleftarrow"},
+            { "trigger": "Longleftarrow", "contents": "Leftarrow"},
+            { "trigger": "rar", "contents": "\\rightarrow"},
+            { "trigger": "rightarrow", "contents": "longrightarrow"},
+            { "trigger": "longrightarrow", "contents": "rightarrow"},
+            { "trigger": "Rar", "contents": "\\Rightarrow"},
+            { "trigger": "Rightarrow", "contents": "Longrightarrow"},
+            { "trigger": "Longrightarrow", "contents": "Rightarrow"},
+            { "trigger": "lr", "contents": "\\leftrightarrow"},
+            { "trigger": "Lr", "contents": "\\Leftrightarrow"},
+            { "trigger": "iff", "contents": "\\Leftrightarrow"},
+            { "trigger": "Leftrightarrow", "contents": "Longleftrightarrow"},
+            { "trigger": "Longleftrightarrow", "contents": "Leftrightarrow"},
+            { "trigger": "up", "contents": "\\uparrow"},
+            { "trigger": "do", "contents": "\\downarrow"},
+
+
+            { "trigger": "bv", "contents": "\\bigm\\vert"},
+            { "trigger": "vj", "contents": "\\vartheta"},
+
+            // Set logic
+            { "trigger": "sbs", "contents": "\\subset"},
+            { "trigger": "subset", "contents": "\\subseteq"},
+            { "trigger": "sps", "contents": "\\supset"},
+            { "trigger": "supset", "contents": "\\supseteq"},
+
+
+            { "trigger": "it", "contents": "\\mathit{$1}$0"},
+            { "trigger": "bf", "contents": "\\mathbf{$1}$0"},
+            { "trigger": "bb", "contents": "\\mathbb{$1}$0"},
+            { "trigger": "bbr", "contents": "\\mathbb{R}$0"},
+            { "trigger": "bbrn", "contents": "\\mathbb{R}^n$0"},
+            { "trigger": "bbn", "contents": "\\mathbb{N}$0"},
+            { "trigger": "rm", "contents": "\\mathrm{$1}$0"},
+            { "trigger": "sf", "contents": "\\mathsf{$1}$0"},
+            { "trigger": "cal", "contents": "\\mathcal{$1}$0"},
 
         ]
 }

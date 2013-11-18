@@ -4,9 +4,12 @@
         "completions":
         [
                 { "trigger": "al", "contents": "\\begin{align}\n\t$0\n\\end{align}"},
+                { "trigger": "als", "contents": "\\begin{align*}\n\t$0\n\\end{align*}"},
                 { "trigger": "all", "contents": "\\begin{align} \\label{eq:$1}\n\t$0\n\\end{align}"},
                 { "trigger": "th", "contents": "\\begin{thm}\n\t$0\n\\end{thm}"},
                 { "trigger": "thm", "contents": "\\begin{thm} \\label{thm:$1}\n\t$0\n\\end{thm}"},
+                { "trigger": "it", "contents": "\\textit{$1}$0"},
+
 
         ]
 

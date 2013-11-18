@@ -1,0 +1,110 @@
+{
+	"build_arguments":
+	[
+		"-shell-escape",
+		"-g"
+	],
+	"cache":
+	{
+		"bib": 24,
+		"bibsonomy": 24,
+		"citeulike": 24,
+		"doc": 48,
+		"mendeley": 24,
+		"pkg": 48,
+		"tex": 24,
+		"zotero": 24
+	},
+	"executables":
+	{
+		"kpsewhich":
+		[
+			"kpsewhich"
+		],
+		"latexmk":
+		[
+			"latexmk"
+		],
+		"mthelp":
+		[
+			"mthelp"
+		],
+		"perl":
+		[
+			"perl"
+		],
+		"rscript":
+		[
+			"Rscript"
+		],
+		"sublime":
+		[
+			"subl3",
+			"sublime_text",
+			"sublime_text.exe"
+		],
+		"texcount":
+		[
+			"texcount"
+		],
+		"texdoc":
+		[
+			"texdoc"
+		]
+	},
+	"foldable_environments":
+	[
+		"table",
+		"figure",
+		"equation",
+		"align",
+		"bmatrix",
+		"matrix"
+	],
+	"forward_sync": true,
+	"knitr": false,
+	"knitr_command": "Rscript -e \"library(knitr); knit('{file}')\"",
+	"license": "5c288e922606502d23ea59e07c",
+	"open_pdf_on_load": false,
+	"output_directory": false,
+	"partial_build": false,
+	"pdf_viewer_order":
+	[
+		"skim",
+		"preview",
+		"sumatra_pdf",
+		"adobe_reader",
+		"foxit_reader",
+		"pdf_xchange_viewer",
+		"evince",
+		"okular"
+	],
+	"pdf_viewer_osx":
+	{
+		"preview":
+		[
+			"/Applications/Preview.app"
+		],
+		"skim":
+		[
+			"/Applications/Skim.app"
+		]
+	},
+	"phrases": true,
+	"phrases_bounding_words":
+	[
+	],
+	"phrases_max_length": 6,
+	"phrases_min_count": 2,
+	"phrases_min_length": 3,
+	"phrases_mode": 2,
+	"reverse_sync": true,
+	"show_log_panel_on":
+	[
+		"errors",
+		"warnings",
+		"badboxes",
+		"infos"
+	],
+	"username": "spencerlyon2@gmail.com"
+}

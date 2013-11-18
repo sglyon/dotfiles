@@ -1,6 +1,22 @@
 {
 	"history":
 	{
+		"-142600441771900320":
+		{
+			"command": "insert_nums",
+			"date": 1382558179.89,
+			"label": "\\i",
+			"separator": null,
+			"text": "1 1 1"
+		},
+		"-1822905860380350245":
+		{
+			"command": "insert_nums",
+			"date": 1381350123.18,
+			"label": "\\i",
+			"separator": null,
+			"text": "1 1 1"
+		},
 		"-338158704683808712":
 		{
 			"command": "insert_nums",
@@ -16,6 +32,14 @@
 			"label": "1 1 0",
 			"separator": null,
 			"text": "b'1 1 0'"
+		},
+		"-3747915228422110532":
+		{
+			"command": "insert_nums",
+			"date": 1384452914.7,
+			"label": "\\i",
+			"separator": null,
+			"text": "1 1 1"
 		},
 		"-382871905662230439":
 		{
@@ -33,6 +57,14 @@
 			"separator": null,
 			"text": "b'10 100 1'"
 		},
+		"-4753922944195391492":
+		{
+			"command": "insert_nums",
+			"date": 1381034112.27,
+			"label": "\\i",
+			"separator": null,
+			"text": "1 1 1"
+		},
 		"-605653661520729739":
 		{
 			"command": "insert_nums",
@@ -40,6 +72,14 @@
 			"label": "1 2 3",
 			"separator": null,
 			"text": "b'1 2 3'"
+		},
+		"-6130954860739689263":
+		{
+			"command": "insert_nums",
+			"date": 1381633944.92,
+			"label": "\\i",
+			"separator": null,
+			"text": "1 1 1"
 		},
 		"-6530258813713518330":
 		{
@@ -56,6 +96,14 @@
 			"label": "\\i",
 			"separator": null,
 			"text": "b'1 1 1'"
+		},
+		"-7070601644849232639":
+		{
+			"command": "insert_nums",
+			"date": 1383075637.75,
+			"label": "\\i",
+			"separator": null,
+			"text": "1 1 1"
 		},
 		"-709037847114145990":
 		{
@@ -97,6 +145,14 @@
 			"separator": null,
 			"text": "b'1 1 1'"
 		},
+		"2153754667370723344":
+		{
+			"command": "insert_nums",
+			"date": 1383713411.93,
+			"label": "\\i",
+			"separator": null,
+			"text": "1 1 1"
+		},
 		"2223518097189883377":
 		{
 			"command": "insert_nums",
@@ -121,6 +177,14 @@
 			"separator": null,
 			"text": "b'ipython nbconvert --to html --template full'"
 		},
+		"3579058149936623096":
+		{
+			"command": "insert_nums",
+			"date": 1382474255.77,
+			"label": "\\i",
+			"separator": null,
+			"text": "1 1 1"
+		},
 		"4082316975201617152":
 		{
 			"command": "insert_nums",
@@ -136,6 +200,22 @@
 			"label": "\\i0",
 			"separator": null,
 			"text": "b'0 1 1'"
+		},
+		"4875775232999489867":
+		{
+			"command": "insert_nums",
+			"date": 1382029909.0,
+			"label": "\\i",
+			"separator": null,
+			"text": "1 1 1"
+		},
+		"5554429688165393963":
+		{
+			"command": "insert_nums",
+			"date": 1382661770.8,
+			"label": "\\i",
+			"separator": null,
+			"text": "1 1 1"
 		},
 		"5648927776303287393":
 		{
@@ -197,10 +277,10 @@
 	"last_command":
 	{
 		"command": "insert_nums",
-		"index": 24,
-		"key": "856616387525172993",
+		"index": 34,
+		"key": "-3747915228422110532",
 		"label": "\\i",
 		"separator": null,
-		"text": "b'1 1 1'"
+		"text": "1 1 1"
 	}
 }

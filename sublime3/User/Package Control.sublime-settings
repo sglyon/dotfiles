@@ -1,41 +1,47 @@
 {
-	"auto_upgrade_last_run": null,
+	"install_prereleases": true,
 	"installed_packages":
 	[
 		"AdvancedNewFile",
 		"Alignment",
 		"AutoWrap",
+		"Calculate",
 		"Dayle Rees Color Schemes",
 		"Enhanced-R",
+		"Fold Python Docstrings",
 		"Gist",
 		"GitGutter",
 		"Jedi - Python autocompletion",
-		"Julia",
 		"knitr",
-		"LaTeXTools",
+		"LaTeX-cwl",
+		"LaTeXing",
 		"MacTerminal",
+		"orgmode",
 		"Package Control",
 		"Pandown",
 		"PlainTasks",
+		"Python Improved",
 		"ScopeHunter",
 		"SFTP",
 		"SideBarEnhancements",
 		"SmartMarkdown",
 		"Solarized Color Scheme",
-		"Spotify Control",
 		"Sublime Finder",
 		"sublime-github",
 		"SublimeGit",
 		"SublimeREPL",
-		"SublimeRope",
 		"SublimeTODO",
-		"Table Cleaner",
 		"Table Editor",
 		"Text Pastry",
 		"Theme - Aqua",
 		"Theme - Phoenix",
 		"TODO Control",
 		"Toggl Timer",
-		"Tomorrow Color Schemes"
+		"Tomorrow Color Schemes",
+		"Vintageous"
+	],
+	"repositories":
+	[
+		"http://testing.latexing.com/packages.json"
 	]
 }

@@ -1,0 +1,17 @@
+{
+    "name": "pythontex",
+    "target": "sequential_builder",
+    "shell": true
+    "build_sequence":
+    [
+        {
+            "cmd": ["latex", "$file"]
+        },
+        {
+            "cmd": ["pythontex.py", "$file"]
+        },
+        {
+            "cmd": ["latex", "$file"]
+        }
+    ]
+}

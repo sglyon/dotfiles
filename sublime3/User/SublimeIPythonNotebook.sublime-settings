@@ -1,6 +1,11 @@
 {
-	"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night.tmTheme",
-	"default_address": "127.0.0.1:8888",
+	"color_scheme": "Packages/Color Scheme - Default/iPlastic.tmTheme",
+	"default_address":
+	[
+		"http://127.0.0.1:8888",
+		"http://127.0.0.1:8998",
+		"127.0.0.1:8888"
+	],
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_indent_guides": true,
 	"ensure_newline_at_eof_on_save": true,
@@ -14,6 +19,6 @@
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
 	"use_tab_stops": true,
-	"word_wrap": "auto",
-	"wrap_width": 79
+	"word_wrap": "true",
+	"wrap_width": 0
 }
