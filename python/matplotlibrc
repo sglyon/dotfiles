@@ -48,7 +48,7 @@ timezone     : UTC        # a pytz timezone string, eg US/Central or Europe/Pari
 ### LINES
 # See http://matplotlib.sourceforge.net/api/artist_api.html#module-matplotlib.lines for more
 # information on line properties.
-lines.linewidth   : 1.0     # line width in points
+lines.linewidth   : 1.8     # line width in points
 #lines.linestyle   : -       # solid line
 # lines.color       : purple
 #lines.marker      : None    # the default marker
@@ -213,7 +213,7 @@ axes.axisbelow      : True     # whether axis gridlines and ticks are below
                                # first or larger than the second
 #axes.unicode_minus  : True    # use unicode for the minus symbol
                                # rather than hypen.  See http://en.wikipedia.org/wiki/Plus_sign#Plus_sign
-axes.color_cycle    : 348ABD, 7A68A6, A60628, 467821, BD348A, 188487, E24A33
+axes.color_cycle    : 7F7FFF, FD9408, CC1C1B, 830094, 0F7003, 8AC627, C1C1C1
                       # E24A33 : orange
                       # 7A68A6 : purple
                       # 348ABD : blue
@@ -221,6 +221,19 @@ axes.color_cycle    : 348ABD, 7A68A6, A60628, 467821, BD348A, 188487, E24A33
                       # A60628 : red
                       # BD348A : Moderate pink
                       # 467821 : green
+
+                      # 7F7FFF : Blue
+                      # FD9408 : Orange
+                      # CC1C1B : Red
+                      # 830094 : Purple
+                      # 0F7003 : Dark Green
+                      # 8AC627 : Green
+                      # C1C1C1 : Grey
+
+                      # 008ADD : Light Blue
+
+                      # 0000FF: Deep Blue
+
 
 
 
