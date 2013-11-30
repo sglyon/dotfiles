@@ -39,9 +39,5 @@
 		"Toggl Timer",
 		"Tomorrow Color Schemes",
 		"Vintageous"
-	],
-	"repositories":
-	[
-		"http://testing.latexing.com/packages.json"
 	]
 }

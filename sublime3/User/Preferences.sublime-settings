@@ -94,22 +94,21 @@
 	"highlight_modified_tabs": false,
 	"ignored_packages":
 	[
-		"ScopeHunter",
 		"Toggl Timer",
 		"GitGutter",
-		"Solarized Color Scheme",
+		"Vintageous",
+		"MacTerminal",
 		"Gist",
 		"sublime-github",
 		"Dayle Rees Color Schemes",
-		"Alignment",
-		"Vintageous",
 		"Enhanced-R",
+		"ScopeHunter",
 		"SmartMarkdown",
-		"SFTP",
-		"AutoWrap",
-		"Jedi - Python autocompletion",
+		"Alignment",
 		"LiveReload",
-		"MacTerminal"
+		"Solarized Color Scheme",
+		"Jedi - Python autocompletion",
+		"AutoWrap"
 	],
 	"ignored_words":
 	[

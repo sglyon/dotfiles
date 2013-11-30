@@ -1,4 +1,9 @@
 {
+    "rulers":
+    [
+        72,
+        78
+    ],
 
     "color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night.tmTheme",
     "wrap_width": 0,
