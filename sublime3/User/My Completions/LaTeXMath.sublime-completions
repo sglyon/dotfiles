@@ -3,14 +3,19 @@
 
         "completions":
         [
+
+            // Timing
             { "trigger": "tp", "contents": "_{t+$1}$0" },
             { "trigger": "tp1", "contents": "_{t+1}$0" },
             { "trigger": "tm", "contents": "_{t-$1}$0" },
             { "trigger": "tm1", "contents": "_{t-1}$0" },
+
             { "trigger": "inf", "contents": "\\infty" },
             { "trigger": "inv", "contents": "^{-1}$0" },
             { "trigger": "0", "contents": "\\emptyset" },
             { "trigger": "br", "contents": "\\\\{ $0 \\\\}" },
+
+            // This one doesn't work
             { "trigger": "l|", "contents": "\\left| $1 \\right| $0"},
 
             { "trigger": "t", "contents": "\\tau" },
@@ -51,6 +56,9 @@
             { "trigger": "subset", "contents": "\\subseteq"},
             { "trigger": "sps", "contents": "\\supset"},
             { "trigger": "supset", "contents": "\\supseteq"},
+
+            // objective function
+            { "trigger": "st", "contents": "\\text{subject to } & "},
 
 
             { "trigger": "it", "contents": "\\mathit{$1}$0"},

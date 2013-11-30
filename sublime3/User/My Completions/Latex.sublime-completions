@@ -8,7 +8,15 @@
                 { "trigger": "all", "contents": "\\begin{align} \\label{eq:$1}\n\t$0\n\\end{align}"},
                 { "trigger": "th", "contents": "\\begin{thm}\n\t$0\n\\end{thm}"},
                 { "trigger": "thm", "contents": "\\begin{thm} \\label{thm:$1}\n\t$0\n\\end{thm}"},
+
+                // definition, theorem, proposition, lemma
+                { "trigger": "defn", "contents": "\\begin{defn}[name=$1]\n\t$0\n\\end{defn}"},
+                { "trigger": "thm", "contents": "\\begin{thm}[name=$1]\n\t$0\n\\end{thm}"},
+                { "trigger": "prop", "contents": "\\begin{prop}[name=$1]\n\t$0\n\\end{prop}"},
+
+                // Text formatting
                 { "trigger": "it", "contents": "\\textit{$1}$0"},
+                { "trigger": "bf", "contents": "\\textbf{$1}$0"},
 
 
         ]
