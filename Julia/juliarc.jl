@@ -6,7 +6,7 @@ end
 
 
 function addprocs_home(n::Int)
-    addprocs(repmat(["spencerlyon2@sglyon.selfip.org:22"], n),
+    addprocs(repmat(["sglyon@sglyon.selfip.org:22"], n),
              tunnel=true,
-             dir="/Users/spencerlyon2q/.src/julia/usr/bin")
+             dir="/Users/spencerlyon2/.src/julia/usr/bin")
 end
