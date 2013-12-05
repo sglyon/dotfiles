@@ -86,7 +86,13 @@
 		"*.bcf",
 		"*.run.xml",
 		"*.pytxcode",
-		"*.pyg"
+		"*.pyg",
+		"*-checkpoint.ipynb",
+		"*.eps",
+		"*.loe",
+		"*.upa",
+		"*.upb",
+
 	],
 	"find_selected_text": true,
 	"font_size": 10,
@@ -94,21 +100,10 @@
 	"highlight_modified_tabs": false,
 	"ignored_packages":
 	[
-		"Toggl Timer",
-		"GitGutter",
-		"Vintageous",
-		"MacTerminal",
-		"Gist",
-		"sublime-github",
-		"Dayle Rees Color Schemes",
-		"Enhanced-R",
-		"ScopeHunter",
-		"SmartMarkdown",
-		"Alignment",
-		"LiveReload",
-		"Solarized Color Scheme",
 		"Jedi - Python autocompletion",
-		"AutoWrap"
+		"Solarized Color Scheme",
+		"Toggl Timer",
+		"Vintage"
 	],
 	"ignored_words":
 	[

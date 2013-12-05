@@ -32,7 +32,7 @@
     { "keys": ["super+.", "b"], "command": "repl_transfer_current", "args": {"scope": "block"}},
     { "keys": ["shift+super+.", "b"], "command": "repl_transfer_current", "args": {"scope": "block", "action":"view_write"}},
 
-    // Macros
+    // Macros -- These require the Vintageous package!!
     {
         "keys": ["super+alt+shift+-"], "command": "run_macro_file", "args": {"file": "Packages/User/MyMacros/rst_sub.sublime-macro"},
         "context": [{ "key": "selector", "operator": "equal", "operand": "text.restructuredtext"}]
