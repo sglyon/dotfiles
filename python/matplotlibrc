@@ -202,7 +202,7 @@ font.monospace      : Andale Mono, Nimbus Mono L, Courier New, Courier, Fixed, T
 axes.facecolor      : eeeeee   # axes background color
 axes.edgecolor      : bcbcbc   # axes edge color
 axes.linewidth      : 1        # edge linewidth
-axes.grid           : True     # display grid or not
+axes.grid           : False     # display grid or not
 axes.titlesize      : x-large  # fontsize of the axes title
 axes.labelsize      : large    # fontsize of the x any y labels
 axes.labelcolor     : 555555
