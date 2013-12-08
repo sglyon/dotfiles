@@ -91,8 +91,7 @@
 		"*.eps",
 		"*.loe",
 		"*.upa",
-		"*.upb",
-
+		"*.upb"
 	],
 	"find_selected_text": true,
 	"font_size": 10,
@@ -100,10 +99,10 @@
 	"highlight_modified_tabs": false,
 	"ignored_packages":
 	[
-		"Jedi - Python autocompletion",
 		"Solarized Color Scheme",
-		"Toggl Timer",
-		"Vintage"
+		"Jedi - Python autocompletion",
+		"Vintage",
+		"Toggl Timer"
 	],
 	"ignored_words":
 	[
@@ -127,5 +126,6 @@
 	"theme": "Phoenix Dark.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"use_simple_full_screen": false
+	"use_simple_full_screen": false,
+	"vintageous_reset_mode_when_switching_tabs": false
 }

@@ -225,6 +225,14 @@
 			"separator": null,
 			"text": "b'10 1 1'"
 		},
+		"5742107994381028521":
+		{
+			"command": "insert_nums",
+			"date": 1386346797.64,
+			"label": "\\i",
+			"separator": null,
+			"text": "1 1 1"
+		},
 		"652386427732152393":
 		{
 			"command": "text_pastry_insert_text",
@@ -277,8 +285,8 @@
 	"last_command":
 	{
 		"command": "insert_nums",
-		"index": 34,
-		"key": "-3747915228422110532",
+		"index": 35,
+		"key": "5742107994381028521",
 		"label": "\\i",
 		"separator": null,
 		"text": "1 1 1"
