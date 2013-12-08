@@ -4,3 +4,9 @@
 [submodule "sublime3/Packages/Package Control"]
 	path = sublime3/Packages/Package Control
 	url = https://github.com/wbond/sublime_package_control.git
+[submodule "vim/bundle/julia-vim"]
+	path = vim/bundle/julia-vim
+	url = git://github.com/JuliaLang/julia-vim.git
+[submodule "vim/bundle/vim-powerline"]
+	path = vim/bundle/vim-powerline
+	url = git@github.com:Lokaltog/vim-powerline.git
