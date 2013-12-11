@@ -15,43 +15,6 @@
 		"tex": 24,
 		"zotero": 24
 	},
-	"executables":
-	{
-		"kpsewhich":
-		[
-			"kpsewhich"
-		],
-		"latexmk":
-		[
-			"latexmk"
-		],
-		"mthelp":
-		[
-			"mthelp"
-		],
-		"perl":
-		[
-			"perl"
-		],
-		"rscript":
-		[
-			"Rscript"
-		],
-		"sublime":
-		[
-			"subl3",
-			"sublime_text",
-			"sublime_text.exe"
-		],
-		"texcount":
-		[
-			"texcount"
-		],
-		"texdoc":
-		[
-			"texdoc"
-		]
-	},
 	"foldable_environments":
 	[
 		"table",
@@ -68,6 +31,21 @@
 	"open_pdf_on_load": false,
 	"output_directory": false,
 	"partial_build": false,
+	"executables": {
+		// Required
+		"perl": ["perl"],
+		"latexmk": ["latexmk"],
+		"pdflatex": ["/usr/texbin/pdflatex"],
+		"xelatex": ["/usr/texbin/xelatex"],
+		"lualatex": ["/usr/texbin/lualatex"],
+		"sublime": ["subl3"],
+		// Optional
+		"kpsewhich": ["kpsewhich"],
+		"mthelp": ["mthelp"],
+		"texcount": ["texcount"],
+		"texdoc": ["texdoc"],
+		"rscript": ["Rscript"]
+	},
 	"pdf_viewer_order":
 	[
 		"skim",

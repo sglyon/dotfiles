@@ -1,5 +1,5 @@
 {
-        "scope": "string.other.math.tex, string.other.math.latex, string.other.math.block.environment.latex",
+        "scope": "string.other.math.tex, string.other.math.latex, string.other.math.block.environment.latex, string.other.math.block.tex",
 
         "completions":
         [
@@ -60,7 +60,11 @@
             // objective function
             { "trigger": "st", "contents": "\\text{subject to } & "},
 
+            // Random
+            { "trigger": "0inf", "contents": "_{t = 0}^{\\infty}"},
+            { "trigger": "sum0i", "contents": "\\sum_{t = 0}^{\\infty}"},
 
+            // Math italics, bold, and mathbb/mathcal stuff
             { "trigger": "it", "contents": "\\mathit{$1}$0"},
             { "trigger": "bf", "contents": "\\mathbf{$1}$0"},
             { "trigger": "bb", "contents": "\\mathbb{$1}$0"},

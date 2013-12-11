@@ -41,3 +41,7 @@ sublime3/User/Package Control.ca-certs/
 sublime3/User/FileHistory.sublime-settings
 vim/.netrwhist
 static/
+python/ipython/profile_julia/
+python/ipython/profile_odyssh/
+python/ipython/profile_sshserver/
+python/ipython/profile_cluster/

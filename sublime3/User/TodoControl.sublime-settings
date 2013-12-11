@@ -1,0 +1,11 @@
+{
+	"tags" : ["TODO", "FIXME", "NOTE"],
+	"prefix" : "",
+	"postfix" : ":",
+	"colors" :
+	{
+		"TODO" : "#FF000088",
+		"FIXME" : "#00FF0088",
+		"NOTE" : "#0000FF88"
+	}
+}

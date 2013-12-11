@@ -11,7 +11,6 @@
 		"knitr",
 		"LaTeX-cwl",
 		"LaTeXing",
-		"orgmode",
 		"Origami",
 		"Package Control",
 		"Pandown",
@@ -24,7 +23,6 @@
 		"Sublime Finder",
 		"SublimeGit",
 		"SublimeREPL",
-		"SublimeTODO",
 		"Table Editor",
 		"Text Pastry",
 		"Theme - Aqua",
@@ -32,7 +30,6 @@
 		"TODO Control",
 		"Toggl Timer",
 		"Tomorrow Color Schemes",
-		"VintageLines",
 		"Vintageous"
 	]
 }
