@@ -19,10 +19,10 @@
 		"*.mat"
 	],
 	"caret_style": "phase",
-	"color_scheme": "Packages/Tomorrow Color Schemes/Tomorrow-Night.tmTheme",
+	"color_scheme": "Packages/User/Tomorrow-Night (SL).tmTheme",
 	"default_extend_env":
 	{
-		"PATH": "{PATH}:/usr/local/bin"
+		"PATH": "{PATH}:/usr/local/bin:/usr/local/anaconda/bin"
 	},
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_centered": false,
@@ -100,10 +100,10 @@
 	"highlight_modified_tabs": false,
 	"ignored_packages":
 	[
-		"Solarized Color Scheme",
+		"Vintage",
 		"Jedi - Python autocompletion",
-		"Toggl Timer",
-		"Vintage"
+		"Solarized Color Scheme",
+		"Toggl Timer"
 	],
 	"ignored_words":
 	[
@@ -111,6 +111,7 @@
 		"internet"
 	],
 	"indent_to_bracket": true,
+	"line_numbers": true,
 	"phoenix_color_blue": true,
 	"phoenix_dirty_bottom_bar": true,
 	"phoenix_eighties": true,

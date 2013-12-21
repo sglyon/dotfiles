@@ -1,20 +1,76 @@
 {
-    // Set this to false to turn pep8 checking off completely
-    "pep8": true,
-
-    /*
-        A list of pep8 error numbers to ignore. By default "line too long" errors are ignored.
-        The list of error codes is in this file: https://github.com/jcrocholl/pep8/blob/master/pep8.py.
-        Search for "Ennn:", where nnn is a 3-digit number.
-    */
-    "pep8_ignore":
-    [
-        "E501"
-    ],
-
-    // Set to true to highlight annotations
-    "sublimelinter_notes": true,
-
-    // The set of annotation phrases to highlight
-    "annotations": ["TODO", "README", "FIXME"]
+	"annotations":
+	[
+		"TODO",
+		"README",
+		"FIXME"
+	],
+	"pep8": true,
+	"pep8_ignore":
+	[
+		"E501"
+	],
+	"sublimelinter_notes": true,
+	"user":
+	{
+		"debug": true,
+		"delay": 0.25,
+		"error_color": "D02000",
+		"gutter_theme": "Packages/SublimeLinter/gutter-themes/Default.gutter-theme",
+		"gutter_theme_excludes":
+		[
+		],
+		"lint_mode": "background",
+		"linters":
+		{
+			"flake8":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"excludes":
+				[
+				],
+				"ignore": "",
+				"max-complexity": -1,
+				"max-line-length": null,
+				"select": ""
+			}
+		},
+		"mark_style": "outline",
+		"paths":
+		{
+			"linux":
+			[
+			],
+			"osx":
+			[
+			],
+			"windows":
+			[
+			]
+		},
+		"python_paths":
+		{
+			"linux":
+			[
+			],
+			"osx":
+			[
+			],
+			"windows":
+			[
+			]
+		},
+		"rc_search_limit": 3,
+		"show_errors_on_save": false,
+		"show_marks_in_minimap": true,
+		"syntax_map":
+		{
+			"php": "html"
+		},
+		"warning_color": "DDB700",
+		"wrap_find": true
+	}
 }

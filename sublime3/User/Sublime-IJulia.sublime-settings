@@ -6,7 +6,7 @@
     // julia's absolute path.
     // e.g. "unix": "/home/username/julia/usr/bin/julia-release-readline"
     "julia_command": {
-        "unix": "/Users/sglyon/anaconda/python.app/Contents/MacOS/julia",
+        "unix": "/usr/local/anaconda/python.app/Contents/MacOS/julia",
         "windows": "julia.bat"
         }
 }
