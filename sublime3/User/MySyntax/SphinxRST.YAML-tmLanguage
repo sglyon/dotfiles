@@ -1,0 +1,202 @@
+# [PackageDev] target_format: plist, ext: tmLanguage
+comment: syntax highlighting for reStructuredText http://docutils.sourceforge.net,
+  based on rst mode from jEdit
+name: SphinxRST
+scopeName: text.restructuredtext
+fileTypes: [rst, rest]
+uuid: 62DA9AD6-36E1-4AB7-BB87-E933AD9FD1A4
+
+patterns:
+- contentName: meta.paragraph.restructuredtext
+  begin: ^([ \t]*)(?=\S)
+  end: ^(?!\1(?=\S))
+  patterns:
+  - include: '#inline'
+
+repository:
+  inline:
+    patterns:
+    - comment: directives.html
+      begin: ^([ \t]*)((\.\.)\sraw(::)) html
+      end: ^(?!\1[ \t])
+      captures:
+        '2': {name: meta.directive.restructuredtext}
+        '3': {name: punctuation.definition.directive.restructuredtext}
+        '4': {name: punctuation.separator.key-value.restructuredtext}
+      patterns:
+      - include: text.html.basic
+    - comment: inline math
+      name: text.restructuredtext.tex.latex text.tex.latex string.other.math.tex
+      match: (:math:)`(.+?)`
+      captures:
+        '1': {name: entity.name.tag.restructuredtext}
+    - comment: block math
+      name: text.restructuredtext.tex.latex 
+      begin: ".. (math)::"
+      beginCaptures:
+        '1': {name: entity.name.tag.restructuredtext}
+      end: ^([a-zA-z])
+      patterns:
+      - include: text.tex.latex 
+      - include: string.other.math.block.environment.latex
+      - name: string.other.math.tex
+        match: ([-_\w\d^=+/'()'])
+    - comment: directives
+      name: meta.other.directive.restructuredtext
+      match: (\.\.)\s[A-z][A-z0-9-_]+(::)\s*$
+      captures:
+        '1': {name: punctuation.definition.directive.restructuredtext}
+        '2': {name: punctuation.separator.key-value.restructuredtext}
+    - comment: verbatim blocks
+      name: meta.raw.block.restructuredtext
+      begin: ^([ \t]*).*?((::))
+      end: ^(?=\1[^\s]+)
+      captures:
+        '2': {name: markup.raw.restructuredtext}
+        '3': {name: punctuation.definition.raw.restructuredtext}
+      patterns:
+      - name: markup.raw.restructuredtext
+        match: .+
+    - comment: directives
+      name: meta.startraw.restructuredtext
+      match: '::'
+    - comment: strong emphasis
+      name: markup.bold.restructuredtext
+      match: (\*\*)[^*]+(\*\*)
+      captures:
+        '1': {name: punctuation.definition.italic.restructuredtext}
+        '2': {name: punctuation.definition.italic.restructuredtext}
+    - comment: emphasis
+      name: markup.italic.restructuredtext
+      match: (\*)\w[^*]+\w(\*)
+      captures:
+        '1': {name: punctuation.definition.italic.restructuredtext}
+        '2': {name: punctuation.definition.italic.restructuredtext}
+    - comment: replacement
+      name: meta.link.reference.def.restructuredtext
+      match: (\.\.)\s+(_)([\w\s]+)(:)\s+(.*)
+      captures:
+        '1': {name: punctuation.definition.link.restructuredtext}
+        '2': {name: punctuation.definition.string.restructuredtext}
+        '3': {name: string.other.link.title.restructuredtext}
+        '4': {name: punctuation.separator.key-value.restructuredtext}
+        '5': {name: markup.underline.link.restructuredtext}
+    - comment: substitution
+      name: markup.underline.substitution.restructuredtext
+      match: (\|)[^|]+(\|_{0,2})
+      captures:
+        '1': {name: punctuation.definition.substitution.restructuredtext}
+    - comment: links `...`_ or `...`__
+      name: meta.link.reference
+      match: \b(\w+)(_)\b
+      captures:
+        '1': {name: string.other.link.title.restructuredtext}
+        '2': {name: punctuation.definition.link.restructuredtext}
+    - comment: links `...`_ or `...`__
+      name: meta.link.reference
+      match: (`)([\w\s]+)(`_)
+      captures:
+        '1': {name: punctuation.definition.link.restructuredtext}
+        '2': {name: string.other.link.title.restructuredtext}
+        '3': {name: punctuation.definition.link.restructuredtext}
+    - comment: 'links `...`_ '
+      name: meta.link.inline.restructuredtext
+      match: (`)([\w\s]+)\s+(<)(.*?)(>)(`_)
+      captures:
+        '1': {name: punctuation.definition.link.restructuredtext}
+        '2': {name: string.other.link.title.restructuredtext}
+        '3': {name: punctuation.definition.location.restructuredtext}
+        '4': {name: markup.underline.link.restructuredtext}
+        '5': {name: punctuation.definition.location.restructuredtext}
+        '6': {name: punctuation.definition.link.restructuredtext}
+    - comment: replacement
+      name: meta.link.footnote.def.restructuredtext
+      match: ^(\.\.)\s+((\[)(((#?)[^]]*?)|\*)(\]))\s+(.*)
+      captures:
+        '1': {name: punctuation.definition.link.restructuredtext}
+        '2': {name: constant.other.footnote.link.restructuredtext}
+        '3': {name: punctuation.definition.constant.restructuredtext}
+        '6': {name: punctuation.definition.constant.restructuredtext}
+        '7': {name: punctuation.definition.constant.restructuredtext}
+        '8': {name: string.other.footnote.restructuredtext}
+    - comment: 'footnote reference: [0]_'
+      name: meta.link.footnote.numeric.restructuredtext
+      match: ((\[)[0-9]+(\]))(_)
+      captures:
+        '1': {name: constant.other.footnote.link}
+        '2': {name: punctuation.definition.constant.restructuredtext}
+        '3': {name: punctuation.definition.constant.restructuredtext}
+        '4': {name: punctuation.definition.constant.restructuredtext}
+    - comment: footnote reference [#]_ or [#foo]_
+      name: meta.link.footnote.auto.restructuredtext
+      match: ((\[#)[A-z0-9_]*(\]))(_)
+      captures:
+        '1': {name: constant.other.footnote.link}
+        '2': {name: punctuation.definition.constant.restructuredtext}
+        '3': {name: punctuation.definition.constant.restructuredtext}
+        '4': {name: punctuation.definition.constant.restructuredtext}
+    - comment: footnote reference [*]_
+      name: meta.link.footnote.symbol.auto.restructuredtext
+      match: ((\[)\*(\]))(_)
+      captures:
+        '1': {name: constant.other.footnote.link.restructuredtext}
+        '2': {name: punctuation.definition.constant.restructuredtext}
+        '3': {name: punctuation.definition.constant.restructuredtext}
+        '4': {name: punctuation.definition.constant.restructuredtext}
+    - comment: replacement
+      name: meta.link.citation.def.restructuredtext
+      match: ^(\.\.)\s+((\[)[A-z][A-z0-9]*(\]))(_)\s+(.*)
+      captures:
+        '1': {name: punctuation.definition.link.restructuredtext}
+        '2': {name: constant.other.citation.link.restructuredtext}
+        '3': {name: punctuation.definition.constant.restructuredtext}
+        '4': {name: punctuation.definition.constant.restructuredtext}
+        '5': {name: punctuation.definition.constant.restructuredtext}
+        '6': {name: string.other.citation.restructuredtext}
+    - comment: citation reference
+      name: meta.link.citation.restructuredtext
+      match: ((\[)[A-z][A-z0-9_-]*(\]))(_)
+      captures:
+        '1': {name: constant.other.citation.link.restructuredtext}
+        '2': {name: punctuation.definition.constant.restructuredtext}
+        '3': {name: punctuation.definition.constant.restructuredtext}
+        '4': {name: punctuation.definition.constant.restructuredtext}
+    - comment: inline literal
+      name: markup.raw.restructuredtext
+      begin: '``'
+      end: '``'
+      captures:
+        '0': {name: punctuation.definition.raw.restructuredtext}
+    - comment: intepreted text
+      name: markup.other.command.restructuredtext
+      match: (`)[^`]+(`)(?!_)
+      captures:
+        '1': {name: punctuation.definition.intepreted.restructuredtext}
+        '2': {name: punctuation.definition.intepreted.restructuredtext}
+    - comment: field list
+      name: entity.name.tag.restructuredtext
+      match: (:)[A-z][A-z0-9  =\s\t_]*(:)
+      captures:
+        '1': {name: punctuation.definition.field.restructuredtext}
+        '2': {name: punctuation.definition.field.restructuredtext}
+    - comment: table
+      name: markup.other.table.restructuredtext
+      match: \+-[+-]+
+      captures:
+        '0': {name: punctuation.definition.table.restructuredtext}
+    - comment: table
+      name: markup.other.table.restructuredtext
+      match: \+=[+=]+
+      captures:
+        '0': {name: punctuation.definition.table.restructuredtext}
+    - name: markup.heading.restructuredtext
+      match: (^(=|-|~|`|#|"|\^|\+|\*){3,}$){1,1}?
+      captures:
+        '1': {name: punctuation.definition.heading.restructuredtext}
+    - comment: comment
+      name: comment.line.double-dot.restructuredtext
+      begin: ^(\.\.)
+      beginCaptures:
+        '1': {name: punctuation.definition.comment.restructuredtext}
+      end: $\n?
+keyEquivalent: ^~R

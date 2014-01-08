@@ -27,7 +27,6 @@
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_centered": false,
 	"draw_minimap_border": true,
-	"enable_tab_scrolling": false,
 	"ensure_newline_at_eof_on_save": true,
 	"file_exclude_patterns":
 	[
@@ -95,24 +94,16 @@
 		"*.upb"
 	],
 	"find_selected_text": true,
-	"folder_exclude_patterns":
-	[
-		".svn",
-		".git",
-		".hg",
-		"CVS",
-		".ipynb_checkpoints"
-	],
 	"font_face": "Source Code Pro",
 	"font_size": 11,
 	"highlight_line": true,
 	"highlight_modified_tabs": false,
 	"ignored_packages":
 	[
+		"SublimeLinter",
 		"Solarized Color Scheme",
 		"Toggl Timer",
-		"RestructuredText",
-		"Markdown",
+		"SublimeLinter-flake8",
 		"Jedi - Python autocompletion",
 		"Vintage"
 	],
