@@ -101,6 +101,7 @@
 		".git",
 		".hg",
 		"CVS",
+		"build",
 		".ipynb_checkpoints"
 	],
 	"font_face": "Source Code Pro",
@@ -109,12 +110,12 @@
 	"highlight_modified_tabs": false,
 	"ignored_packages":
 	[
-		"Solarized Color Scheme",
 		"Toggl Timer",
+		"Jedi - Python autocompletion",
+		"Vintage",
 		"RestructuredText",
 		"Markdown",
-		"Jedi - Python autocompletion",
-		"Vintage"
+		"Solarized Color Scheme"
 	],
 	"ignored_words":
 	[
