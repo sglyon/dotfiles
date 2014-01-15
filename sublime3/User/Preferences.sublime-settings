@@ -110,12 +110,13 @@
 	"highlight_modified_tabs": false,
 	"ignored_packages":
 	[
+		"RestructuredText",
+		"Solarized Color Scheme",
+		"Markdown",
+		"Floobits",
 		"Toggl Timer",
 		"Jedi - Python autocompletion",
-		"Vintage",
-		"RestructuredText",
-		"Markdown",
-		"Solarized Color Scheme"
+		"Vintage"
 	],
 	"ignored_words":
 	[

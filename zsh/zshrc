@@ -49,14 +49,7 @@ plugins=(git
 
 source $ZSH/oh-my-zsh.sh
 
-path=(
-  /usr/local/anaconda/bin
-  /usr/local/anaconda/python.app/Contents/MacOS
-  /usr/texbin
-  $HOME/bin
-  /usr/local/{bin,sbin}
-  $path
-)
+# NOTE: path is set in zshenv
 
 export CLICOLOR=1
 export LSCOLORS=ExFxCxDxBxegedabagacad
@@ -66,7 +59,7 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
-alias matlab='matlab -nodesktop -nosplash'
+alias matlab='/Applications/MATLAB_R2012b.app/bin/matlab -nodesktop -nosplash'
 
 # export CC=/usr/bin/gcc
 # export CXX=/usr/bin/gcc

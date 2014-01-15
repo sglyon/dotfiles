@@ -13,16 +13,35 @@
 	"sublimelinter_notes": true,
 	"user":
 	{
-		"debug": true,
+		"debug": false,
 		"delay": 0.25,
 		"error_color": "D02000",
-		"gutter_theme": "Packages/SublimeLinter/gutter-themes/Default.gutter-theme",
+		"gutter_theme": "Packages/SublimeLinter/gutter-themes/Koloria/Koloria.gutter-theme",
 		"gutter_theme_excludes":
 		[
 		],
 		"lint_mode": "background",
 		"linters":
 		{
+			"annotations":
+			{
+				"@disable": false,
+				"args":
+				[
+				],
+				"errors":
+				[
+					"FIXME"
+				],
+				"excludes":
+				[
+				],
+				"warnings":
+				[
+					"TODO",
+					"README"
+				]
+			},
 			"flake8":
 			{
 				"@disable": false,
@@ -65,6 +84,7 @@
 			]
 		},
 		"rc_search_limit": 3,
+		"shell_timeout": 10,
 		"show_errors_on_save": false,
 		"show_marks_in_minimap": true,
 		"syntax_map":

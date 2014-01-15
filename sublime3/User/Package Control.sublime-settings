@@ -30,6 +30,7 @@
 		"Sublime Finder",
 		"SublimeGit",
 		"SublimeLinter",
+		"SublimeLinter-annotations",
 		"SublimeLinter-flake8",
 		"SublimeREPL",
 		"SyntaxHighlightTools",
