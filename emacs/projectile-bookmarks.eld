@@ -1,0 +1,1 @@
+("~/dotfiles/" "/Users/sglyon/dotfiles/" "/Users/sglyon/Research/Sargent/css2012/" "/Users/sglyon/School/BYU/capstone/" "/Users/sglyon/Dropbox/org/" "/Users/sglyon/School/BYU/byuclasses/" "/Users/sglyon/School/NYU/NYUclasses/" "/Users/sglyon/Python/hbs/" "/Users/sglyon/Downloads/pycse/" "/Users/sglyon/Downloads/v46i03-replication/")

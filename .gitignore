@@ -36,6 +36,7 @@ sublime3/User/Package Control.cache/
 sublime3/User/Package Control.ca-certs/
 .SublimeREPLHistory/
 
+emacs/elpa/
 
 *.db
 sublime3/User/FileHistory.sublime-settings
