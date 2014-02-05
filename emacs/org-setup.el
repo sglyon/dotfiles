@@ -2,7 +2,7 @@
 (setq org-directory "~/Dropbox/org/")
 (setq org-default-notes-file (concat org-directory "refile.org"))
 
-(setq load-path (cons "~/.src/Emacs/org-mode/lisp" load-path))
+(setq load-path (cons "~/src/Emacs/org-mode/lisp" load-path))
 (setq load-path (cons "~/.src/Emacs/org-mode/contrib/lisp" load-path))
 (require 'org-install)
 
@@ -62,7 +62,7 @@
 
 (defun bh/is-project-subtree-p ()
   "Any task with a todo keyword that is in a project subtree.
-Callers of this function already widen the buffer view."
+  Callers of this function already widen the buffer view."
   (let ((task (save-excursion (org-back-to-heading 'invisible-ok)
                               (point))))
     (save-excursion
@@ -222,8 +222,8 @@ Callers of this function already widen the buffer view."
 
 (defun bh/skip-project-tasks-maybe ()
   "Show tasks related to the current restriction.
-When restricted to a project, skip project and sub project tasks, habits, NEXT tasks, and loose tasks.
-When not restricted, skip project and sub-project tasks, habits, and project related tasks."
+  When restricted to a project, skip project and sub project tasks, habits, NEXT tasks, and loose tasks.
+  When not restricted, skip project and sub-project tasks, habits, and project related tasks."
   (save-restriction
     (widen)
     (let* ((subtree-end (save-excursion (org-end-of-subtree t)))
@@ -549,7 +549,7 @@ When not restricted, skip project and sub-project tasks, habits, and project rel
 ; (setq org-M-RET-may-split-line 0)
 
 ; org-sync settings
-(add-to-list 'load-path "~/.src/Emacs/org-sync")
+(add-to-list 'load-path "~/src/Emacs/org-sync")
 (mapc 'load
       '("org-element" "os" "os-bb" "os-github" "os-rmine"))
 (provide 'org-setup)
