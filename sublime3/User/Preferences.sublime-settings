@@ -101,6 +101,7 @@
 		".git",
 		".hg",
 		"CVS",
+		"dist",
 		"build",
 		".ipynb_checkpoints"
 	],
@@ -110,13 +111,14 @@
 	"highlight_modified_tabs": false,
 	"ignored_packages":
 	[
-		"RestructuredText",
 		"Solarized Color Scheme",
-		"Markdown",
+		"UnicodeMath",
+		"Jedi - Python autocompletion",
+		"Vintage",
 		"Floobits",
 		"Toggl Timer",
-		"Jedi - Python autocompletion",
-		"Vintage"
+		"RestructuredText",
+		"Markdown"
 	],
 	"ignored_words":
 	[

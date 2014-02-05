@@ -84,5 +84,17 @@
 		"badboxes",
 		"infos"
 	],
-	"username": "spencerlyon2@gmail.com"
+	"username": "spencerlyon2@gmail.com",
+
+	/*
+	 * TikZ support
+	 *
+	 * Just enable the support and every *.tikz file will compile and build on
+	 * her own very fast. If tikz_create_pdf is enabled the created pdf is
+	 * also copied next to your source file to include it as figure.
+	 *
+	 */
+
+	"tikz": false,
+	"tikz_create_pdf": false
 }

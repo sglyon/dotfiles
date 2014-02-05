@@ -14,6 +14,8 @@
             { "trigger": "inv", "contents": "^{-1}$0" },
             { "trigger": "0", "contents": "\\emptyset" },
             { "trigger": "br", "contents": "\\\\{ $0 \\\\}" },
+            { "trigger": "sum", "contents": "\\sum_{$1}^{$2} $0"},
+            { "trigger": "sumsum", "contents": "\\sum_{t=0}^{\\infty} \\sum_{s^t} \\beta^t"},
 
             // This one doesn't work
             { "trigger": "l|", "contents": "\\left| $1 \\right| $0"},

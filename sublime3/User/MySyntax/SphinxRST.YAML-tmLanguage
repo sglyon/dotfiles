@@ -21,7 +21,7 @@ repository:
       end: ^(?!\1[ \t])
       captures:
         '2': {name: meta.directive.restructuredtext}
-        '3': {name: punctuation.definition.directive.restructuredtext}
+        '3': {name: punctuation.definition.directive.restructureditext}
         '4': {name: punctuation.separator.key-value.restructuredtext}
       patterns:
       - include: text.html.basic
