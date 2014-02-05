@@ -1,5 +1,0 @@
-# -*- mode: snippet -*-
-# name: assertFalse
-# key: af
-# --
-self.assertFalse($0)
