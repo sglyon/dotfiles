@@ -46,3 +46,5 @@ python/ipython/profile_julia/
 python/ipython/profile_odyssh/
 python/ipython/profile_sshserver/
 python/ipython/profile_cluster/
+emacs/.emacs.desktop
+emacs/.emacs.desktop.lock
