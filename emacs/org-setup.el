@@ -1,11 +1,11 @@
 ;; My org-mode setup
 ; most of this is shamelessly copied from http://doc.norang.ca/org-mode.html
-(setq org-directory "~/Dropbox/org/")
-(setq org-default-notes-file (concat org-directory "inbox.org"))
-
 (setq load-path (cons "~/src/Emacs/org-mode/lisp" load-path))
 (setq load-path (cons "~/.src/Emacs/org-mode/contrib/lisp" load-path))
 (require 'org-install)
+
+(setq org-directory "~/Dropbox/org/")
+(setq org-default-notes-file (concat org-directory "inbox.org"))
 
 ;;--------------- habit tracking
 (require 'org-habit)
@@ -305,6 +305,10 @@
 ; of setting this -- see the docstring for details
 (setq org-confirm-babel-evaluate nil)
 
+(setq org-babel-default-header-args
+           (cons '(:exports . "both")
+                 (assq-delete-all :exports org-babel-default-header-args)))
+
 
 ;; Copied from online to get org mode setup
 (global-set-key "\C-cl" 'org-store-link)
@@ -560,7 +564,8 @@
 
 ; (setq org-M-RET-may-split-line 0)
 
-(setq org-src-fontify-natively nil)   ; syntax highlighting
+(setq org-src-fontify-natively t)   ; syntax highlighting
+(setq org-export-htmlize-output-type 'css)
 
 ; org-sync settings
 (add-to-list 'load-path "~/src/Emacs/org-sync")

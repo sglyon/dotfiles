@@ -5,7 +5,7 @@
 (require 'python-mode)
 
 ; use IPython
-(setq py-shell-name "~/anaconda/bin/ipython")  ; if problem set full path
+(setq py-shell-name "/usr/local/anaconda/bin/ipython")  ; if problem set full path
 (setq-default py-which-bufname "IPython")
 (setq py-python-command-args
   '("--gui=osx" "--pylab=osx" "-colors" "Linux"))
@@ -20,7 +20,7 @@
 ; try to automagically figure out indentation
 (setq py-smart-indentation t)
 
-(setq ipython-command "/usr/local/share/python/ipython" )
+(setq ipython-command "/usr/local/anaconda/bin/ipython")
 (require 'ipython)
 
 (add-to-list 'auto-mode-alist '("\\.py\\'" . python-mode))

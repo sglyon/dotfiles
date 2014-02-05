@@ -14,12 +14,17 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (tomorrow-night)))
  '(custom-safe-themes (quote ("6dfcb4de19630ea3676c256ca3c648b43524364898d1b94adca536b10344fefd" default)))
+ '(ipython-command "/usr/local/anaconda/bin/ipython")
  '(org-agenda-files (quote ("~/Dropbox/org/school.org" "~/Dropbox/org/personal.org" "~/School/NYU/NYUclasses/Winter2014/Micro/Pearce/microQ3.org" "~/School/NYU/NYUclasses/Winter2014/Metrics/metricsS2.org" "~/School/NYU/NYUclasses/Winter2014/Macro/Sargent/macroQ3.org" "~/Dropbox/org/inbox.org")))
- '(py-shell-local-path "~/anaconda/bin/ipython")
- '(py-shell-name "~/anaconda/bin/ipython")
- '(py-start-run-ipython-shell t)
+ '(py-force-py-shell-name-p t)
+ '(py-separator-char "/")
+ '(py-shell-local-path "/usr/local/anaconda/bin/ipython")
+ '(py-shell-name "/usr/local/anaconda/bin/ipython")
+ '(py-shell-toggle-1 "/usr/local/anaconda/bin/ipython")
+ '(py-split-windows-on-execute-p nil)
+ '(py-switch-buffers-on-execute-p t)
  '(py-use-local-default t)
- '(python-shell-interpreter "~/anaconda/bin/ipython")
+ '(python-shell-interpreter "/usr/local/anaconda/bin/ipython")
  '(safe-local-variable-values (quote ((eval ispell-change-dictionary "en_US") (eval org-expiry-deinsinuate)))))
 (custom-set-faces
  ;; custom-set-faces was added by Custom.
