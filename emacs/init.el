@@ -4,6 +4,9 @@
 ; Tell emacs about theme directory for colorschemes
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
+(setq user-email-address "sgl290@stern.nyu.edu")
+(setq user-full-name "Spencer Lyon")
+
 (custom-set-variables
  ;; custom-set-variables was added by Custom.
  ;; If you edit it by hand, you could mess it up, so be careful.
@@ -11,8 +14,7 @@
  ;; If there is more than one, they won't work right.
  '(custom-enabled-themes (quote (tomorrow-night)))
  '(custom-safe-themes (quote ("6dfcb4de19630ea3676c256ca3c648b43524364898d1b94adca536b10344fefd" default)))
- '(org-agenda-files (quote ("~/Dropbox/org/personal.org" "~/Dropbox/org/xdress.org" "~/Dropbox/org/school.org" "~/Dropbox/org/refile.org")))
- '(org-directory "~/Dropbox/org")
+ '(org-agenda-files (quote ("~/Dropbox/org/school.org" "~/Dropbox/org/personal.org" "~/School/NYU/NYUclasses/Winter2014/Micro/Pearce/microQ3.org" "~/School/NYU/NYUclasses/Winter2014/Metrics/metricsS2.org" "~/School/NYU/NYUclasses/Winter2014/Macro/Sargent/macroQ3.org" "~/Dropbox/org/inbox.org")))
  '(py-shell-local-path "~/anaconda/bin/ipython")
  '(py-shell-name "~/anaconda/bin/ipython")
  '(py-start-run-ipython-shell t)
@@ -207,3 +209,5 @@
 
 ; (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
 ; (el-get 'sync)
+
+(run-at-time "00:59" 3000 'org-save-all-org-buffers)

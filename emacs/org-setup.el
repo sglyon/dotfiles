@@ -1,6 +1,7 @@
 ;; My org-mode setup
+; most of this is shamelessly copied from http://doc.norang.ca/org-mode.html
 (setq org-directory "~/Dropbox/org/")
-(setq org-default-notes-file (concat org-directory "refile.org"))
+(setq org-default-notes-file (concat org-directory "inbox.org"))
 
 (setq load-path (cons "~/src/Emacs/org-mode/lisp" load-path))
 (setq load-path (cons "~/.src/Emacs/org-mode/contrib/lisp" load-path))
@@ -283,12 +284,29 @@
             (org-set-local 'yas/trigger-key [tab])
             (define-key yas/keymap [tab] 'yas/next-field-group)))
 
-;; Copied from online to get org mode setup
-(require 'org-install)
 (org-babel-do-load-languages
- 'org-babel-load-languages
- '((sh . true) (python . true))
-)
+ (quote org-babel-load-languages)
+ (quote ((emacs-lisp . t)
+         (ditaa . t)
+         (python . t)
+         (R . t)
+         (ruby . t)
+         (perl . t)
+         (gnuplot . t)
+         (clojure . t)
+         (sh . t)
+         (ledger . t)
+         (org . t)
+         (plantuml . t)
+         (latex . t))))
+
+; Do not prompt to confirm evaluation
+; This may be dangerous - make sure you understand the consequences
+; of setting this -- see the docstring for details
+(setq org-confirm-babel-evaluate nil)
+
+
+;; Copied from online to get org mode setup
 (global-set-key "\C-cl" 'org-store-link)
 (global-set-key "\C-cc" 'org-capture)
 (global-set-key "\C-ca" 'org-agenda)
@@ -315,24 +333,24 @@
 (setq org-log-done 'time)
 
 ;; ReFTeX setup
-(defun org-mode-reftex-setup ()
-  (load-library "reftex")
-  (and (buffer-file-name) (file-exists-p (buffer-file-name))
-       (progn
-	 ;enable auto-revert-mode to update reftex when bibtex file changes on disk
-	 (global-auto-revert-mode t)
-	 (reftex-parse-all)
-	 ;add a custom reftex cite format to insert links
-	 (reftex-set-cite-format
-	  '((?b . "[[bib:%l][%l-bib]]")
-	    (?n . "[[notes:%l][%l-notes]]")
-	    (?p . "[[papers:%l][%l-paper]]")
-	    (?t . "%t")
-	    (?h . "** %t\n:PROPERTIES:\n:Custom_ID: %l\n:END:\n[[papers:%l][%l-paper]]")))))
-  (define-key org-mode-map (kbd "C-c )") 'reftex-citation)
-  (define-key org-mode-map (kbd "C-c (") 'org-mode-reftex-search))
+; (defun org-mode-reftex-setup ()
+;   (load-library "reftex")
+;   (and (buffer-file-name) (file-exists-p (buffer-file-name))
+;        (progn
+;   ;enable auto-revert-mode to update reftex when bibtex file changes on disk
+;   (global-auto-revert-mode t)
+;   (reftex-parse-all)
+;   ;add a custom reftex cite format to insert links
+;   (reftex-set-cite-format
+;    '((?b . "[[bib:%l][%l-bib]]")
+;      (?n . "[[notes:%l][%l-notes]]")
+;      (?p . "[[papers:%l][%l-paper]]")
+;      (?t . "%t")
+;      (?h . "** %t\n:PROPERTIES:\n:Custom_ID: %l\n:END:\n[[papers:%l][%l-paper]]")))))
+;   (define-key org-mode-map (kbd "C-c )") 'reftex-citation)
+;   (define-key org-mode-map (kbd "C-c (") 'org-mode-reftex-search))
 
-(add-hook 'org-mode-hook 'org-mode-reftex-setup)
+; (add-hook 'org-mode-hook 'org-mode-reftex-setup)
 
 ;; Save time history accross emacs sessions
 (setq org-clock-persist 'history)
@@ -370,26 +388,20 @@
 
 ;; Capture templates for: TODO tasks, respond to, notes, journal, phone calls, scripture journal, and habits
 (setq org-capture-templates
-      (quote (("t" "todo" entry (file "~/Dropbox/org/refile.org")
+      (quote (("t" "todo" entry (file "~/Dropbox/org/inbox.org")
                "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
-	      ("o" "Open Source TODO" entry (file "~/Dropbox/org/refile.org")
-	       "* TODO %? :DEV: \n%U\n%a\n" :clock-in t :clock-resume t)
-	      ("c" "Classes" entry (file "~/Dropbox/org/school.org")
-	       "* TODO %? :SCHOOL: \n%U\n%a\n" :clock-in t :clock-resume t)
-	      ("f" "Family" entry (file "~/Dropbox/org/refile.org")
+         ("h" "Homework" entry (file "~/Dropbox/org/school.org")
+          "* TODO %? :HOMEWORK:SCHOOL: \n%U\n%a\n" :clock-in t :clock-resume t)
+         ("f" "Family" entry (file "~/Dropbox/org/inbox.org")
 	       "* TODO %? :FAMILY: \n%U\n%a\n" :clock-in t :clock-resume t)
-              ("r" "respond" entry (file "~/Dropbox/org/refile.org")
-               "* NEXT Respond to %:from on %:subject\nSCHEDULED: %t\n%U\n%a\n" :clock-in t :clock-resume t :immediate-finish t)
-              ("n" "note" entry (file "~/Dropbox/org/refile.org")
-               "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
-              ("j" "Journal" entry (file+datetree "~/Dropbox/org/journal.org")
-               "* %?\n%U\n" :clock-in t :clock-resume t)
-              ("p" "Phone call" entry (file "~/Dropbox/org/refile.org")
-               "* PHONE %? :PHONE:\n%U" :clock-in t :clock-resume t)
-	      ("s" "Scripture Journal" entry (file+datetree "~/Dropbox/org/paperplates.org")
-               "* %? :PP:\n%U\n:PROPERTIES:\n:TOPIC: None\n:REFERENCE: None\n:PEOPLE: None\n:PHASE: NYU\n:END:\n")
-              ("h" "Habit" entry (file "~/Dropbox/org/refile.org")
-               "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n"))))
+        ("r" "respond" entry (file "~/Dropbox/org/inbox.org")
+         "* NEXT Respond to %:from on %:subject\nSCHEDULED: %t\n%U\n%a\n" :clock-in t :clock-resume t :immediate-finish t)
+        ("n" "note" entry (file "~/Dropbox/org/inbox.org")
+         "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
+        ("j" "Journal" entry (file+datetree "~/Dropbox/org/journal.org")
+         "* %?\n%U\n" :clock-in t :clock-resume t)
+        ("h" "Habit" entry (file "~/Dropbox/org/inbox.org")
+         "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n"))))
 
 ;; Remove empty LOGBOOK drawers on clock out
 (defun bh/remove-empty-drawer-on-clock-out ()
@@ -547,6 +559,8 @@
 (org-mobile-pull)
 
 ; (setq org-M-RET-may-split-line 0)
+
+(setq org-src-fontify-natively nil)   ; syntax highlighting
 
 ; org-sync settings
 (add-to-list 'load-path "~/src/Emacs/org-sync")
