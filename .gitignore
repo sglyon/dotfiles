@@ -36,6 +36,7 @@ sublime3/User/Package Control.cache/
 sublime3/User/Package Control.ca-certs/
 .SublimeREPLHistory/
 
+emacs/elpa/
 
 *.db
 sublime3/User/FileHistory.sublime-settings
@@ -45,3 +46,5 @@ python/ipython/profile_julia/
 python/ipython/profile_odyssh/
 python/ipython/profile_sshserver/
 python/ipython/profile_cluster/
+emacs/.emacs.desktop
+emacs/.emacs.desktop.lock

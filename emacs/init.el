@@ -1,218 +1,127 @@
-;; My ~/.emacs.d/init.el file
-; based on: http://www.jesshamrick.com/2012/09/18/emacs-as-a-python-ide/
-
-; Tell emacs about theme directory for colorschemes
-(add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
-
-(setq user-email-address "sgl290@stern.nyu.edu")
-(setq user-full-name "Spencer Lyon")
-
-(custom-set-variables
- ;; custom-set-variables was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(custom-enabled-themes (quote (tomorrow-night)))
- '(custom-safe-themes (quote ("6dfcb4de19630ea3676c256ca3c648b43524364898d1b94adca536b10344fefd" default)))
- '(ipython-command "/usr/local/anaconda/bin/ipython")
- '(org-agenda-files (quote ("~/Dropbox/org/school.org" "~/Dropbox/org/personal.org" "~/School/NYU/NYUclasses/Winter2014/Micro/Pearce/microQ3.org" "~/School/NYU/NYUclasses/Winter2014/Metrics/metricsS2.org" "~/School/NYU/NYUclasses/Winter2014/Macro/Sargent/macroQ3.org" "~/Dropbox/org/inbox.org")))
- '(py-force-py-shell-name-p t)
- '(py-separator-char "/")
- '(py-shell-local-path "/usr/local/anaconda/bin/ipython")
- '(py-shell-name "/usr/local/anaconda/bin/ipython")
- '(py-shell-toggle-1 "/usr/local/anaconda/bin/ipython")
- '(py-split-windows-on-execute-p nil)
- '(py-switch-buffers-on-execute-p t)
- '(py-use-local-default t)
- '(python-shell-interpreter "/usr/local/anaconda/bin/ipython")
- '(safe-local-variable-values (quote ((eval ispell-change-dictionary "en_US") (eval org-expiry-deinsinuate)))))
-(custom-set-faces
- ;; custom-set-faces was added by Custom.
- ;; If you edit it by hand, you could mess it up, so be careful.
- ;; Your init file should contain only one such instance.
- ;; If there is more than one, they won't work right.
- '(column-marker-1 ((t (:background "dark cyan"))))
- '(column-marker-2 ((t (:background "red3")))))
+;;; init.el --- Prelude's configuration entry point.
 ;;
+;; Copyright (c) 2011 Bozhidar Batsov
+;;
+;; Author: Bozhidar Batsov <bozhidar@batsov.com>
+;; URL: http://batsov.com/prelude
+;; Version: 1.0.0
+;; Keywords: convenience
 
-; Add marmalade to package control sources
-(require 'package)
-(setq package-archives '(("gnu" . "http://elpa.gnu.org/packages/")
-                           ("marmalade" . "http://marmalade-repo.org/packages/")
-                           ("melpa" . "http://melpa.milkbox.net/packages/")))
-(package-initialize)
+;; This file is not part of GNU Emacs.
 
-; ;- - - - - - - - - - - - - - - Global Settings - - - - - - - - - - - - - - - ;
-;;; Sublime like settings
-; Multiple cursors
-(require 'multiple-cursors)
+;;; Commentary:
 
-; Keyboard shortcuts for multiple-cursors. Maybe change to be like sublime (cmd + d)?
-(global-unset-key (kbd "C-d"))
-(global-unset-key (kbd "C-S-l"))
-(global-set-key (kbd "C-d") 'mc/mark-next-like-this)
-(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
-(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
-(global-set-key (kbd "C-S-l") 'mc/edit-lines)
+;; This file simply sets up the default load path and requires
+;; the various modules defined within Emacs Prelude.
 
-; Clear whitespace on save
-(add-hook 'before-save-hook 'delete-trailing-whitespace)
+;;; License:
 
-; Ensure new line at eof on save
-(setq require-final-newline 't)
+;; This program is free software; you can redistribute it and/or
+;; modify it under the terms of the GNU General Public License
+;; as published by the Free Software Foundation; either version 3
+;; of the License, or (at your option) any later version.
+;;
+;; This program is distributed in the hope that it will be useful,
+;; but WITHOUT ANY WARRANTY; without even the implied warranty of
+;; MERCHANTABILITY or FITNESS FOR A PARTICULAR PURPOSE.  See the
+;; GNU General Public License for more details.
+;;
+;; You should have received a copy of the GNU General Public License
+;; along with GNU Emacs; see the file COPYING.  If not, write to the
+;; Free Software Foundation, Inc., 51 Franklin Street, Fifth Floor,
+;; Boston, MA 02110-1301, USA.
 
-; Set column markers
-(require 'column-marker)
-(column-marker-1 72)
-(column-marker-2 79)
-(add-hook 'python-mode-hook (lambda () (interactive) (column-marker-1 72) (column-marker-2 79)))
+;;; Code:
+(defvar current-user
+      (getenv
+       (if (equal system-type 'windows-nt) "USERNAME" "USER")))
 
-; Map command as control
-(setq mac-command-modifier 'control)
+(message "Prelude is powering up... Be patient, Master %s!" current-user)
 
-; Disable toolbar
-(tool-bar-mode -1)
+(when (version< emacs-version "24.1")
+  (error "Prelude requires at least GNU Emacs 24.1"))
 
-; Enable menu-bar
-(menu-bar-mode 1)
+(defvar prelude-dir (file-name-directory load-file-name)
+  "The root dir of the Emacs Prelude distribution.")
+(defvar prelude-core-dir (expand-file-name "core" prelude-dir)
+  "The home of Prelude's core functionality.")
+(defvar prelude-modules-dir (expand-file-name  "modules" prelude-dir)
+  "This directory houses all of the built-in Prelude modules.")
+(defvar prelude-personal-dir (expand-file-name "personal" prelude-dir)
+  "This directory is for your personal configuration.
 
-; Disable scroll-bar
-(scroll-bar-mode -1)
+Users of Emacs Prelude are encouraged to keep their personal configuration
+changes in this directory.  All Emacs Lisp files there are loaded automatically
+by Prelude.")
+(defvar prelude-personal-preload-dir (expand-file-name "preload" prelude-personal-dir)
+  "This directory is for your personal configuration, that you want loaded before Prelude.")
+(defvar prelude-vendor-dir (expand-file-name "vendor" prelude-dir)
+  "This directory houses packages that are not yet available in ELPA (or MELPA).")
+(defvar prelude-savefile-dir (expand-file-name "savefile" prelude-dir)
+  "This folder stores all the automatically generated save/history-files.")
+(defvar prelude-modules-file (expand-file-name "prelude-modules.el" prelude-dir)
+  "This files contains a list of modules that will be loaded by Prelude.")
 
-; Comment with C-S-/ (C-?)
-(global-set-key (kbd "C-?") 'comment-region)
-(global-set-key (kbd "M-?") 'uncomment-region)
+(unless (file-exists-p prelude-savefile-dir)
+  (make-directory prelude-savefile-dir))
 
-; Switch header/implementation with C-c o
-(global-set-key (kbd "C-c o") 'ff-find-other-file)
+(defun prelude-add-subfolders-to-load-path (parent-dir)
+ "Add all level PARENT-DIR subdirs to the `load-path'."
+ (dolist (f (directory-files parent-dir))
+   (let ((name (expand-file-name f parent-dir)))
+     (when (and (file-directory-p name)
+                (not (equal f ".."))
+                (not (equal f ".")))
+       (add-to-list 'load-path name)
+       (prelude-add-subfolders-to-load-path name)))))
 
-; always visually wrap lines
-(global-visual-line-mode 1)
+;; add Prelude's directories to Emacs's `load-path'
+(add-to-list 'load-path prelude-core-dir)
+(add-to-list 'load-path prelude-modules-dir)
+(add-to-list 'load-path prelude-vendor-dir)
+(prelude-add-subfolders-to-load-path prelude-vendor-dir)
 
-; Set defualt directory
-(let ((default-directory "~/.emacs.d"))
-  (normal-top-level-add-subdirs-to-load-path))
-;; (add-to-list 'load-path "~/.emacs.d/plugins")
-;; (add-to-list 'load-path "~/.emacs.d/elpa")
+;; reduce the frequency of garbage collection by making it happen on
+;; each 50MB of allocated data (the default is on every 0.76MB)
+(setq gc-cons-threshold 50000000)
 
-; Set font size in units of x/10 so :height 100 = 10 pt.
-(set-face-attribute 'default nil :height 100)
+;; preload the personal settings from `prelude-personal-preload-dir'
+(when (file-exists-p prelude-personal-preload-dir)
+  (message "Loading personal configuration files in %s..." prelude-personal-preload-dir)
+  (mapc 'load (directory-files prelude-personal-preload-dir 't "^[^#].*el$")))
 
-; Set cursor color and font lock
-(set-cursor-color "#6785c5")
-(global-font-lock-mode 1)
+(message "Loading Prelude's core...")
 
-; Changes all yes/no questions to y/n type
-(fset 'yes-or-no-p 'y-or-n-p)
+;; the core stuff
+(require 'prelude-packages)
+(require 'prelude-ui)
+(require 'prelude-core)
+(require 'prelude-mode)
+(require 'prelude-editor)
+(require 'prelude-global-keybindings)
 
+;; OSX specific settings
+(when (eq system-type 'darwin)
+  (require 'prelude-osx))
 
-; turn on ido
-(require 'ido)
-(ido-mode t)
-(setq ido-enable-flex-matching t)
-(add-hook 'ido-setup-hook
-          (lambda ()
-            (define-key ido-completion-map [tab] 'ido-complete)))
+(message "Loading Prelude's modules...")
 
-(global-set-key
- "\M-x"
- (lambda ()
-   (interactive)
-   (call-interactively
-    (intern
-     (ido-completing-read
-      "M-x "
-      (all-completions "" obarray 'commandp))))))
+;; the modules
+(when (file-exists-p prelude-modules-file)
+  (load prelude-modules-file))
 
-; auto complete Settings
-(add-to-list 'load-path "/Users/spencerlyon2/.emacs.d/plugins/autocomplete/")
-(require 'auto-complete-config)
-(add-to-list 'ac-dictionary-directories "/Users/spencerlyon2/.emacs.d/plugins/autocomplete//ac-dict")
-(ac-config-default)
+;; config changes made through the customize UI will be store here
+(setq custom-file (expand-file-name "custom.el" prelude-personal-dir))
 
-; (add-to-list 'load-path "~/.emacs.d/plugins")
-; (require 'fill-column-indicator)
-; (define-globalized-minor-mode
-;   global-fci-mode fci-mode (lambda () (fci-mode 1)))
-; (global-fci-mode t)
+;; load the personal settings (this includes `custom-file')
+(when (file-exists-p prelude-personal-dir)
+  (message "Loading personal configuration files in %s..." prelude-personal-dir)
+  (mapc 'load (directory-files prelude-personal-dir 't "^[^#].*el$")))
 
-; Add window navitagion to M
-(global-set-key [M-left] 'windmove-left)          ; move to left windnow
-(global-set-key [M-right] 'windmove-right)        ; move to right window
-(global-set-key [M-up] 'windmove-up)              ; move to upper window
-(global-set-key [M-down] 'windmove-down)          ; move to downer window
+(message "Prelude is ready to do thy bidding, Master %s!" current-user)
 
-; expand-region settings
-(require 'expand-region)
-(global-set-key (kbd "C-c C-d") 'er/expand-region)
+(prelude-eval-after-init
+ ;; greet the use with some useful tip
+ (run-at-time 5 nil 'prelude-tip-of-the-day))
 
-; ;; Set up google talk with Jabber
-; (setq jabber-username "spencerlyon2")
-;   (setq jabber-password "ly0no409")
-;   (setq jabber-nickname "spencer")
-;   (setq jabber-connection-type (quote ssl))
-;   (setq jabber-network-server "talk.google.com")
-;   (setq jabber-server "gmail.com")
-
-; (setq jabber-account-list
-;     '(("spencerlyon2@gmail.com"
-;        (:network-server . "talk.google.com")
-;        (:connection-type . ssl))))
-
-;; load helm
-; (require 'helm-config)
-
-;; Projectile settings
-; (projectile-global-mode)
-; (setq projectile-use-native-indexing t)
-; (setq projectile-enable-caching t)
-
-;; project-persist settings
-; (require 'project-persist)
-; (require 'sr-speedbar)
-; (project-persist-mode t)
-
-;; linum-global mode
-; (require 'linum-relative)
-; (global-linum-mode)
-
-;; git settings
-
-(global-set-key (kbd "M-g M-s")  `magit-status)
-
-;; New shutdown function that calls org-mobile-push automatically
-(defun intelligent-close ()
-  (interactive)
-  (org-mobile-push) ;; <== MOBILE ==
-  (if (eq (car (visible-frame-list)) (selected-frame))
-      (if (> (length (visible-frame-list)) 1)
-          (delete-frame (selected-frame))
-        (save-buffers-kill-emacs))
-    (delete-frame (selected-frame)))
-)
-(global-set-key (kbd "C-x C-c") 'intelligent-close)
-
-
-; ;- - - - - - - - - - - - - - Mode-Specific Settings - - - - - - - - - - - - -;
-(load-file "~/.emacs.d/python-setup.el")
-(load-file "~/.emacs.d/org-setup.el")
-(load-file "~/.emacs.d/tex-setup.el")
-
-(projectile-global-mode)
-
-(find-file "~/Dropbox/org/refile.org")
-
-; ;- - - - - - - - - - - - - - - - - el-get settings - - - - - - - - - - - - -;
-; (add-to-list 'load-path "~/.emacs.d/el-get/el-get")
-
-; (unless (require 'el-get nil 'noerror)
-;   (with-current-buffer
-;       (url-retrieve-synchronously
-;        "https://raw.github.com/dimitri/el-get/master/el-get-install.el")
-;     (goto-char (point-max))
-;     (eval-print-last-sexp)))
-
-; (add-to-list 'el-get-recipe-path "~/.emacs.d/el-get-user/recipes")
-; (el-get 'sync)
-
-(run-at-time "00:59" 3000 'org-save-all-org-buffers)
+;;; init.el ends here
