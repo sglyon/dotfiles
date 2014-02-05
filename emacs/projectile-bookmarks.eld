@@ -1,1 +1,1 @@
-("~/School/NYU/NYUclasses/" "~/Dropbox/org/" "~/dotfiles/")
+("~/dotfiles/" "~/School/NYU/SargentSummer/" "~/Dropbox/org/" "~/School/NYU/NYUclasses/")

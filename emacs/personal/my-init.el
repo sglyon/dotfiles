@@ -24,7 +24,6 @@
 ; save org buffers every 6 minutes
 (run-at-time "00:59" 3600 'org-save-all-org-buffers)
 
-
 (projectile-global-mode)
 
 (desktop-save-mode 1)
@@ -99,9 +98,13 @@
 (column-marker-2 79)
 (add-hook 'python-mode-hook (lambda () (interactive) (column-marker-1 72) (column-marker-2 79)))
 
-
 ;;----------------- yasnippet
 ;; set up yasnippet
 (require 'yasnippet)
 (setq yas-snippet-dirs '("~/.emacs.d/mysnippets"))
 (yas-reload-all)
+
+
+;;----------------- expand-region settings
+(require 'expand-region)
+(global-set-key (kbd "C-c C-d") 'er/expand-region)
