@@ -1,6 +1,10 @@
 ; Tell emacs about theme directory for colorschemes
 (add-to-list 'custom-theme-load-path "~/.emacs.d/themes")
 
+; Set defualt directory
+(let ((default-directory "~/.emacs.d"))
+  (normal-top-level-add-subdirs-to-load-path))
+
 
  ;;----------------- General Settings
 (setq user-email-address "sgl290@stern.nyu.edu")
@@ -46,6 +50,9 @@
 
 ; git status
 (global-set-key (kbd "M-g M-s")  `magit-status)
+
+; NOTE: Experimental
+(define-key read-expression-map [(tab)] 'hippie-expand)
 
 ;;----------------- ido mode
 ; turn on ido
@@ -102,9 +109,22 @@
 ;; set up yasnippet
 (require 'yasnippet)
 (setq yas-snippet-dirs '("~/.emacs.d/mysnippets"))
-(yas-reload-all)
-
+(yas/reload-all)
+(yas-global-mode 1)
 
 ;;----------------- expand-region settings
 (require 'expand-region)
 (global-set-key (kbd "C-c C-d") 'er/expand-region)
+
+
+;;----------------- Sublime like settings
+; Multiple cursors
+(require 'multiple-cursors)
+
+; Keyboard shortcuts for multiple-cursors. Maybe change to be like sublime (cmd + d)?
+(global-unset-key (kbd "C-d"))
+(global-unset-key (kbd "C-S-l"))
+(global-set-key (kbd "C-d") 'mc/mark-next-like-this)
+(global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
+(global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
+(global-set-key (kbd "C-S-l") 'mc/edit-lines)

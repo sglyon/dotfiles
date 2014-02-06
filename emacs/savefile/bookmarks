@@ -1,0 +1,20 @@
+;;;; Emacs Bookmark Format Version 1 ;;;;
+;;; This format is meant to be slightly human-readable;
+;;; nevertheless, you probably don't want to edit it.
+;;; -*- End Of Bookmark File Format Version Stamp -*-
+(("org-capture-last-stored"
+ (filename . "~/Dropbox/org/inbox.org")
+ (front-context-string)
+ (rear-context-string . "testing suite]]\n")
+ (position . 7495))
+("org-capture-last-stored-marker"
+ (filename . "~/School/NYU/NYUclasses/Winter2014/Metrics/metricsS2.org")
+ (front-context-string . "** TODO Illegibl")
+ (rear-context-string . "eas org file]]\n\n")
+ (position . 1953))
+("org-refile-last-stored"
+ (filename . "~/School/NYU/NYUclasses/Winter2014/Metrics/metricsS2.org")
+ (front-context-string . "** TODO Illegibl")
+ (rear-context-string . "eas org file]]\n\n")
+ (position . 1953))
+)

@@ -1,1 +1,1 @@
-("~/dotfiles/" "~/School/NYU/SargentSummer/" "~/Dropbox/org/" "~/School/NYU/NYUclasses/")
+("~/Dropbox/org/" "~/Documents/paperPlates/" "~/dotfiles/" "~/School/NYU/NYUclasses/" "~/School/NYU/SargentSummer/" "~/src/Emacs/ob-julia/" "~/Python/pycse/")

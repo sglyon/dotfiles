@@ -35,15 +35,17 @@
             (local-set-key "\C-y" 'yank)
             ;; yasnippet (allow yasnippet to do its thing in org files)
             (org-set-local 'yas/trigger-key [tab])
-            (define-key yas/keymap [tab] 'yas/next-field-group)))
+            (define-key yas/keymap [tab] 'yas/next-field)))
 
 ;; Set up directories/agenda files
 (setq org-directory "~/Dropbox/org/")
-(setq org-default-notes-file (concat org-directory "inbox.org"))
+(setq org-default-notes-file "~/Dropbox/inbox.org")
 
 (setq org-agenda-files (quote ("~/Dropbox/org/inbox.org"
                                "~/Dropbox/org/personal.org"
-                               "~/School/NYU/NYUclasses/Winter2014/Macro/Sargent/macroQ3.org")))
+                               "~/School/NYU/NYUclasses/Winter2014/Macro/Sargent/macroQ3.org"
+                               "~/School/NYU/NYUclasses/Winter2014/Micro/Pearce/microQ3.org"
+                               "~/School/NYU/NYUclasses/Winter2014/Metrics/metricsS2.org")))
 
 ;; Mobile org settings
 ; Set to the name of the file where new notes will be stored
@@ -52,14 +54,17 @@
 ; Set to <your Dropbox root directory>/MobileOrg.
 (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
 (setq org-mobile-inbox-for-pull "~/Dropbox/org/refile.org")
+(setq org-support-shift-select t)
 
 ;; org-babel setup
+(add-to-list 'load-path  "~/src/Emacs/ob-julia/ob-julia.el")
 (org-babel-do-load-languages
  (quote org-babel-load-languages)
  (quote ((emacs-lisp . t)
          (ditaa . t)
          (python . t)
          (R . t)
+         (julia . t)
          (ruby . t)
          (perl . t)
          (gnuplot . t)
@@ -366,7 +371,7 @@
       (quote (("t" "todo" entry (file "~/Dropbox/org/inbox.org")
                "* TODO %?\n%U\n%a\n" :clock-in t :clock-resume t)
               ("h" "Homework" entry (file "~/Dropbox/org/school.org")
-               "* TODO %? :HOMEWORK:SCHOOL: \n%U\n%a\n" :clock-in t :clock-resume t)
+               "* TODO %? :HOMEWORK: \n%U\n%a\n" :clock-in t :clock-resume t)
               ("f" "Family" entry (file "~/Dropbox/org/inbox.org")
                "* TODO %? :FAMILY: \n%U\n%a\n" :clock-in t :clock-resume t)
               ("r" "respond" entry (file "~/Dropbox/org/inbox.org")
@@ -374,6 +379,8 @@
               ("n" "note" entry (file "~/Dropbox/org/inbox.org")
                "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
               ("j" "Journal" entry (file+datetree "~/Dropbox/org/journal.org")
+               "* %?\n%U\n" :clock-in t :clock-resume t)
+              ("i" "Research Ideas" entry (file+datetree "~/Dropbox/org/research/ideas.org")
                "* %?\n%U\n" :clock-in t :clock-resume t)
               ("h" "Habit" entry (file "~/Dropbox/org/inbox.org")
                "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n"))))
