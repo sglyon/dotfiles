@@ -22,7 +22,7 @@
 	"color_scheme": "Packages/User/Tomorrow-Night (SL).tmTheme",
 	"default_extend_env":
 	{
-		"PATH": "{PATH}:/usr/local/bin:/usr/local/anaconda/bin"
+		"PATH": "{PATH}:/usr/local/bin:/usr/texbin:/usr/local/anaconda/bin"
 	},
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_centered": false,
@@ -111,14 +111,14 @@
 	"highlight_modified_tabs": false,
 	"ignored_packages":
 	[
+		"Markdown",
 		"Solarized Color Scheme",
-		"UnicodeMath",
-		"Jedi - Python autocompletion",
-		"Vintage",
-		"Floobits",
 		"Toggl Timer",
+		"Jedi - Python autocompletion",
+		"Floobits",
 		"RestructuredText",
-		"Markdown"
+		"UnicodeMath",
+		"Vintage"
 	],
 	"ignored_words":
 	[

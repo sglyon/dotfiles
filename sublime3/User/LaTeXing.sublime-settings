@@ -25,7 +25,7 @@
 		"matrix"
 	],
 	"forward_sync": true,
-	"knitr": false,
+	"knitr": true,
 	"knitr_command": "Rscript -e \"library(knitr); knit('{file}')\"",
 	"license": "5c288e922606502d23ea59e07c",
 	"open_pdf_on_load": false,

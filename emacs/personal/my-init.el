@@ -7,7 +7,7 @@
 
 
  ;;----------------- General Settings
-(setq user-email-address "sgl290@stern.nyu.edu")
+(setq user-mail-address "spencerlyon2@gmail.com")
 (setq user-full-name "Spencer Lyon")
 
 ; Changes all yes/no questions to y/n type
@@ -25,8 +25,10 @@
 )
 (global-set-key (kbd "C-x C-c") 'intelligent-close)
 
-; save org buffers every 6 minutes
+; save org buffers every 60 minutes
 (run-at-time "00:59" 3600 'org-save-all-org-buffers)
+(run-at-time "00:59" 1800  'org-mobile-pull)
+(run-at-time "00:59" 1800  'org-mobile-push)
 
 (projectile-global-mode)
 
@@ -87,7 +89,7 @@
 (menu-bar-mode 1)
 
 ; Disable scroll-bar
-(scroll-bar-mode -1)
+; (scroll-bar-mode -1)
 
 ; always visually wrap lines
 (global-visual-line-mode 1)
@@ -128,3 +130,16 @@
 (global-set-key (kbd "C-<") 'mc/mark-previous-like-this)
 (global-set-key (kbd "C-c C-<") 'mc/mark-all-like-this)
 (global-set-key (kbd "C-S-l") 'mc/edit-lines)
+
+(global-unset-key (kbd "C-c t"))
+
+;;                  Gnus settings
+(defun my-gnus-group-list-subscribed-groups ()
+  "List all subscribed groups with or without un-read messages"
+  (interactive)
+  (gnus-group-list-all-groups 5)
+  )
+(add-hook 'gnus-group-mode-hook
+          ;; list all the subscribed groups even they contain zero un-read messages
+          (lambda () (local-set-key "o" 'my-gnus-group-list-subscribed-groups ))
+          )

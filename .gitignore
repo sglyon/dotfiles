@@ -48,3 +48,5 @@ python/ipython/profile_sshserver/
 python/ipython/profile_cluster/
 emacs/.emacs.desktop
 emacs/.emacs.desktop.lock
+python/ipython/history
+sublime3/User/profile-0.json

@@ -2,10 +2,7 @@
 	"color_scheme": "Packages/Color Scheme - Default/iPlastic.tmTheme",
 	"default_address":
 	[
-		"http://127.0.0.1:8888",
-		"http://127.0.0.1:8889",
-		"http://127.0.0.1:8998",
-		"127.0.0.1:8888"
+		"http://127.0.0.1:8888"
 	],
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_indent_guides": true,

@@ -9,7 +9,6 @@
 ;; ------------------------------ My settings ------------------------------ ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 ;; Get syntax highlighting correct in html output
-; TOOD: get it set up for latex too using Pygments
 (require 'htmlize)
 ; syntax highlighting
 (setq org-src-fontify-natively t)
@@ -39,21 +38,20 @@
 
 ;; Set up directories/agenda files
 (setq org-directory "~/Dropbox/org/")
-(setq org-default-notes-file "~/Dropbox/inbox.org")
+(setq org-default-notes-file "~/Dropbox/org/inbox.org")
 
 (setq org-agenda-files (quote ("~/Dropbox/org/inbox.org"
                                "~/Dropbox/org/personal.org"
+                               "~/Dropbox/org/research/ideas.org"
                                "~/School/NYU/NYUclasses/Winter2014/Macro/Sargent/macroQ3.org"
                                "~/School/NYU/NYUclasses/Winter2014/Micro/Pearce/microQ3.org"
                                "~/School/NYU/NYUclasses/Winter2014/Metrics/metricsS2.org")))
 
 ;; Mobile org settings
-; Set to the name of the file where new notes will be stored
-(setq org-mobile-inbox-for-pull "~/Dropbox/org/flagged.org")
 
 ; Set to <your Dropbox root directory>/MobileOrg.
 (setq org-mobile-directory "~/Dropbox/Apps/MobileOrg")
-(setq org-mobile-inbox-for-pull "~/Dropbox/org/refile.org")
+(setq org-mobile-inbox-for-pull "~/Dropbox/org/inbox.org")
 (setq org-support-shift-select t)
 
 ;; org-babel setup
@@ -81,7 +79,13 @@
            (cons '(:exports . "both")
                  (assq-delete-all :exports org-babel-default-header-args)))
 
+;;--------------- Latex Settings
+; (require 'org-latex)
 
+; Set up syntax highlighting with listings package
+; (setq org-export-latex-listings t)
+; (add-to-list 'org-export-latex-packages-alist '("" "listings"))
+; (add-to-list 'org-export-latex-packages-alist '("" "color"))
 
 
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
@@ -375,14 +379,14 @@
               ("f" "Family" entry (file "~/Dropbox/org/inbox.org")
                "* TODO %? :FAMILY: \n%U\n%a\n" :clock-in t :clock-resume t)
               ("r" "respond" entry (file "~/Dropbox/org/inbox.org")
-               "* NEXT Respond to %:from on %:subject\nSCHEDULED: %t\n%U\n%a\n" :clock-in t :clock-resume t :immediate-finish t)
+               "* NEXT Respond to %:from on %:subject\nSCHEDULED: %t\n%U\n%a\n" :clock-in t :clock-resume t)
               ("n" "note" entry (file "~/Dropbox/org/inbox.org")
                "* %? :NOTE:\n%U\n%a\n" :clock-in t :clock-resume t)
               ("j" "Journal" entry (file+datetree "~/Dropbox/org/journal.org")
                "* %?\n%U\n" :clock-in t :clock-resume t)
               ("i" "Research Ideas" entry (file+datetree "~/Dropbox/org/research/ideas.org")
                "* %?\n%U\n" :clock-in t :clock-resume t)
-              ("h" "Habit" entry (file "~/Dropbox/org/inbox.org")
+              ("b" "Habit" entry (file "~/Dropbox/org/inbox.org")
                "* NEXT %?\n%U\n%a\nSCHEDULED: %(format-time-string \"<%Y-%m-%d %a .+1d/3d>\")\n:PROPERTIES:\n:STYLE: habit\n:REPEAT_TO_STATE: NEXT\n:END:\n"))))
 
 ;;----------------- Agenda
@@ -472,6 +476,13 @@
               ("w" "Waiting Tasks" tags-todo "-CANCELLED+WAITING/!"
                ((org-agenda-overriding-header "Waiting and Postponed tasks"))
                (org-tags-match-list-sublevels nil))
+              ("D" "Daily Action List"
+               (
+                (agenda "" ((org-agenda-ndays 1)
+                            (org-agenda-sorting-strategy
+                             (quote ((agenda time-up priority-down tag-up) )))
+                            (org-deadline-warning-days 0)
+                            ))))
               ("A" "Tasks to Archive" tags "-REFILE/"
                ((org-agenda-overriding-header "Tasks to Archive")
                 (org-agenda-skip-function 'bh/skip-non-archivable-tasks)
@@ -504,10 +515,22 @@
 ;; ----------------------------- Final settings ---------------------------- ;;
 ;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;;
 
-(org-mobile-push)
-(org-mobile-pull)
-; org-sync settings
+;;----------------- Effort settings
+; Effort Estimates
+(setq org-global-properties
+              '(("Effort_ALL". "0 0:10 0:20 0:30 1:00 2:00 3:00 4:00 6:00 8:00")))
 
+; Column view for effort estimates
+(setq org-columns-default-format "%40ITEM(Task) %2PRIORITY %TAGS %10Effort(Effort){:} %10CLOCKSUM{Total}")
+
+
+; Push and pull with mobile org
+; TODO: Figure out why this is broken.
+; (org-mobile-push)
+; (org-mobile-pull)
+
+
+; org-sync settings
 (add-to-list 'load-path "~/src/Emacs/org-sync")
 (mapc 'load
       '("org-element" "os" "os-bb" "os-github" "os-rmine"))

@@ -193,6 +193,14 @@
 			"separator": null,
 			"text": "b'ipython nbconvert --to html --template full'"
 		},
+		"2646124428934456829":
+		{
+			"command": "insert_nums",
+			"date": 1392414470.38,
+			"label": "\\i",
+			"separator": null,
+			"text": "1 1 1"
+		},
 		"3579058149936623096":
 		{
 			"command": "insert_nums",
@@ -225,6 +233,14 @@
 			"separator": null,
 			"text": "1 1 1"
 		},
+		"5209469365442105172":
+		{
+			"command": "insert_nums",
+			"date": 1393370860.68,
+			"label": "\\i",
+			"separator": null,
+			"text": "1 1 1"
+		},
 		"5340335656631361059":
 		{
 			"command": "insert_nums",
@@ -253,6 +269,22 @@
 		{
 			"command": "insert_nums",
 			"date": 1386346797.64,
+			"label": "\\i",
+			"separator": null,
+			"text": "1 1 1"
+		},
+		"6105308740250196676":
+		{
+			"command": "insert_nums",
+			"date": 1393080247.69,
+			"label": "\\i(2,1)",
+			"separator": null,
+			"text": "2 1 1"
+		},
+		"6387289677686533281":
+		{
+			"command": "insert_nums",
+			"date": 1393267482.17,
 			"label": "\\i",
 			"separator": null,
 			"text": "1 1 1"
@@ -309,8 +341,8 @@
 	"last_command":
 	{
 		"command": "insert_nums",
-		"index": 38,
-		"key": "-6676751909565851429",
+		"index": 42,
+		"key": "5209469365442105172",
 		"label": "\\i",
 		"separator": null,
 		"text": "1 1 1"

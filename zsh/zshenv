@@ -2,7 +2,7 @@
 path=(
   /usr/local/anaconda/bin
   /usr/local/anaconda/python.app/Contents/MacOS
-  # /usr/local/anaconda/envs/python3/bin
+  /usr/local/anaconda/envs/python3/bin
   /usr/texbin
   $HOME/bin
   /usr/local/{bin,sbin}

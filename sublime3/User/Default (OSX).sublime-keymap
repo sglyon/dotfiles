@@ -4,6 +4,7 @@
     { "keys": ["alt+ctrl+super+t"], "command": "log_all_tags" },
     { "keys": ["super+shift+b"], "command": "build", "args": {"variant": "Run"} },
     { "keys": ["super+g", "super+s"], "command": "git_status"},
+    { "keys": ["super+g", "super+p"], "command": "git_pull"},
     { "keys": ["ctrl+alt+m"], "command": "markdown_preview", "args": {"target": "browser"}},
     { "keys": ["super+alt+t"], "command": "add_time_stamp" },
     { "keys": ["super+alt+ctrl+t"], "command": "add_date_time_stamp" },

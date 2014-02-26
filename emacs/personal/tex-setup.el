@@ -66,7 +66,7 @@
 (load "lorem-ipsum.el")
 (require 'lorem-ipsum)
 
-(setq reftex-default-bibliography '("~/git/research/refs"))
+;; (setq reftex-default-bibliography '("~/git/research/refs"))
 
 (autoload 'cdlatex-mode "cdlatex" "CDLaTeX Mode" t)
 (setq cdlatex-math-symbol-alist
@@ -81,6 +81,7 @@
       )
 (setq cdlatex-env-alist
       '(("align" "\\begin{align}\nAUTOLABEL\n?\n\\end{align}\n" nil)
+        ("als" "\\begin{align*}\n\t?\n\\end{align*}" nil)
     ("inlineeq" "\\[?\\]" nil)
     ("mathcal" "\\mathcal{?}" nil)
     ("partial" "\\frac{\\partial ?}{\\partial }" nil)
