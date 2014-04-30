@@ -59,7 +59,7 @@ export LSCOLORS=gxBxhxDxfxhxhxhxhxcxcx
 
 alias grep='grep --color=auto'
 alias egrep='egrep --color=auto'
-alias matlab='/Applications/MATLAB_R2012b.app/bin/matlab -nodesktop -nosplash'
+# alias matlab='/Applications/MATLAB_R2012b.app/bin/matlab -nodesktop -nosplash'
 
 # export CC=/usr/bin/gcc
 # export CXX=/usr/bin/gcc

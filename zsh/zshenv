@@ -6,5 +6,8 @@ path=(
   /usr/texbin
   $HOME/bin
   /usr/local/{bin,sbin}
+  /usr/local/gocode/bin
   $path
 )
+
+export GOPATH=/usr/local/gocode

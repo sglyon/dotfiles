@@ -21,16 +21,30 @@
 		"figure",
 		"equation",
 		"align",
+		"align*",
 		"bmatrix",
 		"matrix"
 	],
+	"label_format": "{type}:{prefix}:{name}",
+    "label_type": {
+        "table": "tab",
+        "figure": "fig",
+        "part": "prt",
+        "chapter": "chap",
+        "section": "sec",
+        "subsection": "ssec",
+        "subsubsection": "sssec",
+        "paragraph": "par",
+        "subparagraph": "spar"
+    },
 	"forward_sync": true,
 	"knitr": true,
 	"knitr_command": "Rscript -e \"library(knitr); knit('{file}')\"",
 	"license": "5c288e922606502d23ea59e07c",
 	"open_pdf_on_load": false,
-	"output_directory": false,
-	"partial_build": false,
+	"output_directory": true,
+    "output_directory_mode": 1,  // This ensures no temporary file is ever created
+	"partial_build": true,
 	"executables": {
 		// Required
 		"perl": ["perl"],
@@ -74,7 +88,7 @@
 	],
 	"phrases_max_length": 6,
 	"phrases_min_count": 2,
-	"phrases_min_length": 3,
+	"phrases_min_length": 2,
 	"phrases_mode": 2,
 	"reverse_sync": true,
 	"show_log_panel_on":
@@ -96,5 +110,20 @@
 	 */
 
 	"tikz": false,
-	"tikz_create_pdf": false
+	"tikz_create_pdf": false,
+    "quick_build": [
+    {
+        "name": "Default Build: latexmk",
+        "primary": true,
+        "cmds": ["pdflatex"]
+    },
+    {
+        "name": "Pythontex",
+        "cmds": ["pdflatex", "pythontex", "pdflatex"]
+    },
+    {
+        "name": "Quick Build 2: pdflatex + biber + pdflatex (2x)",
+        "cmds": ["pdflatex", "biber", "pdflatex", "pdflatex"]
+    }
+    ],
 }

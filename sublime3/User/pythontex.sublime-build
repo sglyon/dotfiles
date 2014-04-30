@@ -1,7 +1,7 @@
 {
     "name": "pythontex",
     "target": "sequential_builder",
-    "shell": true
+    "shell": true,
     "build_sequence":
     [
         {
