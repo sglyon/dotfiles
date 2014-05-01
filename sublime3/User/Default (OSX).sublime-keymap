@@ -17,6 +17,17 @@
 
     { "keys": ["super+alt+ctrl+g"], "command": "prompt_goto_line" },
 
+    {"keys": ["super+alt+a"], "command": "align_tab"},
+
+    // latex align keybind, to align & and \\, but not \&
+    {
+        "keys": ["super+shift+a"], "command": "align_tab",
+        "args" : {"user_input" : "(?<!\\\\)&|\\\\\\\\ "},
+        "context":[
+            { "key": "selector", "operator": "equal", "operand": "text.tex.latex" }
+        ]
+    },
+
     // Fix stupid alt+arrows. Not sure how they got messed up to begin with.
     { "keys": ["alt+left"], "command": "move", "args": {"by": "subwords", "forward": false} },
     { "keys": ["alt+right"], "command": "move", "args": {"by": "subword_ends", "forward": true} },

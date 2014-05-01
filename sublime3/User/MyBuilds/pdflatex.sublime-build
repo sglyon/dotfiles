@@ -1,0 +1,4 @@
+{
+    "shell_cmd": "pdflatex --shell-escape \"$file\"",
+    "selector": "source.tex.latex"
+}

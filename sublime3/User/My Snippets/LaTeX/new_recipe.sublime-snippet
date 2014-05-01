@@ -1,5 +1,8 @@
 <snippet>
     <content><![CDATA[
+%!TEX root = ../SkousenLyonCookbook.tex
+
+
 \begin{recipe}
     [
       preparationtime,
@@ -20,10 +23,10 @@
 
     \ingredients
     {
-      1 & cup & Butter\\\
-      3 & & Eggs\\\
-      2 & tbs. & Vanilla\\\
-      1 & Tbs. & Sugar
+      1 & cup Butter\\\
+      3 & Eggs\\\
+      2 & tbs. Vanilla\\\
+      1 & Tbs. Sugar
     }
 
 
