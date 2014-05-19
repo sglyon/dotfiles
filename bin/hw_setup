@@ -1,0 +1,41 @@
+#!/usr/bin/env python
+"""
+Use new_hw.py to set up structure for new homework assignment
+"""
+import sys
+import os
+
+# get the main homework file
+sys.path.append('../../../../')
+
+from new_hw import create_skeleton
+
+my_args = map(str.lower, sys.argv[1:])
+
+if 'hw9' in my_args:
+    metadata = {'hw_num': 9, 'num_probs': 3,
+                'due_date': "Thursday November 14 2013",
+                'teach': 'Ljungqvist',
+                'class': 'Macro I'}
+
+
+if 'hw10' in my_args:
+    metadata = {'hw_num': 10, 'num_probs': 3,
+                'due_date': "Thursday November 21 2013",
+                'teach': 'Ljungqvist',
+                'class': 'Macro I'}
+
+if 'hw11' in my_args:
+    metadata = {'hw_num': 11, 'num_probs': 3,
+                'due_date': "Thursday December 5 2013",
+                'teach': 'Ljungqvist',
+                'class': 'Macro I'}
+
+# if 'hw12' in my_args:
+metadata = {'hw_num': 12, 'num_probs': 2,
+                'due_date': "Thursday December 12 2013",
+                'teach': 'Ljungqvist',
+                'class': 'Macro I'}
+
+create_skeleton(metadata, compile=True)
+
