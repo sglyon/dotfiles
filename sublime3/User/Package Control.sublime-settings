@@ -26,14 +26,17 @@
 		"LaTeX-cwl",
 		"LaTeXing",
 		"LaTeXTab",
+		"LaTeXTools",
 		"LESS",
 		"MakeCommands",
 		"Makefile Improved",
 		"MarkdownTOC",
+		"MinimalFortran",
 		"Origami",
 		"Package Control",
 		"Pandown",
 		"PlainTasks",
+		"Pomodoro",
 		"Python Improved",
 		"R-snippets",
 		"ScopeHunter",
@@ -45,6 +48,7 @@
 		"Stata Enhanced",
 		"Sublime Finder",
 		"SublimeGit",
+		"SublimeHaskell",
 		"SublimeLinter",
 		"SublimeLinter-annotations",
 		"SublimeLinter-flake8",
@@ -63,5 +67,9 @@
 		"VintageLines",
 		"Vintageous",
 		"WakaTime"
+	],
+	"repositories":
+	[
+		"https://github.com/wuub/SublimeREPL"
 	]
 }

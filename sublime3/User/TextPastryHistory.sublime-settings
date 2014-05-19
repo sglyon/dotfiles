@@ -258,16 +258,44 @@
 			},
 			"key": "054ddc81d0ec0bddfe52b500ea229c6c",
 			"label": "l h"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"text": "c d e",
+					"threshold": 3
+				},
+				"command": "text_pastry_insert_text",
+				"text": "c d e"
+			},
+			"key": "b34d53cc90bf969b61c43ecaf2407727",
+			"label": "c d e"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"text": "d e f g h i j k l",
+					"threshold": 3
+				},
+				"command": "text_pastry_insert_text",
+				"text": "d e f g h i j k l"
+			},
+			"key": "bb9a6e3a837a99eb7c7a457c7c1e6a17",
+			"label": "d e f g h i j k l"
 		}
 	],
 	"last_command":
 	{
 		"args":
 		{
-			"text": "l h",
+			"text": "d e f g h i j k l",
 			"threshold": 3
 		},
 		"command": "text_pastry_insert_text",
-		"text": "l h"
+		"text": "d e f g h i j k l"
 	}
 }

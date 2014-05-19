@@ -105,26 +105,26 @@
 		"build",
 		".ipynb_checkpoints"
 	],
-	"font_face": "Source Code Pro",
+	"font_face": "Source Code Pro Light",
 	"font_size": 11,
 	"highlight_line": true,
 	"highlight_modified_tabs": false,
 	"ignored_packages":
 	[
-		"VintageLines",
 		"Vintage",
-		"BetterFindBuffer",
-		"Makefile",
 		"Jedi - Python autocompletion",
+		"BetterFindBuffer",
 		"RestructuredText",
 		"Pandown",
+		"Makefile",
 		"Markdown",
-		"PlainTasks",
-		"UnicodeMath",
-		"Solarized Color Scheme",
 		"SublimeLinter",
+		"PlainTasks",
+		"Solarized Color Scheme",
+		"LaTeXTools",
 		"Floobits",
-		"Vintageous"
+		"UnicodeMath",
+		"VintageLines"
 	],
 	"ignored_words":
 	[

@@ -19,6 +19,10 @@
 
     {"keys": ["super+alt+a"], "command": "align_tab"},
 
+
+    // Activate pomodoro
+    { "keys": ["alt+shift+p"], "command": "pomodoro", "args": {"workingMins": 25, "restingMins": 3} },
+
     // latex align keybind, to align & and \\, but not \&
     {
         "keys": ["super+shift+a"], "command": "align_tab",

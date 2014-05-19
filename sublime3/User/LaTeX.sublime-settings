@@ -1,6 +1,5 @@
 {
 	"color_scheme": "Packages/User/base16-tomorrow.dark (SL).tmTheme",
-	"font_face": "Source Code Pro",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_indent_guides": true,
 	"ensure_newline_at_eof_on_save": true,

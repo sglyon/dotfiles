@@ -3,8 +3,9 @@ path=(
   /usr/local/anaconda/bin
   /usr/local/anaconda/python.app/Contents/MacOS
   /usr/local/anaconda/envs/python3/bin
-  /usr/texbin
   $HOME/bin
+  $HOME/.cabal/bin
+  /usr/texbin
   /usr/local/{bin,sbin}
   /usr/local/gocode/bin
   $path
