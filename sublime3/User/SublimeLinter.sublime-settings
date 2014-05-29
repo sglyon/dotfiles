@@ -1,19 +1,7 @@
 {
-	"annotations":
-	[
-		"TODO",
-		"README",
-		"FIXME"
-	],
-	"pep8": true,
-	"pep8_ignore":
-	[
-		"E501"
-	],
-	"sublimelinter_notes": true,
 	"user":
 	{
-		"debug": false,
+		"debug": true,
 		"delay": 0.25,
 		"error_color": "D02000",
 		"gutter_theme": "Packages/SublimeLinter/gutter-themes/Koloria/Koloria.gutter-theme",

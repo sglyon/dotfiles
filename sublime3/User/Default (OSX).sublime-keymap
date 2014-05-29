@@ -2,12 +2,53 @@
     { "keys": ["ctrl+alt+t"], "command": "print_all_tags" },
     { "keys": ["ctrl+alt+n"], "command": "advanced_new_file"},
     { "keys": ["alt+ctrl+super+t"], "command": "log_all_tags" },
+
+    // When building a compiled language
     { "keys": ["super+shift+b"], "command": "build", "args": {"variant": "Run"} },
+
+    // Some git bindings
     { "keys": ["super+g", "super+s"], "command": "git_status"},
     { "keys": ["super+g", "super+p"], "command": "git_pull"},
+
+    // Markdown stuff
     { "keys": ["ctrl+alt+m"], "command": "markdown_preview", "args": {"target": "browser"}},
+
+    // Insert timestamp
     { "keys": ["super+alt+t"], "command": "add_time_stamp" },
     { "keys": ["super+alt+ctrl+t"], "command": "add_date_time_stamp" },
+
+    // TODO-Review
+    { "keys": ["super+alt+t", "super+alt+d"], "command": "todo_review" },
+    { "keys": ["super+t", "super+d"], "command": "todo_review", "args": {"open_files": true}},
+
+    // Swap the move focus window and move tab commands. I NEVER move to tab this way.
+    { "keys": ["super+1"], "command": "focus_group", "args": { "group": 0 } },
+    { "keys": ["super+2"], "command": "focus_group", "args": { "group": 1 } },
+    { "keys": ["super+3"], "command": "focus_group", "args": { "group": 2 } },
+    { "keys": ["super+4"], "command": "focus_group", "args": { "group": 3 } },
+    { "keys": ["super+5"], "command": "focus_group", "args": { "group": 4 } },
+    { "keys": ["super+6"], "command": "focus_group", "args": { "group": 5 } },
+    { "keys": ["super+7"], "command": "focus_group", "args": { "group": 6 } },
+    { "keys": ["super+8"], "command": "focus_group", "args": { "group": 7 } },
+    { "keys": ["super+9"], "command": "focus_group", "args": { "group": 8 } },
+    { "keys": ["super+shift+1"], "command": "move_to_group", "args": { "group": 0 } },
+    { "keys": ["super+shift+2"], "command": "move_to_group", "args": { "group": 1 } },
+    { "keys": ["super+shift+3"], "command": "move_to_group", "args": { "group": 2 } },
+    { "keys": ["super+shift+4"], "command": "move_to_group", "args": { "group": 3 } },
+    { "keys": ["super+shift+5"], "command": "move_to_group", "args": { "group": 4 } },
+    { "keys": ["super+shift+6"], "command": "move_to_group", "args": { "group": 5 } },
+    { "keys": ["super+shift+7"], "command": "move_to_group", "args": { "group": 6 } },
+    { "keys": ["super+shift+8"], "command": "move_to_group", "args": { "group": 7 } },
+    { "keys": ["super+shift+9"], "command": "move_to_group", "args": { "group": 8 } },
+    { "keys": ["ctrl+1"], "command": "select_by_index", "args": { "index": 0 } },
+    { "keys": ["ctrl+2"], "command": "select_by_index", "args": { "index": 1 } },
+    { "keys": ["ctrl+3"], "command": "select_by_index", "args": { "index": 2 } },
+    { "keys": ["ctrl+4"], "command": "select_by_index", "args": { "index": 3 } },
+    { "keys": ["ctrl+5"], "command": "select_by_index", "args": { "index": 4 } },
+    { "keys": ["ctrl+6"], "command": "select_by_index", "args": { "index": 5 } },
+    { "keys": ["ctrl+7"], "command": "select_by_index", "args": { "index": 6 } },
+    { "keys": ["ctrl+8"], "command": "select_by_index", "args": { "index": 7 } },
+    { "keys": ["ctrl+9"], "command": "select_by_index", "args": { "index": 8 } },
 
     // Toggle toggle_vintageous
     { "keys": ["super+k", "super+o"], "command": "toggle_vintageous", "context": [{"key": "panel_visible", "operand": false}] },
@@ -15,8 +56,7 @@
     // My own plugin!
     { "keys": ["alt+ctrl+o"], "command": "open_file_by_name" },
 
-    { "keys": ["super+alt+ctrl+g"], "command": "prompt_goto_line" },
-
+    // Align by regex
     {"keys": ["super+alt+a"], "command": "align_tab"},
 
 

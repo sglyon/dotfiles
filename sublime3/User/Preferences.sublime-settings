@@ -111,20 +111,18 @@
 	"highlight_modified_tabs": false,
 	"ignored_packages":
 	[
-		"Vintage",
-		"Jedi - Python autocompletion",
 		"BetterFindBuffer",
-		"RestructuredText",
-		"Pandown",
-		"Makefile",
-		"Markdown",
-		"SublimeLinter",
-		"PlainTasks",
 		"Solarized Color Scheme",
+		"Markdown",
 		"LaTeXTools",
-		"Floobits",
-		"UnicodeMath",
-		"VintageLines"
+		"VintageLines",
+		"Jedi - Python autocompletion",
+		"RestructuredText",
+		"Makefile",
+		"Vintage",
+		"PlainTasks",
+		"Vintageous",
+		"Floobits"
 	],
 	"ignored_words":
 	[

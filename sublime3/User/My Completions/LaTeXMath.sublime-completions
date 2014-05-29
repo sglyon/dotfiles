@@ -16,7 +16,15 @@
             { "trigger": "br", "contents": "\\\\{ $0 \\\\}" },
             //Econ specific stuff
             { "trigger": "sum", "contents": "\\sum_{$1}^{$2} $0"},
-            { "trigger": "sumsum", "contents": "\\sum_{t=0}^{\\infty} \\sum_{s^t} \\beta^t"},
+            { "trigger": "sumsum", "contents": "\\sum_{t=0}^{\\infty} \\sum_{s^t}"},
+            { "trigger": "sumsumb", "contents": "\\sum_{t=0}^{\\infty} \\sum_{s^t} \\beta^t"},
+            { "trigger": "sumsumq", "contents": "\\sum_{t=0}^{\\infty} \\sum_{s^t} q_t^0 \\left(s^t \\right)"},
+
+            { "trigger": "lps", "contents": "\\left(s^t \\right)"},
+            { "trigger": "qt0", "contents": "q_t^0\\left(s^t \\right)"},
+
+            { "trigger": "spl", "contents": "\\begin{split}\n\t$0\n\\end{split}"},
+            { "trigger": "split", "contents": "\\begin{split}\n\t$0\n\\end{split}"},
 
 
             // This one doesn't work
@@ -31,16 +39,16 @@
             { "trigger": "fra", "contents": "\\frac{$1}{$2}$0"},
             { "trigger": "stack", "contents": "\\stackrel{$1}{$2}$0"},
 
-            { "trigger": "lar", "contents": "\\leftarrow"},
+            { "trigger": "la", "contents": "\\leftarrow"},
             { "trigger": "leftarrow", "contents": "longleftarrow"},
             { "trigger": "longleftarrow", "contents": "leftarrow"},
-            { "trigger": "Lar", "contents": "\\Leftarrow"},
+            { "trigger": "La", "contents": "\\Leftarrow"},
             { "trigger": "Leftarrow", "contents": "Longleftarrow"},
             { "trigger": "Longleftarrow", "contents": "Leftarrow"},
-            { "trigger": "rar", "contents": "\\rightarrow"},
+            { "trigger": "ra", "contents": "\\rightarrow"},
             { "trigger": "rightarrow", "contents": "longrightarrow"},
             { "trigger": "longrightarrow", "contents": "rightarrow"},
-            { "trigger": "Rar", "contents": "\\Rightarrow"},
+            { "trigger": "Ra", "contents": "\\Rightarrow"},
             { "trigger": "Rightarrow", "contents": "Longrightarrow"},
             { "trigger": "Longrightarrow", "contents": "Rightarrow"},
             { "trigger": "lr", "contents": "\\leftrightarrow"},
@@ -50,6 +58,7 @@
             { "trigger": "Longleftrightarrow", "contents": "Leftrightarrow"},
             { "trigger": "up", "contents": "\\uparrow"},
             { "trigger": "do", "contents": "\\downarrow"},
+
 
 
             { "trigger": "bv", "contents": "\\bigm\\vert"},
