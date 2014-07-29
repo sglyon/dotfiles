@@ -63,3 +63,6 @@ alias egrep='egrep --color=auto'
 
 # export CC=/usr/bin/gcc
 # export CXX=/usr/bin/gcc
+
+### Added by the Heroku Toolbelt
+export PATH="/usr/local/heroku/bin:$PATH"

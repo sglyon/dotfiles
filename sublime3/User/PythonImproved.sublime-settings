@@ -1,17 +1,14 @@
 {
+	"auto_wrap_width": 79,
 	"extensions":
 	[
 		"py"
 	],
-    "auto_wrap_width": 79,
-    "extensions":
-    [
-    ],
-    "rulers":
-    [
-        72,
-        78
-    ],
-    "tab_size": 4,
-    "translate_tabs_to_spaces": true
+	"rulers":
+	[
+		72,
+		78
+	],
+	"tab_size": 4,
+	"translate_tabs_to_spaces": true
 }

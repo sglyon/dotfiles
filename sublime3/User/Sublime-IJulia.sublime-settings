@@ -1,4 +1,4 @@
-// "command_name" gives you the chance to name different commands
+    // "command_name" gives you the chance to name different commands
 // that will be displayed when opening a new console view.
 // e.g. " -p 4" could be used for a command that starts julia -p 4
 
@@ -44,13 +44,13 @@
     ]
 },
 "osx": {
-    "zmq_shared_library": "/usr/local/Cellar/zeromq/3.2.4/lib/libzmq.dylib",
+    "zmq_shared_library": "/usr/local/Cellar/zeromq/4.0.4/lib/libzmq.dylib",
     "commands": [
         {
             "command_name": "default",
-            "julia": "/usr/local/anaconda/python.app/Contents/MacOS/julia",
+            "julia": "/usr/local/julia/usr/bin/julia",
             "julia_args": "",
-            "ijulia_kernel": "~/.julia/IJulia/src/kernel.jl"
+            "ijulia_kernel": "~/.julia/v0.3/IJulia/src/kernel.jl"
         }
     ]
 },

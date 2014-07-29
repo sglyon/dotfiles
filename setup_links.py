@@ -19,7 +19,7 @@ def attempt_symlink(source, target, clean=True):
 this_dir = getcwd()
 home = expanduser('~')
 
-st2_dir = home + '/Library/Application Support/Sublime Text 2/Packages'
+#st2_dir = home + '/Library/Application Support/Sublime Text 2/Packages'
 st3_pack_dir = home + '/Library/Application Support/Sublime Text 3/Packages'
 st3_ipack_dir = home + '/Library/Application Support/Sublime Text 3/Installed Packages'
 vimrc_dir = home + '/.vimrc'
@@ -27,7 +27,7 @@ vim_dir = home + '/.vim'
 emacs_dir = home + '/.emacs.d'
 
 # Create symlink for sublime Text 2
-attempt_symlink(this_dir + '/sublime/Packages/', st2_dir)
+# attempt_symlink(this_dir + '/sublime/Packages/', st2_dir)
 
 # Create symlink for sublime Text 3
 attempt_symlink(this_dir + '/sublime3/Packages/', st3_pack_dir)

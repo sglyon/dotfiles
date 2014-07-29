@@ -111,18 +111,17 @@
 	"highlight_modified_tabs": false,
 	"ignored_packages":
 	[
-		"BetterFindBuffer",
-		"Solarized Color Scheme",
-		"Markdown",
-		"LaTeXTools",
-		"VintageLines",
-		"Jedi - Python autocompletion",
-		"RestructuredText",
 		"Makefile",
 		"Vintage",
-		"PlainTasks",
+		"LaTeXTools",
+		"Jedi - Python autocompletion",
+		"VintageLines",
+		"Floobits",
+		"RestructuredText",
+		"Markdown",
+		"BetterFindBuffer",
 		"Vintageous",
-		"Floobits"
+		"Solarized Color Scheme"
 	],
 	"ignored_words":
 	[
