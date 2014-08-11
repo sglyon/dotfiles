@@ -1,0 +1,6 @@
+<snippet>
+    <content><![CDATA[{% extends ${1:"${2:template}"} %}]]></content>
+    <tabTrigger>extends</tabTrigger>
+    <scope>source.jinja, text.restructuredtext.jinja</scope>
+    <description>extends</description>
+</snippet>
