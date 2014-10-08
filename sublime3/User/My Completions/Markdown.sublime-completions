@@ -1,14 +1,12 @@
 {
-        "selector": "text.html.markdown",
+        "scope": "text.html.markdown",
 
         "completions":
         [
                 { "trigger": "align", "contents": "\\begin{align}\n$0\n\\end{align}\n"},
                 { "trigger": "fracpd", "contents": "\\frac{\\partial $1}{\\partial $2}"},
-                { "trigger": "todo|TODO", "contents": "<font color=\"red\">TODO: $1 </font> $0"},
-                { "trigger": "note|NOTE", "contents": "<font color=\"blue\">NOTE: $1 </font> $0"},
-                // { "trigger": "als", "contents": "<div>\\$\\$\\begin{align*}\n\t$0\n\\end{align*}\\$\\$</div>"},
-                // { "trigger": "all", "contents": "<div>\\$\\$\\begin{align}\\label{eq:$1}\n\t$0\n\\end{align}\\$\\$</div>"},
+                { "trigger": "todo", "contents": "<font color=\"red\">TODO: $1 </font> $0"},
+                { "trigger": "note", "contents": "<font color=\"blue\">NOTE: $1 </font> $0"},
 
         ]
 }

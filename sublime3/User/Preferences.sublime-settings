@@ -19,10 +19,10 @@
 		"*.mat"
 	],
 	"caret_style": "phase",
-	"color_scheme": "Packages/User/Tomorrow-Night (SL).tmTheme",
+	"color_scheme": "Packages/User/base16-tomorrow.dark (SL).tmTheme",
 	"default_extend_env":
 	{
-		"PATH": "{PATH}:/usr/local/bin:/usr/texbin:/usr/local/anaconda/bin"
+		"PATH": "{PATH}:/usr/local/bin:/usr/texbin:/usr/local/anaconda/bin:/usr/local/julia/usr/bin"
 	},
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_centered": false,
@@ -111,18 +111,22 @@
 	"highlight_modified_tabs": false,
 	"ignored_packages":
 	[
-		"LaTeXTools",
-		"Makefile",
-		"Solarized Color Scheme",
-		"Jedi - Python autocompletion",
+		"RestructuredText",
 		"Emmet",
 		"Markdown",
-		"BetterFindBuffer",
+		"Sublimerge Pro",
+		"LaTeXTools",
+		"SublimeHaskell",
+		"Swift",
+		"Jedi - Python autocompletion",
 		"Vintageous",
-		"Vintage",
+		"SublimeLinter-flake8",
+		"Makefile",
 		"VintageLines",
-		"RestructuredText",
-		"Floobits"
+		"BetterFindBuffer",
+		"LESS",
+		"MarkdownTOC",
+		"Solarized Color Scheme"
 	],
 	"ignored_words":
 	[
@@ -133,15 +137,10 @@
 	"index_exclude_patterns":
 	[
 		"/Users/sglyon/blog/content/public*",
+		"*.cov",
 		"*.log"
 	],
 	"line_numbers": true,
-	"phoenix_color_blue": true,
-	"phoenix_dirty_bottom_bar_red": true,
-	"phoenix_eighties": true,
-	"phoenix_highlight_current_tab": true,
-	"phoenix_tabs_auto_width": true,
-	"phoenix_tabs_small": true,
 	"rulers":
 	[
 		79
@@ -149,9 +148,9 @@
 	"save_on_focus_lost": false,
 	"scroll_past_end": true,
 	"spell_check": true,
-	"theme": "Phoenix Dark.sublime-theme",
+	"theme": "Spacegray Eighties.sublime-theme",
 	"translate_tabs_to_spaces": true,
 	"trim_trailing_white_space_on_save": true,
-	"use_simple_full_screen": false,
+	"use_simple_full_screen": true,
 	"vintageous_reset_mode_when_switching_tabs": false
 }

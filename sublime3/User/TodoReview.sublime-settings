@@ -1,6 +1,8 @@
 {
     "patterns": {
-        "TODO": "TODO[\\s]*?:+(?P<todo>.*)$"
+        "TODO": "TODO[\\s]*?:+(?P<todo>.*)$",
+        "PERF": "PERF[\\s]*?:+(?P<perf>.*)$",
+        "NOTE": "NOTE[\\s]*?:+(?P<note>.*)$"
     },
     "exclude_folders": [
         "*.git*",
@@ -9,13 +11,10 @@
     "exclude_files": [
         "*.sublime-workspace",
         "*.sublime-project",
-        "*.tex",
-        "*.Rnw",
         "*.ipynb",
-        "*.md",
         "*.org*",
         "*.ptex",
-        "*.Rmd"
+        "*.cov"
     ],
     "case_sensitive": false,
     "render_include_folder": false,

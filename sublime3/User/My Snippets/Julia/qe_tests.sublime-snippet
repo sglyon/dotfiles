@@ -1,0 +1,24 @@
+<snippet>
+    <content><![CDATA[
+module Test${1:Module}
+
+using QuantEcon
+using Base.Test
+using FactCheck
+
+# set up
+
+
+facts("${2:Fact group 1}") do
+    # test stuff
+    @fact 1 => 1
+end  # facts
+end  # module
+
+
+]]></content>
+    <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
+    <tabTrigger>qetest</tabTrigger>
+    <!-- Optional: Set a scope to limit where the snippet will trigger -->
+    <scope>source.julia</scope>
+</snippet>

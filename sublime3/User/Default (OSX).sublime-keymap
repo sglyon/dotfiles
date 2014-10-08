@@ -17,6 +17,10 @@
     { "keys": ["super+alt+t"], "command": "add_time_stamp" },
     { "keys": ["super+alt+ctrl+t"], "command": "add_date_time_stamp" },
 
+    // add new cursor above/below
+    { "keys": ["alt+super+up"], "command": "select_lines", "args": {"forward": false} },
+    { "keys": ["alt+super+down"], "command": "select_lines", "args": {"forward": true} },
+
     // TODO-Review
     { "keys": ["super+alt+t", "super+alt+d"], "command": "todo_review" },
     { "keys": ["super+t", "super+d"], "command": "todo_review", "args": {"open_files": true}},

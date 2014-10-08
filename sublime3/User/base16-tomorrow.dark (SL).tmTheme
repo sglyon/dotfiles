@@ -505,16 +505,6 @@
 		</dict>
 	<dict>
             <key>name</key>
-            <string>SublimeLinter Error</string>
-            <key>scope</key>
-            <string>sublimelinter.mark.error</string>
-            <key>settings</key>
-            <dict>
-                <key>foreground</key>
-                <string>#D02000</string>
-            </dict>
-        </dict><dict>
-            <key>name</key>
             <string>SublimeLinter Gutter Mark</string>
             <key>scope</key>
             <string>sublimelinter.gutter-mark</string>
@@ -522,6 +512,16 @@
             <dict>
                 <key>foreground</key>
                 <string>#FFFFFF</string>
+            </dict>
+        </dict><dict>
+            <key>name</key>
+            <string>SublimeLinter Error</string>
+            <key>scope</key>
+            <string>sublimelinter.mark.error</string>
+            <key>settings</key>
+            <dict>
+                <key>foreground</key>
+                <string>#D02000</string>
             </dict>
         </dict><dict>
             <key>name</key>
@@ -535,6 +535,6 @@
             </dict>
         </dict></array>
 	<key>uuid</key>
-	<string>f83d53d4-3d0a-4c96-9939-280e8e6d18b4</string>
+	<string>bb0ac5b4-93b6-4367-b5e3-6a8fc1f27e67</string>
 </dict>
 </plist>

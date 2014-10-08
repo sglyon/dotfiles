@@ -4,41 +4,29 @@
         "completions":
         [
 
-            // Timing
             { "trigger": "tp", "contents": "_{t+$1}$0" },
             { "trigger": "tp1", "contents": "_{t+1}$0" },
             { "trigger": "tm", "contents": "_{t-$1}$0" },
             { "trigger": "tm1", "contents": "_{t-1}$0" },
-
             { "trigger": "inf", "contents": "\\infty" },
             { "trigger": "inv", "contents": "^{-1}$0" },
             { "trigger": "0", "contents": "\\emptyset" },
             { "trigger": "br", "contents": "\\\\{ $0 \\\\}" },
-            //Econ specific stuff
             { "trigger": "sum", "contents": "\\sum_{$1}^{$2} $0"},
             { "trigger": "sumsum", "contents": "\\sum_{t=0}^{\\infty} \\sum_{s^t}"},
             { "trigger": "sumsumb", "contents": "\\sum_{t=0}^{\\infty} \\sum_{s^t} \\beta^t"},
             { "trigger": "sumsumq", "contents": "\\sum_{t=0}^{\\infty} \\sum_{s^t} q_t^0 \\left(s^t \\right)"},
-
             { "trigger": "lps", "contents": "\\left(s^t \\right)"},
             { "trigger": "qt0", "contents": "q_t^0\\left(s^t \\right)"},
-
             { "trigger": "spl", "contents": "\\begin{split}\n\t$0\n\\end{split}"},
             { "trigger": "split", "contents": "\\begin{split}\n\t$0\n\\end{split}"},
-
-
-            // This one doesn't work
-            { "trigger": "l|", "contents": "\\left| $1 \\right| $0"},
-
             { "trigger": "t", "contents": "\\tau" },
-
             { "trigger": "lp", "contents": "\\left( $1 \\right) $0"},
             { "trigger": "lb", "contents": "\\left[ $1 \\right] $0"},
             { "trigger": "lbr", "contents": "\\left\\\\{ $0 \\right\\\\}"},
             { "trigger": "fr", "contents": "\\frac"},
             { "trigger": "fra", "contents": "\\frac{$1}{$2}$0"},
             { "trigger": "stack", "contents": "\\stackrel{$1}{$2}$0"},
-
             { "trigger": "la", "contents": "\\leftarrow"},
             { "trigger": "leftarrow", "contents": "longleftarrow"},
             { "trigger": "longleftarrow", "contents": "leftarrow"},
@@ -53,31 +41,20 @@
             { "trigger": "Longrightarrow", "contents": "Rightarrow"},
             { "trigger": "lr", "contents": "\\leftrightarrow"},
             { "trigger": "Lr", "contents": "\\Leftrightarrow"},
-            { "trigger": "iff", "contents": "\\Leftrightarrow"},
+            { "trigger": "iff", "contents": "\\Longleftrightarrow"},
             { "trigger": "Leftrightarrow", "contents": "Longleftrightarrow"},
             { "trigger": "Longleftrightarrow", "contents": "Leftrightarrow"},
             { "trigger": "up", "contents": "\\uparrow"},
             { "trigger": "do", "contents": "\\downarrow"},
-
-
-
             { "trigger": "bv", "contents": "\\bigm\\vert"},
             { "trigger": "vj", "contents": "\\vartheta"},
-
-            // Set logic
             { "trigger": "sbs", "contents": "\\subset"},
             { "trigger": "subset", "contents": "\\subseteq"},
             { "trigger": "sps", "contents": "\\supset"},
             { "trigger": "supset", "contents": "\\supseteq"},
-
-            // objective function
             { "trigger": "st", "contents": "\\text{subject to } & "},
-
-            // Random
             { "trigger": "0inf", "contents": "_{t = 0}^{\\infty}"},
             { "trigger": "sum0i", "contents": "\\sum_{t = 0}^{\\infty}"},
-
-            // Math italics, bold, and mathbb/mathcal stuff (text transformations)
             { "trigger": "it", "contents": "\\mathit{$1}$0"},
             { "trigger": "bf", "contents": "\\mathbf{$1}$0"},
             { "trigger": "bb", "contents": "\\mathbb{$1}$0"},
@@ -89,6 +66,5 @@
             { "trigger": "cal", "contents": "\\mathcal{$1}$0"},
             { "trigger": "ul", "contents": "\\underline{$1}$0"},
             { "trigger": "ol", "contents": "\\overline{$1}$0"}
-
         ]
 }

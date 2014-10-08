@@ -1,4 +1,0 @@
-{
-    "cmd": ["/usr/local/anaconda/python.app/Contents/MacOS/julia", "$file"],
-    "selector": "source.julia"
-}

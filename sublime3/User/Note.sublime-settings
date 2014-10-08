@@ -1,0 +1,9 @@
+{
+  "word_wrap": "auto",
+  "wrap_width": 0,
+
+  "spell_check": true,
+
+  "trim_trailing_white_space_on_save": true,
+  "trim_automatic_white_space": true,
+}
