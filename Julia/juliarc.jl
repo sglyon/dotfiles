@@ -1,8 +1,4 @@
 function addprocs_odyny(n::Int)
-    """
-    Add processes on the desktop in my parents nyc apartment
-
-    """
     addprocs(repmat(["sglyon@odyny.homeip.net:22"], n),
              tunnel=true,
              dir="/usr/local/julia/usr/bin")
@@ -10,11 +6,25 @@ end
 
 
 function addprocs_home(n::Int)
-    """
-    Add processes on my home desktop
-
-    """
     addprocs(repmat(["sglyon@sglyon.selfip.org:22"], n),
+             tunnel=true,
+             dir="/usr/local/julia/usr/bin")
+end
+
+function addprocs_stern(n::Int)
+    addprocs(repmat(["sgl290@128.122.185.159"], n),
+             tunnel=true,
+             dir="/usr/bin")
+end
+
+function addprocs_chase_stern(n::Int)
+    addprocs(repmat(["chase@128.122.185.122"], n),
+             tunnel=true,
+             dir="/home/chase/Programming/julia/usr/bin")
+end
+
+function addprocs_dadpro(n::Int)
+    addprocs(repmat(["sglyon@72.208.102.111"], n),
              tunnel=true,
              dir="/usr/local/julia/usr/bin")
 end
@@ -82,3 +92,44 @@ macro timeit(ex)
         @printf "%d loops, best of 3: %4.2f %ss per loop\n" n best pre
     end
 end
+
+
+macro paste()
+    include_string(clipboard());
+end
+
+
+## ------------------------- ##
+#- Matrix to Latex functions -#
+## ------------------------- ##
+
+function pprint(x::Vector; fmt="%.4f", sep::String="  ")
+    # the dofmt function taken from here:
+    # https://groups.google.com/d/msg/julia-users/7Sn5yys0UJE/z33lMBqY5FsJ
+    @eval dofmt(x) = @sprintf($fmt, x)
+    join([dofmt(i) for i in x], sep)
+end
+
+function pprint(x::Matrix; fmt="%.4f", sep::String="  ")
+    n = size(x, 1)
+    join([pprint(squeeze(x[i, :], 1), fmt=fmt, sep=sep) for i=1:n], "\n")
+end
+
+tex_mat_guts(x::Vector; fmt::String="%.4f") = pprint(x; fmt=fmt, sep=" & ")
+
+function tex_mat_guts(x::Matrix; fmt::String="%.4f")
+    n = size(x, 1)
+    join([tex_mat_guts(squeeze(x[i, :], 1), fmt=fmt) for i=1:n], " \\\\\n")
+end
+
+
+#mat_type should be one of p, b, v, V, B, small
+function tex_str(x::Array; fmt::String="%.4f", mat_type="b")
+    """\\begin{$(mat_type)matrix}
+    $(tex_mat_guts(x, fmt=fmt))
+    \\end{$(mat_type)matrix}
+    """
+end
+
+
+# function writemime(io::IO, ::MIME"text/latex", x::Vector; fmt::String="%.4f")
