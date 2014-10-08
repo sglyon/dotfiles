@@ -1,15 +1,28 @@
 # Set path
 path=(
   /usr/local/anaconda/bin
-  /usr/local/julia/usr/bin
+  /usr/local/julia_release/usr/bin
   /usr/local/anaconda/envs/python3/bin
   $HOME/bin
   $HOME/.cabal/bin
   /usr/texbin
   /usr/local/{bin,sbin}
   /usr/local/gocode/bin
+  $HOME/google-cloud-sdk/bin
   $path
 )
 
 export GOPATH=/usr/local/gocode
 export JULIA_EDITOR=subl
+export LT_HOME=$HOME/src/LightTable/deploy
+
+export GRB_LICENSE_FILE=$HOME/src/gurobi.lic
+
+export DYLD_LIBRARY_PATH=/opt/NAG/clmi623dgl/lib
+
+alias julia4="/usr/local/julia/usr/bin/julia"
+
+# use hub instead of git
+eval "$(hub alias -s)"
+
+# export CLASSPATH=/opt/ParallelColt/parallelcolt-0.9.4.jar:/opt/colt/lib/colt.jar:/opt/colt/lib/concurrent.jar:$CLASSPATH
