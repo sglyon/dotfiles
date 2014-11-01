@@ -1,3 +1,5 @@
+using Compat
+
 function addprocs_odyny(n::Int)
     addprocs(repmat(["sglyon@odyny.homeip.net:22"], n),
              tunnel=true,
@@ -29,6 +31,19 @@ function addprocs_dadpro(n::Int)
              dir="/usr/local/julia/usr/bin")
 end
 
+function addprocs_gcloud(n::Int, ip::String)
+    addprocs(repmat(["sglyon@$(ip)"], n),
+             tunnel=true,
+             dir="/home/sglyon/julia-release/usr/bin")
+end
+
+
+# gcloud constants
+const gcloud_image_url = "https://www.googleapis.com/compute/v1/projects/sgl-julia/global/images/julia-src-deb-10212014"
+const gcloud_options = Compat.@Dict("project" => "sgl-julia",
+                                    "image" => gcloud_image_url)
+const gcloud_unary_options = ["--no-boot-disk-auto-delete"]
+
 
 macro run(x::Symbol)
     """
@@ -55,6 +70,15 @@ macro timen(ex, n)
         (t1 - t0) / 1.e9
     end
 end
+
+macro unpack(obj, fields...)
+    Expr(:block, [Expr(:(=), esc(:($f)), :($obj.$f)) for f in fields]...)
+end
+
+
+# macro unpackall(obj)
+#     Expr(:block, Expr(:(=), :nms, :(names($obj)))
+# end
 
 
 macro timeit(ex)
@@ -130,6 +154,25 @@ function tex_str(x::Array; fmt::String="%.4f", mat_type="b")
     \\end{$(mat_type)matrix}
     """
 end
+
+## ------------------------------------------------------ ##
+#- Print array to Numpy format for copy/paste into python -#
+## ------------------------------------------------------ ##
+
+numpy_guts(x::Vector) = "[" * join(x, ", ") * "]"
+numpy_str(x::Vector) = "np.array(" * numpy_guts(x) * ")"
+
+
+function numpy_str(x::Matrix)
+    nr = size(x, 1)
+    nc = size(x, 2)
+    out = "np.array(["
+    for row=1:nr
+        out *= numpy_guts(x[row, :][:]) * ",\n"
+    end
+    out *= "])"
+end
+
 
 
 # function writemime(io::IO, ::MIME"text/latex", x::Vector; fmt::String="%.4f")
