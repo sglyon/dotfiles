@@ -44,11 +44,11 @@
     ]
 },
 "osx": {
-    "zmq_shared_library": "/usr/local/Cellar/zeromq/4.0.4/lib/libzmq.dylib",
+    "zmq_shared_library": "/usr/local/Cellar/zeromq/4.0.5_2/lib/libzmq.dylib",
     "commands": [
         {
             "command_name": "default",
-            "julia": "/usr/local/julia/usr/bin/julia",
+            "julia": "/usr/local/julia_release/usr/bin/julia",
             "julia_args": "",
             "ijulia_kernel": "~/.julia/v0.3/IJulia/src/kernel.jl"
         }

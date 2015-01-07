@@ -3,7 +3,7 @@
 """
 ${1:Description}
 
-@author : Spencer Lyon
+@author : Spencer Lyon <spencer.lyon@stern.nyu.edu>
 @date : ${2:super+alt+crt+t}
 
 """
@@ -11,6 +11,6 @@ ${1:Description}
     <!-- Optional: Set a tabTrigger to define how to trigger the snippet -->
     <tabTrigger>mdoc</tabTrigger>
     <!-- Optional: Set a scope to limit where the snippet will trigger -->
-    <scope>source.python</scope>
+    <scope>source.python,source.julia</scope>
     <description>Add docstring skeleton to module</description>
 </snippet>

@@ -1,13 +1,12 @@
 {
-	// "color_scheme": "Packages/User/Tomorrow (SL).tmTheme",
 	"dictionary": "Packages/Language - English/en_US.dic",
 	"draw_indent_guides": true,
-	"enable_table_editor": true,
 	"ensure_newline_at_eof_on_save": true,
 	"extensions":
 	[
 		"cls",
-		"tex"
+		"tex",
+		"sty"
 	],
 	"find_selected_text": true,
 	"scroll_past_end": true,

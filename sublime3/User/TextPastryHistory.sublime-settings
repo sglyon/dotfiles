@@ -6,352 +6,135 @@
 			{
 				"args":
 				{
-					"text": "08 09 10 11 12 f g",
+					"context": null,
+					"operator": null,
+					"pattern": "priors\\[(.+)\\]"
+				},
+				"command": "text_pastry_modify_selection",
+				"text": "find priors\\[(.+)\\]"
+			},
+			"key": "8d043723e828d746340154cfcaf565c7",
+			"label": "find priors\\[(.+)\\]"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"context": null,
+					"operator": null,
+					"pattern": "prior\\[(.+)\\]"
+				},
+				"command": "text_pastry_modify_selection",
+				"text": "find prior\\[(.+)\\]"
+			},
+			"key": "b052cfcb3ddf4da26d2e7fb863603f9a",
+			"label": "find prior\\[(.+)\\]"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"context": "file",
+					"operator": "add",
+					"pattern": "\\w+"
+				},
+				"command": "text_pastry_modify_selection",
+				"text": "add \\w+"
+			},
+			"key": "92c598a9a6b038b55f480524ac3cf067",
+			"label": "add \\w+"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"text": "1 1 1"
+				},
+				"command": "text_pastry_step",
+				"text": "1 1 1"
+			},
+			"key": "f4093d4303a6804a1cf378c28e59581a",
+			"label": "1 1 1"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"text": "1 "
+				},
+				"command": "text_pastry_step",
+				"text": "1 "
+			},
+			"key": "9d9dff9320e27082b15b4ed7a086ba83",
+			"label": "1 "
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"text": "1 2"
+				},
+				"command": "text_pastry_step",
+				"text": "1 2"
+			},
+			"key": "31371f199688ae40ba84c37a303411be",
+			"label": "1 2"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"text": "r,q",
 					"threshold": 3
 				},
 				"command": "text_pastry_insert_text",
-				"text": "08 09 10 11 12 f g"
+				"text": "r,q"
 			},
-			"key": "66f90fe5cbc2f5cf8760aec1dda351c5",
-			"label": "08 09 10 11 12 f g"
+			"key": "930ed22e4a5cb4ae5cdd898018c4f475",
+			"label": "r,q"
 		},
 		{
 			"data":
 			{
 				"args":
 				{
-					"text": "\\i(8, 1)",
+					"text": "r, q",
 					"threshold": 3
 				},
 				"command": "text_pastry_insert_text",
-				"text": "\\i(8, 1)"
+				"text": "r, q"
 			},
-			"key": "4fc4f8c2a5a7f843657080d5ec604a44",
-			"label": "\\i(8, 1)"
+			"key": "eddda0b0cb00b3e5b5b6d28afe2c8de4",
+			"label": "r, q"
 		},
 		{
 			"data":
 			{
 				"args":
 				{
-					"current": "8",
-					"padding": "1",
-					"step": "1"
+					"text": "2 1"
 				},
-				"command": "insert_nums",
-				"text": "\\i8,1"
+				"command": "text_pastry_step",
+				"text": "2 1"
 			},
-			"key": "b65f658afe59bf400fd1153801e67fbd",
-			"label": "\\i8,1"
+			"key": "e5f496776d0be90c523ffd4a458d7179",
+			"label": "2 1"
 		},
 		{
 			"data":
 			{
 				"args":
 				{
-					"text": "2,3,4",
+					"text": "\\i",
 					"threshold": 3
 				},
 				"command": "text_pastry_insert_text",
-				"text": "2,3,4"
-			},
-			"key": "9113fc7125d58568466a6efe2bb45375",
-			"label": "2,3,4"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"current": "2",
-					"padding": "4",
-					"step": "3"
-				},
-				"command": "insert_nums",
-				"text": "2 3 4"
-			},
-			"key": "aed437e50caab91dbef4caaecc9117a9",
-			"label": "2 3 4"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"text": "\\i(2, 1)",
-					"threshold": 3
-				},
-				"command": "text_pastry_insert_text",
-				"text": "\\i(2, 1)"
-			},
-			"key": "b8594e1e8d19e856e58151c3ad7a2307",
-			"label": "\\i(2, 1)"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"current": "2",
-					"padding": "1",
-					"step": "1"
-				},
-				"command": "insert_nums",
-				"text": "\\i2,1"
-			},
-			"key": "f8fe74aee95002bedc0f6968945d5d80",
-			"label": "\\i2,1"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"text": "even odd",
-					"threshold": 3
-				},
-				"command": "text_pastry_insert_text",
-				"text": "even odd"
-			},
-			"key": "34e97227c02eb61d3b33ed20c4cc1d83",
-			"label": "even odd"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"text": "evens, odds",
-					"threshold": 3
-				},
-				"command": "text_pastry_insert_text",
-				"text": "evens, odds"
-			},
-			"key": "1a68cb13a87ed0d30a9451f6a45839ad",
-			"label": "evens, odds"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"text": "evens,odds",
-					"threshold": 3
-				},
-				"command": "text_pastry_insert_text",
-				"text": "evens,odds"
-			},
-			"key": "a0e2a54f1f9b0168cfa0c9a9b46e456a",
-			"label": "evens,odds"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"text": "Y P C",
-					"threshold": 3
-				},
-				"command": "text_pastry_insert_text",
-				"text": "Y P C"
-			},
-			"key": "6f413b7abb57d2db8f3c9cbb0cb8991a",
-			"label": "Y P C"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"text": "]i",
-					"threshold": 3
-				},
-				"command": "text_pastry_insert_text",
-				"text": "]i"
-			},
-			"key": "9532e1a6dd93548c0da45859d820e79e",
-			"label": "]i"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"text": "\\i(5, 1)",
-					"threshold": 3
-				},
-				"command": "text_pastry_insert_text",
-				"text": "\\i(5, 1)"
-			},
-			"key": "dccd8ba20483d78828a8a9b385ab7c30",
-			"label": "\\i(5, 1)"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"current": "5",
-					"padding": "1",
-					"step": "1"
-				},
-				"command": "insert_nums",
-				"text": "\\i(5)"
-			},
-			"key": "1926d5718c8992538159493273ef7a57",
-			"label": "\\i(5)"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"text": "b d",
-					"threshold": 3
-				},
-				"command": "text_pastry_insert_text",
-				"text": "b d"
-			},
-			"key": "109c5eab75877edf1bc292b9267f8fbf",
-			"label": "b d"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"text": "l h",
-					"threshold": 3
-				},
-				"command": "text_pastry_insert_text",
-				"text": "l h"
-			},
-			"key": "054ddc81d0ec0bddfe52b500ea229c6c",
-			"label": "l h"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"text": "c d e",
-					"threshold": 3
-				},
-				"command": "text_pastry_insert_text",
-				"text": "c d e"
-			},
-			"key": "b34d53cc90bf969b61c43ecaf2407727",
-			"label": "c d e"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"text": "d e f g h i j k l",
-					"threshold": 3
-				},
-				"command": "text_pastry_insert_text",
-				"text": "d e f g h i j k l"
-			},
-			"key": "bb9a6e3a837a99eb7c7a457c7c1e6a17",
-			"label": "d e f g h i j k l"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"text": "a, b",
-					"threshold": 3
-				},
-				"command": "text_pastry_insert_text",
-				"text": "a, b"
-			},
-			"key": "51718398f14c2c7248fa166b1c749400",
-			"label": "a, b"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"text": "a b",
-					"threshold": 3
-				},
-				"command": "text_pastry_insert_text",
-				"text": "a b"
-			},
-			"key": "0cc9cd4dd26c5137b675a0d819cb9ab0",
-			"label": "a b"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"text": "a",
-					"threshold": 3
-				},
-				"command": "text_pastry_insert_text",
-				"text": "a"
-			},
-			"key": "0cc175b9c0f1b6a831c399e269772661",
-			"label": "a"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"text": "K P",
-					"threshold": 3
-				},
-				"command": "text_pastry_insert_text",
-				"text": "K P"
-			},
-			"key": "b6d3b3cadfb164128215bb39e094d757",
-			"label": "K P"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"text": "\\12",
-					"threshold": 3
-				},
-				"command": "text_pastry_insert_text",
-				"text": "\\12"
-			},
-			"key": "7174af888c1121cfbb239291a0842a3d",
-			"label": "\\12"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"current": "2",
-					"padding": "1",
-					"step": "1"
-				},
-				"command": "insert_nums",
-				"text": "\\i(2)"
-			},
-			"key": "7dabebb8540b161cbced10d7519f23b3",
-			"label": "\\i(2)"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"current": "1",
-					"padding": "1",
-					"step": "1"
-				},
-				"command": "insert_nums",
 				"text": "\\i"
 			},
 			"key": "1bd7ee1ce72751da4e64129f6d32db41",
@@ -362,112 +145,65 @@
 			{
 				"args":
 				{
-					"text": "2,3,4,5",
+					"text": "adkk",
 					"threshold": 3
 				},
 				"command": "text_pastry_insert_text",
-				"text": "2,3,4,5"
+				"text": "adkk"
 			},
-			"key": "a4618027ebbce40ce36f37c1f80cf2a7",
-			"label": "2,3,4,5"
+			"key": "ad9463008321a647b7bb28206063223b",
+			"label": "adkk"
 		},
 		{
 			"data":
 			{
 				"args":
 				{
-					"text": "\\1(2,5)",
+					"text": "1 1"
+				},
+				"command": "text_pastry_step",
+				"text": "1 1"
+			},
+			"key": "75c124fae7a8b8b89183d4de196613b3",
+			"label": "1 1"
+		},
+		{
+			"data":
+			{
+				"args":
+				{
+					"text": "OT GC",
 					"threshold": 3
 				},
 				"command": "text_pastry_insert_text",
-				"text": "\\1(2,5)"
+				"text": "OT GC"
 			},
-			"key": "131288463046746371854093b2117731",
-			"label": "\\1(2,5)"
+			"key": "0d9d129844faf9bdffaf8d1ab9001373",
+			"label": "OT GC"
 		},
 		{
 			"data":
 			{
 				"args":
 				{
-					"text": "\\2\\1",
+					"text": "OT, GC",
 					"threshold": 3
 				},
 				"command": "text_pastry_insert_text",
-				"text": "\\2\\1"
+				"text": "OT, GC"
 			},
-			"key": "41a4170c872b3fda5a3c42e4d96309fc",
-			"label": "\\2\\1"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"text": "25",
-					"threshold": 3
-				},
-				"command": "text_pastry_insert_text",
-				"text": "25"
-			},
-			"key": "8e296a067a37563370ded05f5a3bf3ec",
-			"label": "25"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"current": "2",
-					"padding": "1",
-					"step": "5"
-				},
-				"command": "insert_nums",
-				"text": "\\i(2,5)"
-			},
-			"key": "be4158714cc5963e15ec3ad97b104d2d",
-			"label": "\\i(2,5)"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"current": "2",
-					"padding": "1",
-					"step": "1"
-				},
-				"command": "insert_nums",
-				"text": "\\i(2,1)"
-			},
-			"key": "4371e5dc886922b6aed0b1f9812a2132",
-			"label": "\\i(2,1)"
-		},
-		{
-			"data":
-			{
-				"args":
-				{
-					"current": "1",
-					"padding": "1",
-					"step": "1"
-				},
-				"command": "insert_nums",
-				"text": "i"
-			},
-			"key": "865c0c0b4ab0e063e5caa3387c1a8741",
-			"label": "i"
+			"key": "e0eaf0193e85e9d63e611182d0775f8a",
+			"label": "OT, GC"
 		}
 	],
 	"last_command":
 	{
 		"args":
 		{
-			"current": "1",
-			"padding": "1",
-			"step": "1"
+			"text": "OT, GC",
+			"threshold": 3
 		},
-		"command": "insert_nums",
-		"text": "i"
+		"command": "text_pastry_insert_text",
+		"text": "OT, GC"
 	}
 }

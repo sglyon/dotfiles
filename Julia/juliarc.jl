@@ -80,6 +80,12 @@ end
 #     Expr(:block, Expr(:(=), :nms, :(names($obj)))
 # end
 
+function save_prof(f_name="profile_resuts.txt")
+    s = open(f_name,"w")
+    Profile.print(s,cols = 500)
+    close(s)
+end
+
 
 macro timeit(ex)
     quote
@@ -172,7 +178,6 @@ function numpy_str(x::Matrix)
     end
     out *= "])"
 end
-
 
 
 # function writemime(io::IO, ::MIME"text/latex", x::Vector; fmt::String="%.4f")

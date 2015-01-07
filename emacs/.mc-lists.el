@@ -3,9 +3,12 @@
 
 (setq mc/cmds-to-run-for-all
       '(
+        ess-eval-region-or-function-or-paragraph-and-step
+        ess-smart-comma
         mouse-buffer-menu
         org-beginning-of-line
         org-dblock-update
+        suspend-frame
         ))
 
 (setq mc/cmds-to-run-once

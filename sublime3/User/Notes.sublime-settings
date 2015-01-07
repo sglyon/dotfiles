@@ -1,0 +1,6 @@
+{
+  "root": "~/Research/randomNotes/",
+  "note_file_extensions": ["note", "md"],
+  "note_save_extension": "md",
+  "enable_yaml": true
+}

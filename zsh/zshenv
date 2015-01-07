@@ -1,12 +1,11 @@
 # Set path
 path=(
-  /usr/local/anaconda/bin
+  /Users/sglyon/anaconda/bin
   /usr/local/julia_release/usr/bin
-  /usr/local/anaconda/envs/python3/bin
   $HOME/bin
   $HOME/.cabal/bin
-  /usr/texbin
   /usr/local/{bin,sbin}
+  /usr/texbin
   /usr/local/gocode/bin
   $HOME/google-cloud-sdk/bin
   $path
@@ -20,7 +19,23 @@ export GRB_LICENSE_FILE=$HOME/src/gurobi.lic
 
 export DYLD_LIBRARY_PATH=/opt/NAG/clmi623dgl/lib
 
+# Add GHC 7.8.3 to the PATH, via http://ghcformacosx.github.io/
+export GHC_DOT_APP="/Users/sglyon/src/haskell/ghc-7.8.3.app"
+if [ -d "$GHC_DOT_APP" ]; then
+    export PATH="${HOME}/.cabal/bin:${GHC_DOT_APP}/Contents/bin:${PATH}"
+fi
+
+# so gcloud doesn't complain about python 3
+export CLOUDSDK_PYTHON=/Users/sglyon/anaconda/bin/python
+
 alias julia4="/usr/local/julia/usr/bin/julia"
+alias pip2="/usr/local/anaconda2/bin/pip"
+alias conda2="/usr/local/anaconda2/bin/conda"
+alias ipython2="/usr/local/anaconda2/bin/ipython"
+alias python2="/usr/local/anaconda2/bin/python"
+alias ipypy="/usr/local/share/pypy/ipython"
+
+alias matlab="/Applications/MATLAB_R2014a.app/bin/matlab -nodesktop -nosplash"
 
 # use hub instead of git
 eval "$(hub alias -s)"

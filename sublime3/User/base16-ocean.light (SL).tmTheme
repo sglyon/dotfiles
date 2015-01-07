@@ -37,7 +37,7 @@
 				<key>invisibles</key>
 				<string>#dfe1e8</string>
 				<key>lineHighlight</key>
-				<string>#a7adba55</string>
+				<string>#dfe1e8</string>
 				<key>selection</key>
 				<string>#dfe1e8</string>
 			</dict>
@@ -417,7 +417,7 @@
 			<key>name</key>
 			<string>Inserted</string>
 			<key>scope</key>
-			<string>markup.inserted</string>
+			<string>markup.inserted, markup.inserted.git_gutter</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -428,7 +428,7 @@
 			<key>name</key>
 			<string>Deleted</string>
 			<key>scope</key>
-			<string>markup.deleted</string>
+			<string>markup.deleted, markup.deleted.git_gutter</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
@@ -439,11 +439,33 @@
 			<key>name</key>
 			<string>Changed</string>
 			<key>scope</key>
-			<string>markup.changed</string>
+			<string>markup.changed, markup.changed.git_gutter</string>
 			<key>settings</key>
 			<dict>
 				<key>foreground</key>
 				<string>#b48ead</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Ignored</string>
+			<key>scope</key>
+			<string>markup.ignored, markup.ignored.git_gutter</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#c0c5ce</string>
+			</dict>
+		</dict>
+		<dict>
+			<key>name</key>
+			<string>Untracked</string>
+			<key>scope</key>
+			<string>markup.untracked, markup.untracked.git_gutter</string>
+			<key>settings</key>
+			<dict>
+				<key>foreground</key>
+				<string>#c0c5ce</string>
 			</dict>
 		</dict>
 		<dict>
@@ -535,6 +557,6 @@
             </dict>
         </dict></array>
 	<key>uuid</key>
-	<string>750b861b-d7cf-4f99-90a4-220f77be3f48</string>
+	<string>52997033-52ea-4534-af9f-7572613947d8</string>
 </dict>
 </plist>

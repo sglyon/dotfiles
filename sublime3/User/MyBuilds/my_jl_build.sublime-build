@@ -1,4 +1,4 @@
 {
-    "cmd": ["/usr/local/julia/usr/bin/julia", "$file"],
+    "cmd": ["/usr/local/julia_release/usr/bin/julia", "$file"],
     "selector": "source.julia"
 }

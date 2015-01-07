@@ -1,8 +1,13 @@
 {
+	"add_to_PATH":
+	[
+		"/Users/sglyon/.cabal/bin/",
+		"/usr/local/bin"
+	],
+	"cabal_dev_sandbox_list":
+	[
+		""
+	],
 	"enable_hdevtools": false,
-
-    // Extra directories to be added to the front of the PATH environment variable.
-    // Specify this for using custom ghc, cabal, and ghc-mod
-    // Example: /home/user/.cabal/bin
-    "add_to_PATH": ["/Users/sglyon/.cabal/bin/"],
+	"use_cabal_dev": false
 }

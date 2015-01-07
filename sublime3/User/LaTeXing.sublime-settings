@@ -44,7 +44,7 @@
 	"open_pdf_on_load": false,
 	"output_directory": true,
     "output_directory_mode": 1,  // This ensures no temporary file is ever created
-	"partial_build": true,
+	"partial_build": false,
 	"executables": {
 		// Required
 		"perl": ["perl"],

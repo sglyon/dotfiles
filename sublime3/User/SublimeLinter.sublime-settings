@@ -1,7 +1,6 @@
 {
 	"user":
 	{
-		"@disable": true,
 		"debug": true,
 		"delay": 0.25,
 		"error_color": "D02000",
@@ -42,6 +41,7 @@
 				[
 				],
 				"ignore": "",
+				"jobs": "1",
 				"max-complexity": -1,
 				"max-line-length": null,
 				"select": ""
@@ -49,6 +49,7 @@
 		},
 		"mark_style": "outline",
 		"no_column_highlights_line": false,
+		"passive_warnings": false,
 		"paths":
 		{
 			"linux":

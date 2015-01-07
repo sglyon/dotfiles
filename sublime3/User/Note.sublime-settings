@@ -1,9 +1,11 @@
 {
-  "word_wrap": "auto",
-  "wrap_width": 0,
-
-  "spell_check": true,
-
-  "trim_trailing_white_space_on_save": true,
-  "trim_automatic_white_space": true,
+	"extensions":
+	[
+		"md"
+	],
+	"spell_check": true,
+	"trim_automatic_white_space": true,
+	"trim_trailing_white_space_on_save": true,
+	"word_wrap": "auto",
+	"wrap_width": 0
 }
