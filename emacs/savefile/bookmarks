@@ -13,8 +13,8 @@
  (rear-context-string . "eas org file]]\n\n")
  (position . 1953))
 ("org-refile-last-stored"
- (filename . "~/School/NYU/NYUclasses/Winter2014/Metrics/metricsS2.org")
- (front-context-string . "** TODO Illegibl")
- (rear-context-string . "eas org file]]\n\n")
- (position . 1953))
+ (filename . "~/Dropbox/org/research/ideas.org")
+ (front-context-string . "** TODO Fourier ")
+ (rear-context-string . "3-11 Tue 13:26]\n")
+ (position . 7805))
 )

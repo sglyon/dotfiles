@@ -45,7 +45,8 @@
                                "~/Dropbox/org/research/ideas.org"
                                "~/School/NYU/NYUclasses/Spring2014/Macro/Sargent/macroQ3.org"
                                "~/School/NYU/NYUclasses/Spring2014/Micro/Pearce/microQ3.org"
-                               "~/School/NYU/NYUclasses/Spring2014/Metrics/metricsS2.org")))
+                               "~/School/NYU/NYUclasses/Spring2014/Metrics/metricsS2.org"
+                               "~/School/NYU/NYUclasses/Spring2015/Info/econinfo.org")))
 
 ;; Mobile org settings
 

@@ -87,6 +87,7 @@
 
 ; Enable menu-bar
 (menu-bar-mode 1)
+(setq ns-use-native-fullscreen t)
 
 ; Disable scroll-bar
 ; (scroll-bar-mode -1)
@@ -95,7 +96,6 @@
 (global-visual-line-mode 1)
 
 ; Set font size in units of x/10 so :height 100 = 10 pt.
-(set-face-attribute 'default nil :height 100)
 
 ; Set cursor color and font lock
 (set-cursor-color "#6785c5")
@@ -185,5 +185,16 @@
 
 ;;                 Scala settings
 
-(require `ensime)
-(add-hook `scala-mode-hook `ensime-scala-mode-hook)
+;; (require `ensime)
+;; (add-hook `scala-mode-hook `ensime-scala-mode-hook)
+
+;;---------------- Markdown settings
+(load "pandoc-mode")
+(add-hook 'markdown-mode-hook 'pandoc-mode)
+
+(require 'poly-R)
+(require 'poly-markdown)
+(add-to-list 'auto-mode-alist '("\\.md" . poly-markdown-mode))
+
+;; ------------------- helm Settingse
+
