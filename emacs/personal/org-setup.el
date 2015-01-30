@@ -43,9 +43,9 @@
 (setq org-agenda-files (quote ("~/Dropbox/org/inbox.org"
                                "~/Dropbox/org/personal.org"
                                "~/Dropbox/org/research/ideas.org"
-                               "~/School/NYU/NYUclasses/Winter2014/Macro/Sargent/macroQ3.org"
-                               "~/School/NYU/NYUclasses/Winter2014/Micro/Pearce/microQ3.org"
-                               "~/School/NYU/NYUclasses/Winter2014/Metrics/metricsS2.org")))
+                               "~/School/NYU/NYUclasses/Spring2014/Macro/Sargent/macroQ3.org"
+                               "~/School/NYU/NYUclasses/Spring2014/Micro/Pearce/microQ3.org"
+                               "~/School/NYU/NYUclasses/Spring2014/Metrics/metricsS2.org")))
 
 ;; Mobile org settings
 

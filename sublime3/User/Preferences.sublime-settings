@@ -111,19 +111,18 @@
 	"highlight_modified_tabs": false,
 	"ignored_packages":
 	[
-		"Emmet",
-		"LaTeXTools",
-		"VintageLines",
-		"Solarized Color Scheme",
-		"MarkdownTOC",
-		"LESS",
-		"Colorcoder",
 		"Makefile",
-		"Markdown",
-		"Jedi - Python autocompletion",
-		"Swift",
 		"RestructuredText",
-		"UnicodeMath"
+		"Solarized Color Scheme",
+		"Emmet",
+		"Colorcoder",
+		"Markdown",
+		"LESS",
+		"Swift",
+		"LaTeXTools",
+		"Jedi - Python autocompletion",
+		"VintageLines",
+		"MarkdownTOC"
 	],
 	"ignored_words":
 	[

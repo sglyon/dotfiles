@@ -1,0 +1,13 @@
+{
+    "auto_wrap_width": 79,
+    "extensions":
+    [
+    ],
+    "rulers":
+    [
+        72,
+        78
+    ],
+    "tab_size": 2,
+    "translate_tabs_to_spaces": true
+}

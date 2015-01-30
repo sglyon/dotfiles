@@ -99,6 +99,11 @@
     },
 
     {
+        "keys": ["super+alt+ctrl+d"], "command": "run_macro_file", "args": {"file": "Packages/User/MyMacros/python-dunder.sublime-macro"},
+        "context": [{ "key": "selector", "operator": "equal", "operand": "source.python"}]
+    },
+
+    {
         "keys": ["super+alt+shift+="], "command": "run_macro_file", "args": {"file": "Packages/User/MyMacros/rst_sec.sublime-macro"},
         "context": [{ "key": "selector", "operator": "equal", "operand": "text.restructuredtext"}]
     },

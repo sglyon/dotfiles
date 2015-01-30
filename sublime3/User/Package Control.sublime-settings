@@ -1,7 +1,6 @@
 {
 	"in_process_packages":
 	[
-		"UnicodeMath"
 	],
 	"install_prereleases": true,
 	"installed_dependencies":
@@ -21,6 +20,7 @@
 		"Better CoffeeScript",
 		"BetterFindBuffer",
 		"Bootstrap 3 Snippets",
+		"C++11",
 		"C99",
 		"Calculate",
 		"Colorcoder",
@@ -29,6 +29,7 @@
 		"Emmet",
 		"Enhanced-R",
 		"Evernote",
+		"Fix Mac Path",
 		"Floobits",
 		"Fold Python Docstrings",
 		"Gist",
@@ -63,6 +64,7 @@
 		"SFTP",
 		"Shell Command",
 		"SideBarEnhancements",
+		"Slack",
 		"SmartMarkdown",
 		"Solarized Color Scheme",
 		"Spotify",
@@ -74,7 +76,7 @@
 		"SublimeLinter-annotations",
 		"SublimeLinter-flake8",
 		"SublimeREPL",
-		"Sublimerge Pro",
+		"SublimeSBT",
 		"Super Calculator",
 		"Swift",
 		"SyntaxHighlightTools",

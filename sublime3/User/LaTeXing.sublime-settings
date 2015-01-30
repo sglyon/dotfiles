@@ -42,8 +42,8 @@
 	"knitr_command": "Rscript -e \"library(knitr); knit('{file}')\"",
 	"license": "5c288e922606502d23ea59e07c",
 	"open_pdf_on_load": false,
-	"output_directory": true,
-    "output_directory_mode": 1,  // This ensures no temporary file is ever created
+	"output_directory": false,
+    "output_directory_mode": 0,  // This ensures no temporary file is ever created
 	"partial_build": false,
 	"executables": {
 		// Required

@@ -38,7 +38,7 @@
 ; Map command as control
 (setq mac-command-modifier 'control)
 
-; Comment with C-S-/ (C-?)
+; Commento with C-S-/ (C-?)
 (global-set-key (kbd "C-?") 'comment-region)
 (global-set-key (kbd "M-?") 'uncomment-region)
 ; Switch header/implementation with C-c o
@@ -181,5 +181,9 @@
   )
 (add-hook 'gnus-group-mode-hook
           ;; list all the subscribed groups even they contain zero un-read messages
-          (lambda () (local-set-key "o" 'my-gnus-group-list-subscribed-groups ))
-          )
+          (lambda () (local-set-key "o" 'my-gnus-group-list-subscribed-groups )))
+
+;;                 Scala settings
+
+(require `ensime)
+(add-hook `scala-mode-hook `ensime-scala-mode-hook)
