@@ -1,0 +1,123 @@
+{
+  :layers
+  [
+    :core
+    :tools/git
+    :tools/minimap
+    ; :tools/linter
+    :tools/build
+    :lang/clojure
+    :lang/python
+    :lang/julia
+    :lang/latex
+    :lang/markdown
+    :lang/rust]
+
+
+
+  :additional-packages
+  [
+    :build-make
+    :nvatom
+    :tomorrow-night-eighties-syntax
+    :language-matlab-only
+    :markdown-preview-plus
+    :date
+    :time-status
+    :battery-status
+    :atom-alignment
+    :comment-commander
+    :isotope-ui
+    :wakatime
+    :go-plus
+    :atom-ctags
+    :last-cursor-position
+
+    ; ionic
+    ; :emmet
+    :ionic-preview
+    :ionic-framework-snippets
+    :angularjs]
+
+    ; :indent-detective
+
+
+
+  :configuration
+  [
+    ;; appearance
+    ["core.themes" ["atom-material-ui" "tomorrow-night-eighties-syntax"]]
+    ["atom-material-ui.ui.accentColor" "Blue"]
+    ["atom-material-ui.tabs.showTabIcons" "Show on active tab"]
+    ["atom-material-ui.tabs.tabMinWidth" true]
+    ["atom-material-ui.tabs.tabSize" "Small"]
+    ["atom-material-ui.tabs.compactTabs" true]
+    ["atom-material-ui.fonts.fontSize" "Small"]
+    ["atom-material-ui.panels.panelContrast" true]
+    ["atom-material-ui.treeView.compactTreeView" true]
+    ["atom-material-ui.tabs.rippleAccentColor" true]
+
+    ; ["isotope-ui.minimalMode" true]
+    ; ["isotope-ui.lowContrastTooltip" true]
+    ; ["isotope-ui.fontWeight" "Light"]
+    ; ["isotope-ui.fontFamily" "Source Sans Pro"]
+
+
+    ["editor.lineHeight" 1.2]
+    ["editor.tabLength" 4]
+    ["editor.softWrap" true]
+    ["editor.softWrapHangingIndent" 2]
+    ["editor.fontFamily" "Hasklig-ExtraLight"]
+    ["editor.fontSize" 11]
+    ["editor.scrollPastEnd" true]
+    ["editor.showIndentGuide" true]
+    ["editor.backUpBeforeSaving" true]
+    ["editor.tabType" "soft"]
+    ["tabs.showIcons" true]
+    ["tabs.usePreviewTabs" true]
+    ["tabs.enableVcsColoring" true]
+
+    ;; markdown settings
+    ["markdown-preview-plus.pandocPath" "/usr/local/bin/pandoc"]
+    ["markdown-preview-plus.enablePandoc" true]
+    ["markdown-preview-plus.pandocBibliography" true]
+    ["markdown-preview-plus.pandocBIBFileFallback" "/Users/sglyon/Research/library.bib"]
+    ["markdown-preview-plus.pandocCSLFileFallback" "/Users/sglyon/.pandoc/csl/apsa.csl"]
+    ["markdown-preview-plus.pandocMarkdownFlavor" "markdown+implicit_figures+pipe_tables+table_captions+yaml_metadata_block+fenced_code_blocks+fenced_code_attributes+tex_math_dollars"]
+    ["markdown-preview-plus.pandocArguments" ["--template=/Users/sglyon/.pandoc/templates/html.template"
+                                              "--filter pandoc-citeproc"]]
+    ["markdown-writer.fileExtension" ".md"]
+    ["markdown-writer.tableExtraPipes" true]
+
+    ;; other
+    ["ink.monotypeResults" true]
+    ["nvatom.directory" "/Users/sglyon/Research/randomNotes/content"]
+    ["spell-check.grammars" ["source.gfm"
+                             "source.git-commit"
+                             "text.tex.latex"
+                             "text.html.php"]]
+
+    ["atom-alignment.addSpacePostfix" true]
+    ["atom-alignment.alignBy" ["=>" ":=" "=" "$" "&" "#"]]
+    ["autocomplete-plus.confirmCompletion" "tab"]
+    ["minimap.autoToggle" false]
+    ["ctags.autoBuildTagsWhenActive" true]
+
+    ;; stuff for proton
+    ["proton.core.showTabBar" true]
+    ["proton.core.quickOpenProvider" :atom]
+    ["proton.core.post-init-timeout" 1000]
+    ["proton.core.relativeLineNumbers" false]
+    ["proton.core.vim-provider" :vim-mode]]
+
+
+  ;; Don't like a keybinding or want to add something yourself? Do it here
+  ;; (not implemented yet)
+  :keybindings {}
+
+  ;; Want some custom behavior inside a certain window?
+  ;; For example you prefer navigating with esc and enter? Add it here.
+
+  :keymaps [{:selector "body atom-text-editor.vim-mode-plus:not(.insert-mode)" :keymap [["space" "proton:toggle"]]}
+            {:selector "atom-text-editor.vim-mode:not(.insert-mode)" :keymap [["space" "proton:toggle"]]}
+            {:selector ".tree-view" :keymap [["escape" "tree-view:toggle"]]}]}
