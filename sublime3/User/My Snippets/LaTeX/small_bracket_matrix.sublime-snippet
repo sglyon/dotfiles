@@ -1,5 +1,0 @@
-<snippet>
-    <content><![CDATA[\left[\begin{smallmatrix} $0 \end{smallmatrix}\right]]]></content>
-    <tabTrigger>smbmat</tabTrigger>
-    <scope>text.tex.latex</scope>
-</snippet>

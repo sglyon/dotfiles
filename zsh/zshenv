@@ -1,17 +1,18 @@
 # Set path
 path=(
-  /Users/sglyon/anaconda/bin
-  /usr/local/julia_release/usr/bin
+  /Users/sglyon/anaconda3/bin
+  /Users/sglyon/src/julia/julia/usr/bin
   $HOME/bin
   $HOME/.cabal/bin
+  $HOME/.cargo/bin
   /usr/local/{bin,sbin}
   /usr/texbin
-  /usr/local/gocode/bin
+  $HOME/gocode/bin
   $HOME/google-cloud-sdk/bin
   $path
 )
 
-export GOPATH=/usr/local/gocode
+export GOPATH=$HOME/gocode
 export JULIA_EDITOR=subl
 export LT_HOME=$HOME/src/LightTable/deploy
 
@@ -28,16 +29,26 @@ fi
 # so gcloud doesn't complain about python 3
 export CLOUDSDK_PYTHON=/Users/sglyon/anaconda/bin/python
 
-alias julia4="/usr/local/julia/usr/bin/julia"
+# alias julia4="/usr/local/julia/usr/bin/julia"
 alias pip2="/usr/local/anaconda2/bin/pip"
 alias conda2="/usr/local/anaconda2/bin/conda"
-alias ipython2="/usr/local/anaconda2/bin/ipython"
-alias python2="/usr/local/anaconda2/bin/python"
+alias ipython2="/Users/sglyon/anaconda3/envs/py2/bin/ipython"
 alias ipypy="/usr/local/share/pypy/ipython"
+alias gco='git checkout'
 
-alias matlab="/Applications/MATLAB_R2014a.app/bin/matlab -nodesktop -nosplash"
+alias matlab="/Applications/MATLAB_R2015b.app/bin/matlab -nodesktop -nosplash"
 
 # use hub instead of git
 eval "$(hub alias -s)"
 
 # export CLASSPATH=/opt/ParallelColt/parallelcolt-0.9.4.jar:/opt/colt/lib/colt.jar:/opt/colt/lib/concurrent.jar:$CLASSPATH
+
+export RSTUDIO_WHICH_R=/Users/sglyon/anaconda3/bin/R
+export ATOM_REPOS_HOME=$HOME/src/atom
+export EDITOR="atom"
+export RUBYMOTION_ANDROID_SDK=/Users/sglyon/.rubymotion-android/sdk
+export RUBYMOTION_ANDROID_NDK=/Users/sglyon/.rubymotion-android/ndk
+
+export PATH="/usr/local/heroku/bin:$PATH"
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
+source ~/.rvm/scripts/rvm

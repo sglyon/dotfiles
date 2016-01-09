@@ -1,8 +1,0 @@
-<snippet>
-    <content><![CDATA[[code]
-$0
-[/code]]]></content>
-    <tabTrigger>code</tabTrigger>
-    <scope>text.orgmode</scope>
-    <description>code block</description>
-</snippet>

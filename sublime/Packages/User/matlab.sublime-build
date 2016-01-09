@@ -1,7 +1,0 @@
-{
-
-    "cmd": ["/Applications/MATLAB_R2011a.app/bin/matlab", "-nosplash", "<$file_name"],
-    
-    "selector": "source.matlab"
-
-}

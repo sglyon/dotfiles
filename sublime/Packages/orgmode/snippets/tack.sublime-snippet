@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[- ${0:CONTENT}]]></content>
-    <tabTrigger>-</tabTrigger>
-    <scope>text.orgmode</scope>
-    <description>tack</description>
-</snippet>

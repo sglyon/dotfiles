@@ -1,4 +1,0 @@
-[
-    { "keys": ["super+shift+space"], "command": "text_formatting_maxlength" },
-    { "keys": ["ctrl+p"], "command": "text_formatting_debug" }
-]

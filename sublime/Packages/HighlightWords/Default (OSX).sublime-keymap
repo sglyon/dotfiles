@@ -1,4 +1,0 @@
-[
-	{ "keys": ["super+shift+h"], "command": "highlight_words" },
-	{ "keys": ["super+escape"], "command": "unhighlight_words" }
-]

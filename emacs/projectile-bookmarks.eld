@@ -1,1 +1,0 @@
-("~/School/NYU/NYUclasses/" "~/Dropbox/org/" "~/Desktop/temp/scala/fpinscala/" "~/Research/dvfi/" "~/Research/randomNotes/" "~/dotfiles/" "~/Documents/paperPlates/" "~/School/NYU/SargentSummer/" "~/src/Emacs/ob-julia/" "~/Python/pycse/")

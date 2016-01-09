@@ -1,5 +1,0 @@
-[	// iTodo plugin
-	{ "keys": ["super+d"], "command": "complete" },
-	{ "keys": ["super+i"], "command": "new" },
-	{ "keys": ["super+l"], "command": "clear" }
-]

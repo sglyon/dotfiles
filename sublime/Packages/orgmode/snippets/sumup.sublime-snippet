@@ -1,6 +1,0 @@
-<snippet>
-    <content><![CDATA[=> ${0:CONTENT}]]></content>
-    <tabTrigger>ff</tabTrigger>
-    <scope>text.orgmode</scope>
-    <description>sum up</description>
-</snippet>
